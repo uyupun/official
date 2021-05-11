@@ -1,4 +1,4 @@
-# Official
+# official
 
 ぅゅ...ぷんぽぷんぽ公式Webサイト
 
