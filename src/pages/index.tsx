@@ -1,25 +1,22 @@
-import {useEffect} from 'react';
-import {client, query} from '../lib/apollo';
+import {client, query, useQuery} from '../lib/apollo';
+
+const TEST = query`
+query {
+  person(personID: 4) {
+    name
+  }
+}
+`
 
 const Index = () => {
-  const test = () => {
-    client.query({
-      query: query`
-        query {
-          person(personID: 4) {
-            name
-          }
-        }
-      `
-    }).then(res => {
-      console.log(res);
-    });
-  }
 
-  useEffect(test, []);
+  const {loading, error, data} = useQuery(TEST, {client});
 
   return (
-    <div>hopge</div>
+    <div>
+      <div>hoge</div>
+      {data.person.name}
+    </div>
   )
 };
 
