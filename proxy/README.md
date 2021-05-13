@@ -5,5 +5,6 @@
 ### 環境構築
 
 ```bash
+$ make setup
 $ make run  # localhost:8080で待ち受け
 ```
