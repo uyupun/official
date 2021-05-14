@@ -11,11 +11,11 @@ import (
 	"github.com/uyupun/official/proxy/graph/model"
 )
 
-func (r *mutationResolver) CreateTodo(ctx context.Context, input model.NewTodo) (*model.Todo, error) {
+func (r *mutationResolver) CreateHoge(ctx context.Context, input model.NewHoge) (*model.Hoge, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
-func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
+func (r *queryResolver) Hoge(ctx context.Context) ([]*model.Hoge, error) {
 	panic(fmt.Errorf("not implemented"))
 }
 
