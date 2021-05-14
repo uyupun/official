@@ -16,7 +16,12 @@ func (r *mutationResolver) CreateHoge(ctx context.Context, input model.NewHoge) 
 }
 
 func (r *queryResolver) Hoge(ctx context.Context) ([]*model.Hoge, error) {
-	panic(fmt.Errorf("not implemented"))
+	return []*model.Hoge{
+		{
+			ID:   "test",
+			Name: "test",
+		},
+	}, nil
 }
 
 // Mutation returns generated.MutationResolver implementation.
