@@ -16,14 +16,16 @@ func main() {
 	config.Init()
 	conf := config.Get()
 
-	registerRoutes(engine)
+	registerRoutes(engine, conf.Env)
 	engine.Run(conf.Listen)
 }
 
-func registerRoutes(engine *gin.Engine) {
+func registerRoutes(engine *gin.Engine, env string) {
 	engine.GET("/", indexHandler())
 	engine.POST("/query", graphqlHandler())
-	engine.GET("/playground", playgroundHandler())
+	if env == "development" {
+		engine.GET("/playground", playgroundHandler())
+	}
 }
 
 func indexHandler() gin.HandlerFunc {

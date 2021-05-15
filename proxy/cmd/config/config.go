@@ -9,6 +9,7 @@ import (
 )
 
 type Config struct {
+	Env    string `json:"env" yaml:"env"`
 	Listen string `json:"listen" yaml:"listen"`
 }
 

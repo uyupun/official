@@ -6,5 +6,6 @@
 
 ```bash
 $ make setup
-$ make run  # localhost:8000で待ち受け
+$ make run  # localhost:8000で待ち受け。開発環境のみ/playgroundにアクセスでGraphQL Playgroundが利用可能
+$ make gen  # GraphQL resolverの実装の更新
 ```

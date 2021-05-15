@@ -1,1 +1,2 @@
+env: development
 listen: localhost:8000
