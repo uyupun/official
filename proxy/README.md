@@ -6,5 +6,5 @@
 
 ```bash
 $ make setup
-$ make run  # localhost:8080で待ち受け
+$ make run  # localhost:8000で待ち受け
 ```

@@ -21,8 +21,15 @@ func main() {
 }
 
 func registerRoutes(engine *gin.Engine) {
+	engine.GET("/", indexHandler())
 	engine.POST("/query", graphqlHandler())
-	engine.GET("/", playgroundHandler())
+	engine.GET("/playground", playgroundHandler())
+}
+
+func indexHandler() gin.HandlerFunc {
+	return func(ctx *gin.Context) {
+		ctx.JSON(200, "Reverse proxy connecting official to Re:gret")
+	}
 }
 
 func graphqlHandler() gin.HandlerFunc {

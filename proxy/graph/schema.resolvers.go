@@ -18,7 +18,7 @@ func (r *mutationResolver) CreateHoge(ctx context.Context, input model.NewHoge) 
 func (r *queryResolver) Hoge(ctx context.Context) ([]*model.Hoge, error) {
 	return []*model.Hoge{
 		{
-			ID:   "test",
+			ID:   "test2",
 			Name: "test",
 		},
 	}, nil
