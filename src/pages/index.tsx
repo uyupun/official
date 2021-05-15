@@ -2,7 +2,8 @@ import {client, query, useQuery} from '../lib/apollo';
 
 const TEST = query`
 query {
-  person(personID: 4) {
+  hoge {
+    id
     name
   }
 }
@@ -15,7 +16,8 @@ const Index = () => {
   return (
     <div>
       <div>hoge</div>
-      {data.person.name}
+      {!loading && data.hoge[0].name}
+      {!loading && data.hoge[0].id}
     </div>
   )
 };
