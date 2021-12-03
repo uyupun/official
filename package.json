@@ -6,10 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint:eslint": "next lint .",
+    "lint:eslint": "next lint --max-warnings 0 .",
     "lint:prettier": "prettier --check .",
-    "fix:eslint": "yarn lint:eslint -- --fix",
-    "fix:prettier": "yarn lint:prettier -- --write",
+    "fix:eslint": "next lint --fix --max-warnings 0 .",
+    "fix:prettier": "prettier --write .",
     "lint-staged": "lint-staged",
     "prepare": "husky install"
   },
