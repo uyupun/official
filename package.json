@@ -12,8 +12,8 @@
     "fix:prettier": "prettier --write .",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s public"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
