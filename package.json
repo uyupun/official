@@ -43,6 +43,7 @@
     "eslint-plugin-storybook": "^0.5.5",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
+    "modern-css-reset": "^1.4.0",
     "prettier": "^2.5.0",
     "typescript": "^4.2.4"
   }
