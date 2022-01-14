@@ -1,3 +1,4 @@
+import 'modern-css-reset/dist/reset.min.css';
 import * as NextImage from 'next/image';
 
 const OriginalNextImage = NextImage.default;
