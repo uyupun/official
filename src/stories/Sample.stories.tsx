@@ -1,21 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import Image from 'next/image';
 import React from 'react';
 
-const SampleComponent = (props: { title: string }) => {
-  return (
-    <div>
-      <h1>{props.title}</h1>
-      <Image
-        src="https://picsum.photos/300/200"
-        alt="picsum.photos"
-        width={300}
-        height={200}
-        objectFit="contain"
-      />
-    </div>
-  );
-};
+const SampleComponent = (props: { title: string }) => <h1>{props.title}</h1>;
 
 //👇 This default export determines where your story goes in the story list
 export default {
@@ -34,5 +20,5 @@ export const Sample = Template.bind({});
 
 Sample.args = {
   /*👇 The args you need here will depend on your component */
-  title: 'サンプル画像',
+  title: 'タイトル',
 };
