@@ -1,6 +1,10 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 
-const SampleComponent = (props: { title: string }) => <h1>{props.title}</h1>;
+import { styles } from './sample.css';
+
+const SampleComponent = (props: { title: string }) => (
+  <h1 className={styles.title}>{props.title}</h1>
+);
 
 export default {
   title: 'Sample',
