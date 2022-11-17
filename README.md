@@ -42,6 +42,10 @@ $ yarn storybook
 - [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
 - [vanilla-extract](https://vanilla-extract.style)
 
+### CSS設計
+
+- [BEM](https://en.bem.info)
+
 ## 参照
 
 - [Figma](https://www.figma.com/file/24u8W1q18DksKv8UmgUhpv/official)
