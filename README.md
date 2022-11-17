@@ -1,5 +1,7 @@
 # official
 
+<img src="logo.png" width="300px">
+
 ぅゅ...ぷんぽぷんぽ公式Webサイト
 
 ## 環境構築
