@@ -1,11 +1,13 @@
-import { style } from '@vanilla-extract/css';
-
-import { theme } from '../styles/theme';
+import { sprinkles } from '../styles/sprinkles.css';
 
 export const styles = {
-  title: style({
+  title: sprinkles({
     display: 'flex',
     alignItems: 'center',
-    color: theme.blue,
+    color: 'blue',
+    fontSize: {
+      mobile: 32,
+      desktop: 48,
+    },
   }),
 };
