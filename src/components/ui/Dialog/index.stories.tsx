@@ -6,12 +6,6 @@ import { Dialog } from './index';
 export default {
   title: 'ui/Dialog',
   component: Dialog,
-  parameters: {
-    docs: {
-      inlineStories: false,
-      iframeHeight: 500,
-    },
-  },
 } as ComponentMeta<typeof Dialog>;
 
 export const Index: ComponentStoryObj<typeof Dialog> = {
