@@ -1,17 +1,27 @@
-import { action } from '@storybook/addon-actions';
-import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
+import { ComponentMeta, Story } from '@storybook/react';
+import { useState } from 'react';
 
-import { Dialog } from './index';
+import { Dialog } from '.';
 
 export default {
-  title: 'ui/Dialog',
+  title: 'Dialog',
   component: Dialog,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
 } as ComponentMeta<typeof Dialog>;
 
-export const Index: ComponentStoryObj<typeof Dialog> = {
-  args: {
-    isOpen: false,
-    onClose: action('onClose'),
-    children: <div style={{ height: '1000px' }}>コンテンツ</div>,
-  },
+export const _Dialog: Story = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <button type="button" onClick={() => setIsOpen(true)}>
+        Open Dialog
+      </button>
+      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <div style={{ height: '1000px' }}>コンテンツ</div>
+      </Dialog>
+    </div>
+  );
 };
