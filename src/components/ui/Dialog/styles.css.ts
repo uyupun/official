@@ -10,11 +10,9 @@ const styles = {
       width: '100%',
       height: '100%',
       overflowY: 'auto',
-      opacity: 0.3,
     },
     sprinkles({
       position: 'fixed',
-      background: 'black',
     }),
   ]),
   container: style([
