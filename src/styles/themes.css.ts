@@ -1,15 +1,17 @@
 import { createGlobalTheme } from '@vanilla-extract/css';
 
+export const colors = {
+  white: '#FEFEFE',
+  black: '#333333',
+  silver: '#F8F8F8',
+  gray: '#C8C8C8',
+  blue: '#1E1ADE',
+  lightBlue: '#0080FF',
+  purple: '#B01CF6',
+} as const;
+
 export const vars = createGlobalTheme(':root', {
-  colors: {
-    white: '#FEFEFE',
-    black: '#333333',
-    silver: '#F8F8F8',
-    gray: '#C8C8C8',
-    blue: '#1E1ADE',
-    lightBlue: '#0080FF',
-    purple: '#B01CF6',
-  },
+  colors: colors,
   spacing: {
     0.5: '4px',
     1: '8px',

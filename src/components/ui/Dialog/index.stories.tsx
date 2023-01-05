@@ -8,6 +8,9 @@ export default {
   component: Dialog,
   parameters: {
     controls: { hideNoControlsWarning: true },
+    backgrounds: {
+      default: 'blue',
+    },
   },
 } as ComponentMeta<typeof Dialog>;
 
