@@ -3,13 +3,22 @@ import { ReactNode } from 'react';
 
 import { styles } from './styles.css';
 
-type DialogProps = {
+export type DialogProps = {
+  /**
+   * ダイアログを開いているかどうか
+   */
   isOpen: boolean;
-  onClose: () => void;
+  /**
+   * ダイアログのコンテンツ
+   */
   children: ReactNode;
+  /**
+   * ダイアログを閉じる時に発火するコールバック関数
+   */
+  onClose: () => void;
 };
 
-const Dialog = ({ isOpen, onClose, children }: DialogProps) => {
+const Dialog = ({ isOpen, children, onClose }: DialogProps) => {
   return (
     <HDialog open={isOpen} onClose={onClose} className={styles.dialog}>
       <div className={styles.container}>

@@ -1,4 +1,6 @@
+import { ArgsTable, Title } from '@storybook/addon-docs';
 import 'modern-css-reset/dist/reset.min.css';
+import React from 'react';
 import '../src/styles/globals.css';
 
 export const parameters = {
@@ -8,5 +10,13 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  docs: {
+    page: () => (
+      <>
+        <Title />
+        <ArgsTable />
+      </>
+    ),
   },
 };
