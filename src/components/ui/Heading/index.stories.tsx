@@ -10,7 +10,7 @@ export default {
 export const _Heading: Story = () => {
   return (
     <div>
-      <Heading tag="h1">Heading level 1</Heading>
+      <Heading>Heading level 1</Heading>
       <Heading tag="h2">Heading level 2</Heading>
     </div>
   );
