@@ -13,10 +13,10 @@ const styles = {
       color: 'white',
       backgroundColor: 'blue',
       outlineColor: {
-        focus: 'lightBlue',
+        focusVisible: 'lightBlue',
       },
       opacity: {
-        focus: 0.8,
+        focusVisible: 0.8,
         hover: 0.8,
         disabled: 0.3,
         disabledHover: 0.3,
