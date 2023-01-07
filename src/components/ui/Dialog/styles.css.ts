@@ -46,6 +46,32 @@ const styles = {
       },
     }),
   ]),
+  transition: {
+    enter: style({
+      transitionTimingFunction: 'ease',
+      transitionDuration: '300ms',
+    }),
+    enterFrom: style({
+      opacity: 0,
+      transform: 'scale(.95)',
+    }),
+    enterTo: style({
+      opacity: 1,
+      transform: 'scale(1)',
+    }),
+    leave: style({
+      transitionTimingFunction: 'ease',
+      transitionDuration: '300ms',
+    }),
+    leaveFrom: style({
+      opacity: 1,
+      transform: 'scale(1)',
+    }),
+    leaveTo: style({
+      opacity: 0,
+      transform: 'scale(.95)',
+    }),
+  },
 };
 
 export { styles };
