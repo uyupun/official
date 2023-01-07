@@ -35,7 +35,7 @@ const styles = {
       borderRadius: '20px',
     },
     sprinkles({
-      background: 'white',
+      backgroundColor: 'white',
       paddingX: {
         mobile: 2.5,
         desktop: 5,
