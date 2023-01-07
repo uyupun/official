@@ -10,7 +10,7 @@ const responsiveProperties = defineProperties({
   defaultCondition: 'mobile',
   properties: {
     position: ['absolute', 'relative', 'fixed'],
-    display: ['none', 'block', 'inline', 'inline-block', 'flex'],
+    display: ['none', 'block', 'inline', 'inline-block', 'flex', 'inline-flex'],
     alignItems: ['flex-start', 'center', 'flex-end'],
     justifyContent: ['flex-start', 'center', 'flex-end', 'space-between'],
     flexDirection: ['row', 'row-reverse', 'column', 'column-reverse'],
@@ -39,7 +39,7 @@ const responsiveProperties = defineProperties({
 const colorProperties = defineProperties({
   properties: {
     color: vars.colors,
-    background: vars.colors,
+    backgroundColor: vars.colors,
   },
 });
 
@@ -49,9 +49,25 @@ const lineHeightProperties = defineProperties({
   },
 });
 
+const selectorProperties = defineProperties({
+  conditions: {
+    default: {},
+    hover: { selector: '&:hover' },
+    focus: { selector: '&:focus' },
+    disabled: { selector: '&:disabled' },
+    disabledHover: { selector: '&:disabled:hover' },
+  },
+  defaultCondition: 'default',
+  properties: {
+    outlineColor: vars.colors,
+    opacity: [0.3, 0.8, 1],
+    cursor: ['pointer', 'not-allowed'],
+  },
+});
+
 const fontWeightProperties = defineProperties({
   properties: {
-    fontWeight: vars.fontWeight,
+    fontWeight: ['normal', 'bold'],
   },
 });
 
@@ -59,7 +75,8 @@ export const sprinkles = createSprinkles(
   responsiveProperties,
   colorProperties,
   lineHeightProperties,
-  fontWeightProperties
+  fontWeightProperties,
+  selectorProperties
 );
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];
