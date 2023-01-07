@@ -53,7 +53,7 @@ const selectorProperties = defineProperties({
   conditions: {
     default: {},
     hover: { selector: '&:hover' },
-    focus: { selector: '&:focus' },
+    focusVisible: { selector: '&:focus-visible' },
     disabled: { selector: '&:disabled' },
     disabledHover: { selector: '&:disabled:hover' },
   },
