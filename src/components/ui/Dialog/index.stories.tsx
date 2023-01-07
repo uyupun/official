@@ -7,7 +7,6 @@ export default {
   title: 'Dialog',
   component: Dialog,
   parameters: {
-    controls: { hideNoControlsWarning: true },
     backgrounds: {
       default: 'blue',
     },
