@@ -1,5 +1,5 @@
-import { Dialog as HDialog } from '@headlessui/react';
-import { ReactNode } from 'react';
+import { Dialog as HDialog, Transition } from '@headlessui/react';
+import { Fragment, ReactNode } from 'react';
 
 import { styles } from './styles.css';
 
@@ -20,14 +20,25 @@ export type DialogProps = {
 
 const Dialog = ({ isOpen, children, onClose }: DialogProps) => {
   return (
-    <HDialog open={isOpen} onClose={onClose} className={styles.dialog}>
-      <div className={styles.container}>
-        <HDialog.Panel className={styles.content}>
-          {/* TODO: ダイアログを閉じるためのボタンを配置する */}
-          {children}
-        </HDialog.Panel>
-      </div>
-    </HDialog>
+    <Transition
+      show={isOpen}
+      as={Fragment}
+      enter={styles.transition.enter}
+      enterFrom={styles.transition.enterFrom}
+      enterTo={styles.transition.enterTo}
+      leave={styles.transition.leave}
+      leaveFrom={styles.transition.leaveFrom}
+      leaveTo={styles.transition.leaveTo}
+    >
+      <HDialog className={styles.dialog} onClose={onClose}>
+        <div className={styles.container}>
+          <HDialog.Panel className={styles.content}>
+            {/* TODO: ダイアログを閉じるためのボタンを配置する */}
+            {children}
+          </HDialog.Panel>
+        </div>
+      </HDialog>
+    </Transition>
   );
 };
 
