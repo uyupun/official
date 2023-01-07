@@ -23,6 +23,14 @@ $ yarn dev
 $ yarn storybook
 ```
 
+## コミットルール
+
+コミット時は以下のコマンドを打ち、[git-cz](https://github.com/streamich/git-cz)を使用する。
+
+```
+$ yarn commit
+```
+
 ## 使用技術
 
 ### 開発環境
