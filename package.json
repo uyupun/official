@@ -13,7 +13,8 @@
     "lint-staged": "lint-staged",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "commit": "git cz"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
@@ -53,6 +54,7 @@
     "eslint-config-next": "12.0.4",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-storybook": "^0.6.8",
+    "git-cz": "^4.9.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
     "modern-css-reset": "^1.4.0",
@@ -65,5 +67,10 @@
   },
   "resolutions": {
     "@types/react": "^17.0.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
   }
 }
