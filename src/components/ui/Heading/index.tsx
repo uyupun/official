@@ -7,7 +7,7 @@ export type HeadingProps = {
   /**
    * 見出しのタグ
    */
-  tag: 'h1' | 'h2';
+  tag?: 'h1' | 'h2';
   /**
    * 見出しのコンテンツ
    */
