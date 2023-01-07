@@ -43,6 +43,23 @@ const colorProperties = defineProperties({
   },
 });
 
-export const sprinkles = createSprinkles(responsiveProperties, colorProperties);
+const lineHeightProperties = defineProperties({
+  properties: {
+    lineHeight: vars.lineHeight,
+  },
+});
+
+const fontWeightProperties = defineProperties({
+  properties: {
+    fontWeight: vars.fontWeight,
+  },
+});
+
+export const sprinkles = createSprinkles(
+  responsiveProperties,
+  colorProperties,
+  lineHeightProperties,
+  fontWeightProperties
+);
 
 export type Sprinkles = Parameters<typeof sprinkles>[0];

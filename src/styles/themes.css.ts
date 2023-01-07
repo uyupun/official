@@ -43,4 +43,12 @@ export const vars = createGlobalTheme(':root', {
     48: '3rem',
     64: '4rem',
   },
+  lineHeight: {
+    text: '1.8',
+    heading: '1.3',
+  },
+  fontWeight: {
+    normal: 'normal',
+    bold: 'bold',
+  },
 });
