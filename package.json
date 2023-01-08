@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "yarn pathpida && next build && next export",
     "start": "next start",
     "lint:eslint": "next lint --max-warnings 0 .",
     "lint:prettier": "prettier --check .",
@@ -14,7 +14,8 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
-    "commit": "git cz"
+    "commit": "git cz",
+    "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
@@ -59,6 +60,7 @@
     "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
     "modern-css-reset": "^1.4.0",
+    "pathpida": "^0.20.1",
     "prettier": "^2.5.0",
     "storybook-addon-next": "^1.7.1",
     "typescript": "^4.2.4"
