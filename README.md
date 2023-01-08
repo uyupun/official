@@ -27,8 +27,51 @@ $ yarn storybook
 
 コミット時は以下のコマンドを打ち、[git-cz](https://github.com/streamich/git-cz)を使用する。
 
-```
+```bash
 $ yarn commit
+```
+
+## コマンド一覧
+
+```bash
+# ローカルサーバの起動
+$ yarn dev
+
+# ビルドの実行
+$ yarn build
+
+# 本番モードで起動
+$ yarn start
+
+# ESLintの実行
+$ yarn lint:eslint
+
+# Prettierの実行
+$ yarn lint:prettier
+
+# ESLintの実行と問題の自動修正
+$ yarn fix:eslint
+
+# Prettierの実行と問題の自動修正
+$ yarn fix:prettier
+
+# ステージング環境にあるファイルに対して、ESLintとPrettierを実行
+$ yarn lint-staged
+
+# yarn install後に実行され、huskyをインストールする
+$ yarn prepare
+
+# Storybookの起動
+$ yarn storybook
+
+# Storybookのビルド
+$ yarn build-storybook
+
+# git-czの実行
+$ yarn commit
+
+# pathpidaの実行
+$ yarn pathpida
 ```
 
 ## 使用技術
