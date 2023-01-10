@@ -23,14 +23,6 @@ $ yarn dev
 $ yarn storybook
 ```
 
-## コミットルール
-
-コミット時は以下のコマンドを打ち、[git-cz](https://github.com/streamich/git-cz)を使用する。
-
-```bash
-$ yarn commit
-```
-
 ## コマンド一覧
 
 ```bash
@@ -67,7 +59,7 @@ $ yarn storybook
 # Storybookのビルド
 $ yarn build-storybook
 
-# git-czの実行
+# コミット時はgit commitではなく以下のnpm scriptsを実行(git-czの実行)
 $ yarn commit
 
 # pathpidaの実行
