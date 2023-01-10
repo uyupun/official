@@ -14,7 +14,6 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
-    "commit": "git cz",
     "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/"
   },
   "lint-staged": {

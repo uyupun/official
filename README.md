@@ -59,9 +59,6 @@ $ yarn storybook
 # Storybookのビルド
 $ yarn build-storybook
 
-# コミット時はgit commitではなく以下のnpm scriptsを実行(git-czの実行)
-$ yarn commit
-
 # pathpidaの実行
 $ yarn pathpida
 ```
