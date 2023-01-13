@@ -37,6 +37,11 @@ const responsiveProperties = defineProperties({
 });
 
 const colorProperties = defineProperties({
+  conditions: {
+    default: {},
+    visited: { selector: '&:visited' },
+  },
+  defaultCondition: 'default',
   properties: {
     color: vars.colors,
     backgroundColor: vars.colors,
