@@ -15,18 +15,12 @@ $ cd official
 
 # パッケージのインストール
 $ yarn install
-
-# ローカルサーバの起動
-$ yarn dev
-
-# Storybookの起動
-$ yarn storybook
 ```
 
 ## コマンド一覧
 
 ```bash
-# ローカルサーバの起動
+# ローカルサーバの起動(localhost:3000)
 $ yarn dev
 
 # ビルドの実行
@@ -53,7 +47,7 @@ $ yarn lint-staged
 # yarn install後に実行され、huskyをインストールする
 $ yarn prepare
 
-# Storybookの起動
+# Storybookの起動(localhost:6006)
 $ yarn storybook
 
 # Storybookのビルド
