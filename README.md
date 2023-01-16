@@ -57,6 +57,30 @@ $ yarn build-storybook
 $ yarn pathpida
 ```
 
+## OGPの検証
+
+- OGPをローカル開発環境で検証する場合、一時的にインターネットに公開する必要があるため、ngrokを用いる
+
+```bash
+# ngrokのインストール
+$ brew install ngrok
+
+# 認証トークンの設定
+$ ngrok config add-authtoken <your authtoken>
+
+# ローカルサーバの起動(localhost:3000)
+$ yarn dev
+
+# ngrokの実行
+$ ngrok http 3000
+
+# ngrokでプロキシされたリンクを開く
+$ open https://xxxx.jp.ngrok.io
+
+# Web UIを開く
+$ open http://localhost:4040
+```
+
 ## 使用技術
 
 ### 開発環境
