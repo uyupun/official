@@ -1,4 +1,10 @@
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin');
 const withVanillaExtract = createVanillaExtractPlugin();
 
-module.exports = withVanillaExtract();
+const nextConfig = {
+  eslint: {
+    dirs: ['src', 'public', '.storybook'],
+  },
+};
+
+module.exports = withVanillaExtract(nextConfig);
