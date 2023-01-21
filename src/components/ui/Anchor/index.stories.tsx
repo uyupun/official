@@ -1,8 +1,8 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { Anchor } from '.';
-
 import { pagesPath } from '@/lib/$path';
+
+import { Anchor } from '.';
 
 export default {
   title: 'Anchor',
