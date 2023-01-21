@@ -16,12 +16,6 @@
     "build-storybook": "build-storybook -s public",
     "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/"
   },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "yarn fix:eslint",
-      "yarn fix:prettier"
-    ]
-  },
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
