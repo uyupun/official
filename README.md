@@ -1,5 +1,7 @@
 # official
 
+[![Chromatic](https://github.com/uyupun/official/actions/workflows/chromatic.yml/badge.svg)](https://github.com/uyupun/official/actions/workflows/chromatic.yml)
+
 <img src="logo.png" width="300px">
 
 ぅゅ...ぷんぽぷんぽ公式Webサイト
