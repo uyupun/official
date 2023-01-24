@@ -6,21 +6,15 @@
     "dev": "next dev",
     "build": "yarn pathpida && next build && next export",
     "start": "next start",
-    "lint:eslint": "next lint --max-warnings 0 .",
-    "lint:prettier": "prettier --check .",
-    "fix:eslint": "next lint --fix --max-warnings 0 .",
-    "fix:prettier": "prettier --write .",
+    "lint:eslint": "next lint --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content",
+    "lint:prettier": "prettier --check . --ignore-path .prettierignore --cache --cache-strategy content",
+    "fix:eslint": "next lint --fix --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content",
+    "fix:prettier": "prettier --write . --ignore-path .prettierignore --cache --cache-strategy content",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
     "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/"
-  },
-  "lint-staged": {
-    "*.{js,ts,jsx,tsx}": [
-      "yarn fix:eslint",
-      "yarn fix:prettier"
-    ]
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -51,16 +45,16 @@
     "@vanilla-extract/sprinkles": "^1.5.1",
     "babel-loader": "^8.2.3",
     "chromatic": "^6.4.3",
-    "eslint": "<8.0.0",
-    "eslint-config-next": "12.0.4",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-storybook": "^0.6.8",
+    "eslint": "^8.32.0",
+    "eslint-config-next": "^12.1.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-storybook": "^0.6.10",
     "git-cz": "^4.9.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.1.2",
     "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
-    "prettier": "^2.5.0",
+    "prettier": "^2.8.3",
     "storybook-addon-next": "^1.7.1",
     "typescript": "^4.2.4"
   },
