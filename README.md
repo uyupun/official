@@ -57,6 +57,9 @@ $ yarn build-storybook
 
 # pathpidaの実行
 $ yarn pathpida
+
+# アイコンコンポーネントの生成
+$ yarn icons
 ```
 
 ## OGPの検証

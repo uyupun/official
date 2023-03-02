@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { CloseIcon } from '../../../assets/icons/';
+import { CloseIcon } from '../../Icons';
 
 import { Button } from '.';
 
@@ -26,7 +26,9 @@ export const _Button: Story = () => {
         </Button>
       </dd>
       <dt style={{ marginBottom: '8px' }}>Circle</dt>
-      <CloseIcon type="button" onClick={action('clicked')} />
+      <Button type="button" variant="circle" aria-label="閉じる" onClick={action('clicked')}>
+        <CloseIcon fill="white" />
+      </Button>
     </dl>
   );
 };
