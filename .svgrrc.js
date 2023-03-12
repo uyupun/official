@@ -19,7 +19,7 @@ module.exports = {
   },
   template: (variables, { tpl }) => {
     return tpl`
-      import { IconProps } from '@/components/ui/Icon/props';
+      import { IconProps } from '@/components/ui/Icons/props';
 
       const ${variables.componentName} = ({ fill, stroke, ...props }: IconProps) => (
         ${variables.jsx}
