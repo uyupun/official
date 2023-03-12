@@ -18,7 +18,6 @@
     "icons": "svgr -d src/components/ui/Icons src/assets/icons"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
     "@headlessui/react": "^1.7.4",
     "clsx": "^1.2.1",
     "next": "latest",
