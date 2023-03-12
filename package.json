@@ -15,7 +15,7 @@
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
     "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/",
-    "icons": "npx @svgr/cli -d src/components/ui/Icons src/assets/icons"
+    "icons": "svgr -d src/components/ui/Icons src/assets/icons"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
