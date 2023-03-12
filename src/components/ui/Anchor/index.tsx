@@ -24,7 +24,7 @@ export type AnchorProps = BaseProps &
 
 const Anchor = ({ href, children, rel, target, ...props }: AnchorProps) => {
   return (
-    <Link href={href}>
+    <Link href={href} legacyBehavior>
       <a
         {...props}
         className={styles.anchor}
