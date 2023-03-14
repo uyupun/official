@@ -111,6 +111,11 @@ $ open http://localhost:4040
 
 - [BEM](https://en.bem.info)
 
+
+### アイコン
+
+- [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
+
 ## 参照
 
 - [Figma](https://www.figma.com/file/24u8W1q18DksKv8UmgUhpv/official)
