@@ -14,14 +14,11 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
-    "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/"
+    "pathpida": "pathpida --ignorePath .gitignore && prettier --write src/lib/",
+    "icons": "svgr -d src/components/ui/Icons src/assets/icons"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
     "@headlessui/react": "^1.7.4",
-    "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.9",
     "clsx": "^1.2.1",
     "next": "13.2.4",
     "react": "18.2.0",
@@ -36,6 +33,7 @@
     "@storybook/builder-webpack5": "^6.5.15",
     "@storybook/manager-webpack5": "^6.5.15",
     "@storybook/react": "^6.5.15",
+    "@svgr/cli": "^6.5.1",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",

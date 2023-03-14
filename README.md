@@ -57,6 +57,9 @@ $ yarn build-storybook
 
 # pathpidaの実行
 $ yarn pathpida
+
+# アイコンコンポーネントの生成
+$ yarn icons
 ```
 
 ## OGPの検証
@@ -107,6 +110,11 @@ $ open http://localhost:4040
 ### CSS設計
 
 - [BEM](https://en.bem.info)
+
+
+### アイコン
+
+- [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
 
 ## 参照
 
