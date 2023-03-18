@@ -116,6 +116,14 @@ $ open http://localhost:4040
 
 - [Material Icons](https://fonts.google.com/icons?icon.set=Material+Icons)
 
+### フォーム
+
+- [React Hook Form](https://react-hook-form.com/)
+
+### バリデーション
+
+- [Zod](https://zod.dev/)
+
 ## 参照
 
 - [Figma](https://www.figma.com/file/24u8W1q18DksKv8UmgUhpv/official)
