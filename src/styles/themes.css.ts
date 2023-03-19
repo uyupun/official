@@ -10,6 +10,8 @@ export const colors = {
   purple: '#B01CF6',
 } as const;
 
+export type Color = keyof typeof colors;
+
 export const spacing = {
   0.5: '4px',
   1: '8px',
