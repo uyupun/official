@@ -8,6 +8,8 @@ export const colors = {
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
   purple: '#B01CF6',
+  red: '#E6002F',
+  lightRed: '#FBD4D4',
 } as const;
 
 export type Color = keyof typeof colors;
@@ -15,6 +17,7 @@ export type Color = keyof typeof colors;
 export const spacing = {
   0.5: '4px',
   1: '8px',
+  1.25: '10px',
   1.5: '12px',
   2: '16px',
   2.5: '20px',
