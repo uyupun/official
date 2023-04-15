@@ -11,6 +11,7 @@ const styles = {
       },
       color: 'black',
       paddingX: 1,
+      paddingY: 1.25,
       borderColor: {
         default: 'gray',
         focusVisible: 'blue',
