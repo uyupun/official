@@ -8,6 +8,8 @@ export const colors = {
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
   purple: '#B01CF6',
+  red: '#E6002F',
+  lightRed: '#FBD4D4',
 } as const;
 
 export type Color = keyof typeof colors;
