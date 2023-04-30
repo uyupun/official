@@ -1,7 +1,7 @@
 module.exports = {
   typescript: true,
   svgProps: {
-    fill: '{fill}',
+    fill: '{fill ? colors[fill] : colors.black}',
     stroke: '{stroke}',
     'aria-hidden': true,
   },
@@ -20,6 +20,7 @@ module.exports = {
   template: (variables, { tpl }) => {
     return tpl`
       import { IconProps } from '@/components/ui/Icons/props';
+      import { colors } from '@/styles/themes.css';
 
       const ${variables.componentName} = ({ fill, stroke, ...props }: IconProps) => (
         ${variables.jsx}

@@ -1,6 +1,6 @@
 import { IconProps } from '@/components/ui/Icons/props';
 import { colors } from '@/styles/themes.css';
-const SvgCloseIcon = ({ fill, stroke, ...props }: IconProps) => (
+const SvgExpandMoreIcon = ({ fill, stroke, ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={24}
@@ -11,8 +11,8 @@ const SvgCloseIcon = ({ fill, stroke, ...props }: IconProps) => (
     aria-hidden={true}
     {...props}
   >
-    <path d="M0 0h24v24H0V0z" fill="none" />
-    <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+    <path d="M24 24H0V0h24v24z" fill="none" opacity={0.87} />
+    <path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
   </svg>
 );
-export default SvgCloseIcon;
+export default SvgExpandMoreIcon;
