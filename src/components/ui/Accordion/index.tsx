@@ -10,7 +10,7 @@ export type AccordionProps = {
   /**
    * 初期描画時のアコーディオンの状態
    */
-  defaultOpen?: boolean;
+  isOpen: boolean;
   /**
    * アコーディオンを開閉するためのボタンテキスト
    */
@@ -21,9 +21,9 @@ export type AccordionProps = {
   children: ReactNode;
 };
 
-const Accordion = ({ defaultOpen, buttonText, children }: AccordionProps) => {
+const Accordion = ({ isOpen, buttonText, children }: AccordionProps) => {
   return (
-    <Disclosure defaultOpen={defaultOpen}>
+    <Disclosure defaultOpen={isOpen}>
       {({ open }) => (
         <>
           <div className={styles.buttonWrapper}>

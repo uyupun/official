@@ -12,14 +12,14 @@ export default {
 export const _Accordion: Story = () => {
   return (
     <>
-      <Accordion defaultOpen={true} buttonText="2023">
-        {'defaultOpen={true}'}
+      <Accordion isOpen={true} buttonText="2023">
+        {'isOpen={true}'}
       </Accordion>
-      <Accordion defaultOpen={false} buttonText="2022">
-        {'defaultOpen={false}'}
+      <Accordion isOpen={false} buttonText="2022">
+        {'isOpen={false}'}
       </Accordion>
-      <Accordion buttonText="2021" defaultOpen={isDesktop()}>
-        {'defaultOpen={isDesktop()} // 画面幅に応じて制御'}
+      <Accordion buttonText="2021" isOpen={isDesktop()}>
+        {'isOpen={isDesktop()} // 画面幅に応じて制御'}
       </Accordion>
     </>
   );
