@@ -1,11 +1,12 @@
 import { IconProps } from '@/components/ui/Icons/props';
+import { colors } from '@/styles/themes.css';
 const SvgExpandMoreIcon = ({ fill, stroke, ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     height={24}
     viewBox="0 0 24 24"
     width={24}
-    fill={fill}
+    fill={fill ? colors[fill] : colors.black}
     stroke={stroke}
     aria-hidden={true}
     {...props}
