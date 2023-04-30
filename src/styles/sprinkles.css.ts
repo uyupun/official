@@ -1,11 +1,12 @@
 import { createSprinkles, defineProperties } from '@vanilla-extract/sprinkles';
 
+import { breakpoint } from './breakpoint';
 import { vars } from './themes.css';
 
 const responsiveProperties = defineProperties({
   conditions: {
     mobile: {},
-    desktop: { '@media': 'screen and (min-width: 768px)' },
+    desktop: { '@media': breakpoint },
   },
   defaultCondition: 'mobile',
   properties: {
