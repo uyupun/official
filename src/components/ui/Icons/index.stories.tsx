@@ -3,14 +3,12 @@ import { ComponentMeta, Story } from '@storybook/react';
 import * as Icons from '.';
 
 const IconList = () => {
-  const iconComponents = Object.keys(Icons).map((icon) => Icons[icon as keyof typeof Icons]);
-
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-      {iconComponents.map((IconComponent, index) => (
+      {Object.entries(Icons).map(([iconName, IconComponent], index) => (
         <div key={index} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <IconComponent />
-          <div>{Object.keys(Icons)[index]}</div>
+          <div>{iconName}</div>
         </div>
       ))}
     </div>
