@@ -28,10 +28,21 @@ const styles = {
       border: 'none',
     }),
   ]),
-  // TODO: width / height のサイズを画面幅に応じて変える
-  icon: style({
-    transition: 'transform 300ms',
-  }),
+  icon: style([
+    sprinkles({
+      width: {
+        mobile: 24,
+        desktop: 36,
+      },
+      height: {
+        mobile: 24,
+        desktop: 36,
+      },
+    }),
+    style({
+      transition: 'transform 300ms',
+    }),
+  ]),
   rotate: style({
     transform: 'rotate(180deg)',
   }),

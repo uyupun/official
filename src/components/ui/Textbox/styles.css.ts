@@ -5,13 +5,16 @@ import { sprinkles } from '@/styles/sprinkles.css';
 const styles = {
   textbox: style([
     sprinkles({
+      height: {
+        desktop: 40,
+        mobile: 36,
+      },
       fontSize: {
         desktop: 16,
         mobile: 14,
       },
       color: 'black',
       paddingX: 1,
-      paddingY: 1.25,
       borderColor: {
         default: 'gray',
         focusVisible: 'blue',
@@ -19,7 +22,6 @@ const styles = {
     }),
     {
       width: '100%',
-      height: '40px',
       borderWidth: '1px',
       borderStyle: 'solid',
       borderRadius: '5px',

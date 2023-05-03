@@ -58,9 +58,23 @@ export const lineHeight = {
   heading: '1.3',
 } as const;
 
+/**
+ *  width と height で使用する
+ */
+export const size = {
+  16: '1rem',
+  24: '1.5rem',
+  36: '2.25rem',
+  40: '2.5rem',
+  100: '6.25rem',
+  200: '12.5rem',
+  300: '18.75rem',
+};
+
 export const vars = createGlobalTheme(':root', {
   colors,
   spacing,
   fontSize,
   lineHeight,
+  size,
 });
