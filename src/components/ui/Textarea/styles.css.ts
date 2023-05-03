@@ -3,9 +3,13 @@ import { style } from '@vanilla-extract/css';
 import { sprinkles } from '@/styles/sprinkles.css';
 
 const styles = {
-  // TODO: heightを指定する
   textarea: style([
     sprinkles({
+      height: {
+        desktop: 300,
+        mobile: 200,
+      },
+      minHeight: 100,
       fontSize: {
         desktop: 16,
         mobile: 14,
@@ -21,8 +25,6 @@ const styles = {
     }),
     {
       width: '100%',
-      // TODO: rem指定する
-      minHeight: '100px',
       borderWidth: '1px',
       borderStyle: 'solid',
       borderRadius: '5px',
