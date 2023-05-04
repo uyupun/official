@@ -3,7 +3,7 @@ import { style } from '@vanilla-extract/css';
 import { sprinkles } from '@/styles/sprinkles.css';
 
 const styles = {
-  anchor: style([
+  link: style([
     sprinkles({
       display: 'inline-block',
       fontSize: {
