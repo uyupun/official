@@ -1,6 +1,5 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { breakpoint } from '@/styles/breakpoint';
 import { sprinkles } from '@/styles/sprinkles.css';
 
 import { Image, ImageProps } from '.';
@@ -13,21 +12,21 @@ export default {
 const sources: ImageProps['sources'] = [
   {
     srcset: '/images/zeus/zeus-pc.webp',
-    type: 'image/webp',
-    media: breakpoint,
+    format: 'webp',
+    isDesktop: true,
   },
   {
     srcset: '/images/zeus/zeus-pc.png',
-    type: 'image/png',
-    media: breakpoint,
+    format: 'png',
+    isDesktop: true,
   },
   {
     srcset: '/images/zeus/zeus-sp.webp',
-    type: 'image/webp',
+    format: 'webp',
   },
   {
     srcset: '/images/zeus/zeus-sp.png',
-    type: 'image/png',
+    format: 'png',
   },
 ];
 const src = '/images/zeus/zeus-pc.png';
