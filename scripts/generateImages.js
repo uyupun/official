@@ -3,8 +3,6 @@ const path = require('path');
 
 const sharp = require('sharp');
 
-const fileExtensions = ['.png', '.jpg', '.jpeg'];
-
 /**
  * スマホ用の画像を生成する
  * @param {string} fullPath
@@ -27,6 +25,7 @@ const generateMobileImage = async (fullPath, outputPath) => {
  * @param {string} dirPath
  */
 const generateImages = async (dirPath) => {
+  const fileExtensions = ['.png', '.jpg', '.jpeg'];
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
 
   for (const entry of entries) {
