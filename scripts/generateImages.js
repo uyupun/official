@@ -3,7 +3,6 @@ const path = require('path');
 
 const sharp = require('sharp');
 
-const directoryPath = path.join(__dirname, '..', 'public', 'images');
 const fileExtensions = ['.png', '.jpg', '.jpeg'];
 
 /**
@@ -79,4 +78,5 @@ const generateImages = async (dirPath) => {
   }
 };
 
+const directoryPath = path.join(__dirname, '..', 'public', 'images');
 generateImages(directoryPath).catch(console.error);
