@@ -46,41 +46,39 @@ const generateImages = async (dirPath) => {
     const fileExtension = path.extname(fullPath);
     const fileName = path.basename(fullPath, fileExtension);
 
-    if (fileName.includes('mobile')) return;
+    if (!fileExtensions.includes(fileExtension) || fileName.includes('mobile')) return;
 
-    if (fileExtensions.includes(fileExtension)) {
-      const outputPathMobile = path.join(dirPath, `${fileName}-mobile${fileExtension}`);
+    const outputPathMobile = path.join(dirPath, `${fileName}-mobile${fileExtension}`);
 
-      const outputPathWebp = path.join(dirPath, `${fileName}.webp`);
-      const outputPathWebpMobile = path.join(dirPath, `${fileName}-mobile.webp`);
+    const outputPathWebp = path.join(dirPath, `${fileName}.webp`);
+    const outputPathWebpMobile = path.join(dirPath, `${fileName}-mobile.webp`);
 
-      const outputPathAvif = path.join(dirPath, `${fileName}.avif`);
-      const outputPathAvifMobile = path.join(dirPath, `${fileName}-mobile.avif`);
+    const outputPathAvif = path.join(dirPath, `${fileName}.avif`);
+    const outputPathAvifMobile = path.join(dirPath, `${fileName}-mobile.avif`);
 
-      if (!fs.existsSync(outputPathMobile)) {
-        // モバイル用のファイルの生成
-        await generateMobileImage(fullPath, outputPathMobile);
-      }
+    if (!fs.existsSync(outputPathMobile)) {
+      // モバイル用のファイルの生成
+      await generateMobileImage(fullPath, outputPathMobile);
+    }
 
-      if (!fs.existsSync(outputPathWebp)) {
-        // デスクトップ用のwebpファイルの生成
-        await sharp(fullPath).toFile(outputPathWebp);
-      }
+    if (!fs.existsSync(outputPathWebp)) {
+      // デスクトップ用のwebpファイルの生成
+      await sharp(fullPath).toFile(outputPathWebp);
+    }
 
-      if (!fs.existsSync(outputPathWebpMobile)) {
-        // モバイル用のwebpファイルの生成
-        await generateMobileImage(fullPath, outputPathWebpMobile);
-      }
+    if (!fs.existsSync(outputPathWebpMobile)) {
+      // モバイル用のwebpファイルの生成
+      await generateMobileImage(fullPath, outputPathWebpMobile);
+    }
 
-      if (!fs.existsSync(outputPathAvif)) {
-        // デスクトップ用のavifファイルの生成
-        await sharp(fullPath).avif().toFile(outputPathAvif);
-      }
+    if (!fs.existsSync(outputPathAvif)) {
+      // デスクトップ用のavifファイルの生成
+      await sharp(fullPath).avif().toFile(outputPathAvif);
+    }
 
-      if (!fs.existsSync(outputPathAvifMobile)) {
-        // モバイル用のavifファイルの生成
-        await generateMobileImage(fullPath, outputPathAvifMobile);
-      }
+    if (!fs.existsSync(outputPathAvifMobile)) {
+      // モバイル用のavifファイルの生成
+      await generateMobileImage(fullPath, outputPathAvifMobile);
     }
   }
 };
