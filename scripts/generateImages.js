@@ -25,7 +25,6 @@ const generateMobileImage = async (fullPath, outputPath) => {
  * @param {string} dirPath
  */
 const generateImages = async (dirPath) => {
-  const fileExtensions = ['.png', '.jpg', '.jpeg'];
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
 
   for (const entry of entries) {
@@ -46,8 +45,8 @@ const generateImages = async (dirPath) => {
     const fileExtension = path.extname(fullPath);
     const fileName = path.basename(fullPath, fileExtension);
 
-    // '.png', '.jpg', '.jpeg' 以外の拡張子を持つファイル、または名前に 'mobile' を含むファイルの場合はファイルの生成を行わないため早期リターン
-    if (!fileExtensions.includes(fileExtension) || fileName.includes('mobile')) return;
+    const validFileExtensions = ['.png', '.jpg', '.jpeg'];
+    if (!validFileExtensions.includes(fileExtension) || fileName.includes('mobile')) return;
 
     const outputPathMobile = path.join(dirPath, `${fileName}-mobile${fileExtension}`);
 
