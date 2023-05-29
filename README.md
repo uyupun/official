@@ -60,6 +60,9 @@ $ yarn pathpida
 
 # アイコンコンポーネントの生成
 $ yarn icons
+
+# /public/images 以下のディレクトリ内にある png または jpg(jpeg) ファイルを元に画像を生成
+$ yarn images
 ```
 
 ## OGPの検証
