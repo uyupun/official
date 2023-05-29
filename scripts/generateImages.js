@@ -43,7 +43,7 @@ const generateImages = async (dirPath) => {
 
     if (entry.isDirectory()) {
       await generateImages(fullPath);
-      return;
+      continue;
     }
 
     if (!entry.isFile()) {
@@ -57,7 +57,7 @@ const generateImages = async (dirPath) => {
     const fileName = path.basename(fullPath, fileExtension);
 
     const validFileExtensions = ['.png', '.jpg', '.jpeg'];
-    if (!validFileExtensions.includes(fileExtension) || fileName.includes('mobile')) return;
+    if (!validFileExtensions.includes(fileExtension) || fileName.includes('mobile')) continue;
 
     const outputPathMobile = path.join(dirPath, `${fileName}-mobile${fileExtension}`);
     await generateMobileImage(fullPath, outputPathMobile);
