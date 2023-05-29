@@ -11,25 +11,34 @@ export default {
 
 const sources: ImageProps['sources'] = [
   {
-    srcset: '/images/zeus/zeus-pc.webp',
+    srcset: '/images/zeus/zeus.avif',
+    format: 'avif',
+    isDesktop: true,
+  },
+  {
+    srcset: '/images/zeus/zeus.webp',
     format: 'webp',
     isDesktop: true,
   },
   {
-    srcset: '/images/zeus/zeus-pc.png',
+    srcset: '/images/zeus/zeus.png',
     format: 'png',
     isDesktop: true,
   },
   {
-    srcset: '/images/zeus/zeus-sp.webp',
+    srcset: '/images/zeus/zeus-mobile.avif',
+    format: 'avif',
+  },
+  {
+    srcset: '/images/zeus/zeus-mobile.webp',
     format: 'webp',
   },
   {
-    srcset: '/images/zeus/zeus-sp.png',
+    srcset: '/images/zeus/zeus-mobile.png',
     format: 'png',
   },
 ];
-const src = '/images/zeus/zeus-pc.png';
+const src = '/images/zeus/zeus.png';
 const alt = 'ゼウスくん';
 const className = sprinkles({
   width: {
