@@ -9,6 +9,7 @@ const sharp = require('sharp');
  * @param {string} outputPath
  */
 const generateMobileImage = async (fullPath, outputPath) => {
+  if (fs.existsSync(outputPath)) return;
   const image = sharp(fullPath);
   const metadata = await image.metadata();
   await image
@@ -17,6 +18,16 @@ const generateMobileImage = async (fullPath, outputPath) => {
       height: Math.round(metadata.height / 2),
     })
     .toFile(outputPath);
+};
+
+/**
+ * デスクトップ用の画像を生成する
+ * @param {string} fullPath
+ * @param {string} outputPath
+ */
+const generateDesktopImage = async (fullPath, outputPath) => {
+  if (fs.existsSync(outputPath)) return;
+  await sharp(fullPath).toFile(outputPath);
 };
 
 /**
@@ -49,37 +60,17 @@ const generateImages = async (dirPath) => {
     if (!validFileExtensions.includes(fileExtension) || fileName.includes('mobile')) return;
 
     const outputPathMobile = path.join(dirPath, `${fileName}-mobile${fileExtension}`);
+    await generateMobileImage(fullPath, outputPathMobile);
 
     const outputPathWebp = path.join(dirPath, `${fileName}.webp`);
     const outputPathWebpMobile = path.join(dirPath, `${fileName}-mobile.webp`);
+    await generateDesktopImage(fullPath, outputPathWebp);
+    await generateMobileImage(fullPath, outputPathWebpMobile);
 
     const outputPathAvif = path.join(dirPath, `${fileName}.avif`);
     const outputPathAvifMobile = path.join(dirPath, `${fileName}-mobile.avif`);
-
-    if (!fs.existsSync(outputPathMobile)) {
-      // モバイル用のファイルの生成
-      await generateMobileImage(fullPath, outputPathMobile);
-    }
-
-    if (!fs.existsSync(outputPathWebp)) {
-      // デスクトップ用のwebpファイルの生成
-      await sharp(fullPath).toFile(outputPathWebp);
-    }
-
-    if (!fs.existsSync(outputPathWebpMobile)) {
-      // モバイル用のwebpファイルの生成
-      await generateMobileImage(fullPath, outputPathWebpMobile);
-    }
-
-    if (!fs.existsSync(outputPathAvif)) {
-      // デスクトップ用のavifファイルの生成
-      await sharp(fullPath).avif().toFile(outputPathAvif);
-    }
-
-    if (!fs.existsSync(outputPathAvifMobile)) {
-      // モバイル用のavifファイルの生成
-      await generateMobileImage(fullPath, outputPathAvifMobile);
-    }
+    await generateDesktopImage(fullPath, outputPathAvif);
+    await generateMobileImage(fullPath, outputPathAvifMobile);
   }
 };
 
