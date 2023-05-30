@@ -18,6 +18,7 @@
         "pathGroupsExcludedImportTypes": ["builtin"],
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }
-    ]
+    ],
+    "eqeqeq": "error"
   }
 }

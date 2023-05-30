@@ -42,7 +42,7 @@ const Button = ({
       type={type}
       className={clsx(
         styles.button,
-        variant == 'default' ? styles.default : styles.circle,
+        variant === 'default' ? styles.default : styles.circle,
         className
       )}
     >

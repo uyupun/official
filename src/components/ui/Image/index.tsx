@@ -24,7 +24,7 @@ export type ImageProps = {
 };
 
 const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
-  if (sources.length == 0) return <></>;
+  if (sources.length === 0) return <></>;
 
   const formatPriority = ['jpeg', 'png', 'webp', 'avif'];
   const sortedSources = [...sources].sort((a, b) => {
