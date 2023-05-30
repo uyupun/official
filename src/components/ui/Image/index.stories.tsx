@@ -38,7 +38,6 @@ const sources: ImageProps['sources'] = [
     format: 'png',
   },
 ];
-const src = '/images/zeus/zeus.png';
 const alt = 'ゼウスくん';
 const className = sprinkles({
   width: {
@@ -52,11 +51,11 @@ export const _Image: Story = () => {
     <dl>
       <dt>isLazy=true</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <Image sources={sources} src={src} alt={alt} className={className} isLazy={true} />
+        <Image sources={sources} alt={alt} className={className} isLazy={true} />
       </dd>
       <dt>isLazy=false</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <Image sources={sources} src={src} alt={alt} className={className} isLazy={false} />
+        <Image sources={sources} alt={alt} className={className} isLazy={false} />
       </dd>
     </dl>
   );
