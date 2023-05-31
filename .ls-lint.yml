@@ -1,9 +1,27 @@
 ls:
   .js: camelCase
+  .config.js: camelCase
   .ts: camelCase
   .d.ts: camelCase
   .css.ts: camelCase
-  .config.js: camelCase
+  .tsx: camelCase
+  .stories.tsx: camelCase
+
+  src/components/ui/Icons:
+    .tsx: PascalCase
+    .stories.tsx: camelCase
+
+  .json: kebab-case
+  .yml: kebab-case
+
+  .svg: camelCase
+  .jpg: kebab-case
+  .jpeg: kebab-case
+  .png: kebab-case
+  .webp: kebab-case
+  .avif: kebab-case
+
+  .md: kebab-case
 
 ignore:
   - .next
@@ -12,3 +30,8 @@ ignore:
   - .svgrrc.js
   - next-env.d.ts
   - src/lib/$path.ts
+  - src/pages/_app.tsx
+  - .eslintrc.json
+  - .prettierrc.json
+  - .ls-lint.yml
+  - README.md
