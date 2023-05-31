@@ -1,14 +1,16 @@
 import { breakpoint } from '@/styles/breakpoint';
 
+type ImageSource = {
+  srcset: string;
+  format: 'jpeg' | 'png' | 'webp' | 'avif';
+  isDesktop?: boolean;
+};
+
 export type ImageProps = {
   /**
    * source 要素で使用する値を持つ配列
    */
-  sources: {
-    srcset: string;
-    format: 'jpeg' | 'png' | 'webp' | 'avif';
-    isDesktop?: boolean;
-  }[];
+  sources: ImageSource[];
   /**
    * img 要素の alt 属性に渡す値
    */
@@ -23,16 +25,32 @@ export type ImageProps = {
   isLazy: boolean;
 };
 
-const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
-  if (sources.length === 0) return <></>;
+const getSrc = (sources: ImageSource[]): string | null => {
+  if (sources.length === 0) {
+    return null;
+  }
 
-  const formatPriority = ['jpeg', 'png', 'webp', 'avif'];
-  const sortedSources = [...sources].sort((a, b) => {
-    const formatComparison = formatPriority.indexOf(a.format) - formatPriority.indexOf(b.format);
-    if (formatComparison !== 0) return formatComparison;
+  const compareFormats = (a: ImageSource, b: ImageSource): number => {
+    const priorityFormats = ['jpeg', 'png', 'webp', 'avif'];
+    return priorityFormats.indexOf(a.format) - priorityFormats.indexOf(b.format);
+  };
+
+  const compareIsDesktop = (a: ImageSource, b: ImageSource): number => {
     return (a.isDesktop ? 1 : 0) - (b.isDesktop ? 1 : 0);
+  };
+
+  const sortedSources = [...sources].sort((a, b) => {
+    const formatComparison = compareFormats(a, b);
+    if (formatComparison !== 0) return formatComparison;
+    return compareIsDesktop(a, b);
   });
-  const src = sortedSources[0].srcset;
+
+  return sortedSources[0].srcset;
+};
+
+const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
+  const src = getSrc(sources);
+  if (src === null) return <></>;
 
   return (
     <picture>
