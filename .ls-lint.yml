@@ -1,0 +1,14 @@
+ls:
+  .js: camelCase
+  .ts: camelCase
+  .d.ts: camelCase
+  .css.ts: camelCase
+  .config.js: camelCase
+
+ignore:
+  - .next
+  - node_modules
+  - .lintstagedrc.js
+  - .svgrrc.js
+  - next-env.d.ts
+  - src/lib/$path.ts
