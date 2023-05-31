@@ -7,10 +7,6 @@ ls:
   .tsx: camelCase | regex:^\_[a-z]+(?:[A-Z][a-z]+)*$
   .stories.tsx: camelCase
 
-  src/components/ui/Icons:
-    .tsx: PascalCase
-    .stories.tsx: camelCase
-
   .json: kebab-case | regex:^\.[a-z]+(?:-[a-z]+)*$
   .yml: kebab-case | regex:^\.[a-z]+(?:-[a-z]+)*$
 

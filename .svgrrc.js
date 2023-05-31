@@ -1,5 +1,6 @@
 module.exports = {
   typescript: true,
+  filenameCase: 'camel',
   svgProps: {
     fill: '{fill ? colors[fill] : colors.black}',
     stroke: '{stroke}',

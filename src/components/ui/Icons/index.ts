@@ -1,2 +1,2 @@
-export { default as CloseIcon } from './CloseIcon';
-export { default as ExpandMoreIcon } from './ExpandMoreIcon';
+export { default as CloseIcon } from './closeIcon';
+export { default as ExpandMoreIcon } from './expandMoreIcon';
