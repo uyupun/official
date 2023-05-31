@@ -1667,6 +1667,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@ls-lint/ls-lint@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@ls-lint/ls-lint/-/ls-lint-2.0.0.tgz#a31256efaeb1d97d6bcb4a98ed7f2e96809e6767"
+  integrity sha512-1QEk2tzSH5YBCgP+klCZJvdGHJFNQgJb8qPFpFwQPmvjmZMV0aPE11TZ4qd+BlTcteeCWzs5ewSIOVRx2xT+Lw==
+
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-1.6.22.tgz#8a723157bf90e78f17dc0f27995398e6c731f1ba"
