@@ -1,18 +1,18 @@
 ls:
-  .js: camelCase
+  .js: camelCase | regex:^\.[a-z]+(?:[A-Z][a-z]+)*$
   .config.js: camelCase
-  .ts: camelCase
+  .ts: camelCase | regex:^\$[a-z]+(?:[A-Z][a-z]+)*$
   .d.ts: camelCase
   .css.ts: camelCase
-  .tsx: camelCase
+  .tsx: camelCase | regex:^\_[a-z]+(?:[A-Z][a-z]+)*$
   .stories.tsx: camelCase
 
   src/components/ui/Icons:
     .tsx: PascalCase
     .stories.tsx: camelCase
 
-  .json: kebab-case
-  .yml: kebab-case
+  .json: kebab-case | regex:^\.[a-z]+(?:-[a-z]+)*$
+  .yml: kebab-case | regex:^\.[a-z]+(?:-[a-z]+)*$
 
   .svg: camelCase
   .jpg: kebab-case
@@ -26,12 +26,5 @@ ls:
 ignore:
   - .next
   - node_modules
-  - .lintstagedrc.js
-  - .svgrrc.js
   - next-env.d.ts
-  - src/lib/$path.ts
-  - src/pages/_app.tsx
-  - .eslintrc.json
-  - .prettierrc.json
-  - .ls-lint.yml
   - README.md
