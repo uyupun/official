@@ -1,8 +1,10 @@
 import { breakpoint } from '@/styles/breakpoint';
 
-type ImageSource = {
+export type ImageSource = {
   srcset: string;
   format: 'jpeg' | 'png' | 'webp' | 'avif';
+  width: number;
+  height: number;
   isDesktop?: boolean;
 };
 
@@ -18,17 +20,15 @@ export type ImageProps = {
   /**
    * img 要素の className 属性に渡す値
    */
-  className: string;
+  className?: string;
   /**
    * 画像の読み込みを遅延させるかどうか
    */
   isLazy: boolean;
 };
 
-const getSrc = (sources: ImageSource[]): string | null => {
-  if (sources.length === 0) {
-    return null;
-  }
+const getSource = (sources: ImageSource[]): ImageSource | null => {
+  if (sources.length === 0) return null;
 
   const compareFormats = (a: ImageSource, b: ImageSource): number => {
     const priorityFormats = ['jpeg', 'png', 'webp', 'avif'];
@@ -45,12 +45,12 @@ const getSrc = (sources: ImageSource[]): string | null => {
     return compareIsDesktop(a, b);
   });
 
-  return sortedSources[0].srcset;
+  return sortedSources[0];
 };
 
 const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
-  const src = getSrc(sources);
-  if (src === null) return <></>;
+  const sourceForImgElement = getSource(sources);
+  if (sourceForImgElement === null) return <></>;
 
   return (
     <picture>
@@ -61,15 +61,19 @@ const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
             srcSet={source.srcset}
             type={`image/${source.format}`}
             media={source.isDesktop ? breakpoint : undefined}
+            width={source.width}
+            height={source.height}
           />
         );
       })}
       <img
-        src={src}
+        src={sourceForImgElement.srcset}
         alt={alt}
         className={className}
         loading={isLazy ? 'lazy' : 'eager'}
         decoding={'async'}
+        width={sourceForImgElement.width}
+        height={sourceForImgElement.height}
       />
     </picture>
   );
