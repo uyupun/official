@@ -64,7 +64,13 @@ const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
           />
         );
       })}
-      <img src={src} alt={alt} className={className} loading={isLazy ? 'lazy' : 'eager'} />
+      <img
+        src={src}
+        alt={alt}
+        className={className}
+        loading={isLazy ? 'lazy' : 'eager'}
+        decoding={'async'}
+      />
     </picture>
   );
 };
