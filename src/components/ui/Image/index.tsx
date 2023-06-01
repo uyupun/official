@@ -27,7 +27,7 @@ export type ImageProps = {
   /**
    * 画像の読み込みを遅延させるかどうか
    */
-  isLazy: boolean;
+  isLazy?: boolean;
   /**
    * 画像の横幅
    */
@@ -59,7 +59,7 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
   return sortedSources[0];
 };
 
-const Image = ({ sources, alt, className, isLazy, height, width }: ImageProps) => {
+const Image = ({ sources, alt, className, isLazy = true, height, width }: ImageProps) => {
   const sourceForImgElement = getSource(sources);
   if (sourceForImgElement === null) return <></>;
 
