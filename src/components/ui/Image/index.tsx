@@ -3,9 +3,12 @@ import { breakpoint } from '@/styles/breakpoint';
 export type ImageSource = {
   srcset: string;
   format: 'jpeg' | 'png' | 'webp' | 'avif';
-  width: number;
-  height: number;
   isDesktop?: boolean;
+};
+
+export type ImageSize = {
+  mobile: number;
+  desktop: number;
 };
 
 export type ImageProps = {
@@ -25,6 +28,14 @@ export type ImageProps = {
    * 画像の読み込みを遅延させるかどうか
    */
   isLazy: boolean;
+  /**
+   * 画像の横幅
+   */
+  width: ImageSize;
+  /**
+   * 画像の高さ
+   */
+  height: ImageSize;
 };
 
 const getSource = (sources: ImageSource[]): ImageSource | null => {
@@ -48,7 +59,7 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
   return sortedSources[0];
 };
 
-const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
+const Image = ({ sources, alt, className, isLazy, height, width }: ImageProps) => {
   const sourceForImgElement = getSource(sources);
   if (sourceForImgElement === null) return <></>;
 
@@ -61,8 +72,8 @@ const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
             srcSet={source.srcset}
             type={`image/${source.format}`}
             media={source.isDesktop ? breakpoint : undefined}
-            width={source.width}
-            height={source.height}
+            width={source.isDesktop ? width.desktop : width.mobile}
+            height={source.isDesktop ? height.desktop : height.mobile}
           />
         );
       })}
@@ -72,8 +83,8 @@ const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
         className={className}
         loading={isLazy ? 'lazy' : 'eager'}
         decoding="async"
-        width={sourceForImgElement.width}
-        height={sourceForImgElement.height}
+        width={sourceForImgElement.isDesktop ? width.desktop : width.mobile}
+        height={sourceForImgElement.isDesktop ? height.desktop : height.mobile}
       />
     </picture>
   );
