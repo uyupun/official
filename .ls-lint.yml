@@ -20,7 +20,8 @@ ls:
   .md: kebab-case
 
 ignore:
-  - .next
   - node_modules
+  - .next
+  - out
   - next-env.d.ts
   - README.md
