@@ -71,7 +71,7 @@ const Image = ({ sources, alt, className, isLazy }: ImageProps) => {
         alt={alt}
         className={className}
         loading={isLazy ? 'lazy' : 'eager'}
-        decoding={'async'}
+        decoding="async"
         width={sourceForImgElement.width}
         height={sourceForImgElement.height}
       />
