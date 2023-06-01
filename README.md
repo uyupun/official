@@ -37,6 +37,9 @@ $ yarn lint:eslint
 # Prettierの実行
 $ yarn lint:prettier
 
+# ls-lintの実行
+$ yarn lint:ls
+
 # ESLintの実行と問題の自動修正
 $ yarn fix:eslint
 
