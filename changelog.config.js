@@ -1,6 +1,18 @@
 module.exports = {
   format: '{emoji}{type}: {subject}',
-  list: ['chore', 'ci', 'docs', 'feat', 'fix', 'perf', 'refactor', 'release', 'style', 'test'],
+  list: [
+    'chore',
+    'ci',
+    'docs',
+    'feat',
+    'fix',
+    'perf',
+    'refactor',
+    'release',
+    'revert',
+    'style',
+    'test',
+  ],
   maxMessageLength: 128,
   minMessageLength: 3,
   questions: ['type', 'subject'],
@@ -44,6 +56,11 @@ module.exports = {
       description: 'リリースコミットの作成',
       emoji: '🔖',
       value: 'release',
+    },
+    revert: {
+      description: 'コミットを取り消す',
+      emoji: '⏪️',
+      value: 'revert',
     },
     style: {
       description:

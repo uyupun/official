@@ -35,7 +35,7 @@ const Text = ({
 }: TextProps) => {
   const className = clsx(
     styles.text(fontSize, fontWeight, color),
-    tag == 'span' && styles.inlineBlock
+    tag === 'span' && styles.inlineBlock
   );
 
   switch (tag) {
