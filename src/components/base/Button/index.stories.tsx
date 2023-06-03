@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { CloseIcon } from '@/components/ui/Icons';
+import { CloseIcon } from '@/components/base/Icons';
 
 import { Button } from '.';
 

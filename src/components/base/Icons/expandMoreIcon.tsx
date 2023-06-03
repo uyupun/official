@@ -1,4 +1,4 @@
-import { IconProps } from '@/components/ui/Icons/props';
+import { IconProps } from '@/components/base/Icons/props';
 import { colors } from '@/styles/themes.css';
 const SvgExpandMoreIcon = ({ fill, stroke, ...props }: IconProps) => (
   <svg
