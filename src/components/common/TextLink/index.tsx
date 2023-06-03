@@ -1,4 +1,4 @@
-import NextLink, { LinkProps as NextLinkProps } from 'next/link';
+import NextLink, { LinkProps } from 'next/link';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 
 import { styles } from './styles.css';
@@ -10,18 +10,19 @@ type BaseProps = {
    * @example
    * import { pagesPath } from '@/lib/$path';
    *
-   * <Link href={pagesPath.$url()}>link text</Link>
+   * <TextLink href={pagesPath.$url()}>link text</TextLink>
    */
-  href: NextLinkProps['href'];
+  href: LinkProps['href'];
   /**
    * リンクのコンテンツ
    */
   children: ReactNode;
 };
 
-export type LinkProps = BaseProps & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps>;
+export type TextLinkProps = BaseProps &
+  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps>;
 
-const Link = ({ href, children, rel, target, ...props }: LinkProps) => {
+const TextLink = ({ href, children, rel, target, ...props }: TextLinkProps) => {
   return (
     <NextLink
       {...props}
@@ -35,4 +36,4 @@ const Link = ({ href, children, rel, target, ...props }: LinkProps) => {
   );
 };
 
-export { Link };
+export { TextLink };
