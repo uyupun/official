@@ -5,7 +5,7 @@ import { pagesPath } from '@/lib/$path';
 import { TextLink as CommonTextLink } from '.';
 
 export default {
-  title: 'Common/TextLink',
+  title: 'Base/TextLink',
   component: CommonTextLink,
 } as ComponentMeta<typeof CommonTextLink>;
 
