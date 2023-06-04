@@ -7,7 +7,7 @@ import { object, string } from 'zod';
 import { Textarea as BaseTextarea } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Textarea',
   component: BaseTextarea,
 } as ComponentMeta<typeof BaseTextarea>;
 

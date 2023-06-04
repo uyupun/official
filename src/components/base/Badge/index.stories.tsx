@@ -3,7 +3,7 @@ import { ComponentMeta, Story } from '@storybook/react';
 import { Badge as BaseBadge } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Badge',
   component: BaseBadge,
 } as ComponentMeta<typeof BaseBadge>;
 

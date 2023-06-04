@@ -16,7 +16,7 @@ const IconList = () => {
 };
 
 export default {
-  title: 'Base',
+  title: 'Base/Icon',
   component: IconList,
 } as ComponentMeta<typeof IconList>;
 

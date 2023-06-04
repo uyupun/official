@@ -3,7 +3,7 @@ import { ComponentMeta, Story } from '@storybook/react';
 import { Text as BaseText } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Text',
   component: BaseText,
 } as ComponentMeta<typeof BaseText>;
 

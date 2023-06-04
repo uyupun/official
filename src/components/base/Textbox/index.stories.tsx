@@ -7,7 +7,7 @@ import { object, string } from 'zod';
 import { Textbox as BaseTextbox } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Textbox',
   component: BaseTextbox,
 } as ComponentMeta<typeof BaseTextbox>;
 

@@ -5,7 +5,7 @@ import { isDesktop } from '@/utils/isDesktop';
 import { Accordion as CommonAccordion } from '.';
 
 export default {
-  title: 'Common',
+  title: 'Common/Accordion',
   component: CommonAccordion,
 } as ComponentMeta<typeof CommonAccordion>;
 

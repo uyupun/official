@@ -3,7 +3,7 @@ import { ComponentMeta, Story } from '@storybook/react';
 import { Label as BaseLabel } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Label',
   component: BaseLabel,
 } as ComponentMeta<typeof BaseLabel>;
 

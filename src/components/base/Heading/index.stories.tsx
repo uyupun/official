@@ -3,7 +3,7 @@ import { ComponentMeta, Story } from '@storybook/react';
 import { Heading as BaseHeading } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Heading',
   component: BaseHeading,
 } as ComponentMeta<typeof BaseHeading>;
 

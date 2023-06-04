@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Dialog as CommonDialog } from '.';
 
 export default {
-  title: 'Common',
+  title: 'Common/Dialog',
   component: CommonDialog,
   parameters: {
     backgrounds: {

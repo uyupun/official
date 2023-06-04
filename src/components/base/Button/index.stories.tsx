@@ -6,7 +6,7 @@ import { CloseIcon } from '@/components/base/Icons';
 import { Button as BaseButton } from '.';
 
 export default {
-  title: 'Base',
+  title: 'Base/Button',
   component: BaseButton,
 } as ComponentMeta<typeof BaseButton>;
 
