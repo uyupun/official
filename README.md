@@ -107,11 +107,14 @@ $ open http://localhost:4040
 
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
+- [ls-lint](https://ls-lint.org)
 
 ### スタイリング
 
 - [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
 - [vanilla-extract](https://vanilla-extract.style)
+  - [Sprinkles](https://vanilla-extract.style/documentation/packages/sprinkles)
+  - [Recipes](https://vanilla-extract.style/documentation/packages/recipes)
 
 ### CSS設計
 
