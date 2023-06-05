@@ -1,19 +1,19 @@
 import { ComponentMeta, Story } from '@storybook/react';
 import { useState } from 'react';
 
-import { Dialog } from '.';
+import { Dialog as CommonDialog } from '.';
 
 export default {
-  title: 'Dialog',
-  component: Dialog,
+  title: 'Common/Dialog',
+  component: CommonDialog,
   parameters: {
     backgrounds: {
       default: 'blue',
     },
   },
-} as ComponentMeta<typeof Dialog>;
+} as ComponentMeta<typeof CommonDialog>;
 
-export const _Dialog: Story = () => {
+export const Dialog: Story = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,9 +21,9 @@ export const _Dialog: Story = () => {
       <button type="button" onClick={() => setIsOpen(true)}>
         Open Dialog
       </button>
-      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+      <CommonDialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <div style={{ height: '1000px' }}>コンテンツ</div>
-      </Dialog>
+      </CommonDialog>
     </div>
   );
 };
