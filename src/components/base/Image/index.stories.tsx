@@ -1,5 +1,7 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
+import { staticPath } from '@/lib/$path';
+
 import { Image as BaseImage, ImageSize, ImageSource } from '.';
 
 export default {
@@ -9,30 +11,30 @@ export default {
 
 const sources: ImageSource[] = [
   {
-    srcset: '/images/zeus/zeus.avif',
+    srcset: staticPath.images.zeus.zeus_avif,
     format: 'avif',
     isDesktop: true,
   },
   {
-    srcset: '/images/zeus/zeus.webp',
+    srcset: staticPath.images.zeus.zeus_webp,
     format: 'webp',
     isDesktop: true,
   },
   {
-    srcset: '/images/zeus/zeus.png',
+    srcset: staticPath.images.zeus.zeus_png,
     format: 'png',
     isDesktop: true,
   },
   {
-    srcset: '/images/zeus/zeus-mobile.avif',
+    srcset: staticPath.images.zeus.zeus_mobile_avif,
     format: 'avif',
   },
   {
-    srcset: '/images/zeus/zeus-mobile.webp',
+    srcset: staticPath.images.zeus.zeus_mobile_webp,
     format: 'webp',
   },
   {
-    srcset: '/images/zeus/zeus-mobile.png',
+    srcset: staticPath.images.zeus.zeus_mobile_png,
     format: 'png',
   },
 ];
