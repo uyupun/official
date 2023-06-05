@@ -4,18 +4,18 @@ import { ComponentMeta, Story } from '@storybook/react';
 import { useForm } from 'react-hook-form';
 import { object, string } from 'zod';
 
-import { Textarea } from '.';
+import { Textbox as BaseTextbox } from '.';
 
 export default {
-  title: 'Textarea',
-  component: Textarea,
-} as ComponentMeta<typeof Textarea>;
+  title: 'Base/Textbox',
+  component: BaseTextbox,
+} as ComponentMeta<typeof BaseTextbox>;
 
 const schema = object({
-  description: string().nonempty().max(10),
+  title: string().nonempty().max(10),
 });
 
-export const _Textarea: Story = () => {
+export const Textbox: Story = () => {
   const {
     register,
     handleSubmit,
@@ -27,10 +27,10 @@ export const _Textarea: Story = () => {
     <form onSubmit={handleSubmit(action('handleSubmit'))}>
       <dl>
         <dt style={{ marginBottom: '8px' }}>
-          <label htmlFor="description">Description</label>
+          <label htmlFor="title">Title</label>
         </dt>
         <dd style={{ marginBottom: '24px' }}>
-          <Textarea id="description" register={register} errors={errors} />
+          <BaseTextbox id="title" register={register} errors={errors} />
         </dd>
       </dl>
       <button type="submit">Submit</button>

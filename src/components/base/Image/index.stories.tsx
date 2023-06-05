@@ -1,11 +1,11 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { Image, ImageSize, ImageSource } from '.';
+import { Image as BaseImage, ImageSize, ImageSource } from '.';
 
 export default {
-  title: 'Image',
-  component: Image,
-} as ComponentMeta<typeof Image>;
+  title: 'Base/Image',
+  component: BaseImage,
+} as ComponentMeta<typeof BaseImage>;
 
 const sources: ImageSource[] = [
   {
@@ -46,16 +46,16 @@ const height: ImageSize = {
   desktop: 413,
 };
 
-export const _Image: Story = () => {
+export const Image: Story = () => {
   return (
     <dl>
       <dt>isLazy=true</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <Image sources={sources} alt={alt} isLazy={true} width={width} height={height} />
+        <BaseImage sources={sources} alt={alt} isLazy={true} width={width} height={height} />
       </dd>
       <dt>isLazy=false</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <Image sources={sources} alt={alt} isLazy={false} width={width} height={height} />
+        <BaseImage sources={sources} alt={alt} isLazy={false} width={width} height={height} />
       </dd>
     </dl>
   );

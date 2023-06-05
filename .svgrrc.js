@@ -20,7 +20,7 @@ module.exports = {
   },
   template: (variables, { tpl }) => {
     return tpl`
-      import { IconProps } from '@/components/ui/Icons/props';
+      import { IconProps } from '@/components/base/Icons/props';
       import { colors } from '@/styles/themes.css';
 
       const ${variables.componentName} = ({ fill, stroke, ...props }: IconProps) => (

@@ -16,8 +16,8 @@ const IconList = () => {
 };
 
 export default {
-  title: 'Icon',
+  title: 'Base/Icon',
   component: IconList,
 } as ComponentMeta<typeof IconList>;
 
-export const _Icon: Story = () => <IconList />;
+export const Icon: Story = () => <IconList />;

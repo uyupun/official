@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
 
-import { ExpandMoreIcon } from '../Icons';
+import { ExpandMoreIcon } from '../../base/Icons';
 
 import { styles } from './styles.css';
 
