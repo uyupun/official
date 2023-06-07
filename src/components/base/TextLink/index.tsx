@@ -1,6 +1,8 @@
 import NextLink, { LinkProps } from 'next/link';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 
+import { updateRelAccordingToTarget } from '@/utils/updateRelAccordingToTarget';
+
 import { styles } from './styles.css';
 
 type BaseProps = {
@@ -28,7 +30,7 @@ const TextLink = ({ href, children, rel, target, ...props }: TextLinkProps) => {
       {...props}
       href={href}
       className={styles.link}
-      rel={target === '_blank' ? `${rel ?? ''} noreferrer noopener`.trim() : rel}
+      rel={updateRelAccordingToTarget(rel, target)}
       target={target}
     >
       {children}

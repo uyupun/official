@@ -2,6 +2,7 @@ import NextLink, { LinkProps } from 'next/link';
 import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
 import { Image, ImageProps } from '@/components/base/Image';
+import { updateRelAccordingToTarget } from '@/utils/updateRelAccordingToTarget';
 
 import { styles } from './styles.css';
 
@@ -38,7 +39,7 @@ const ImageLink = ({ href, target, rel, text, children, ...rest }: ImageLinkProp
     <NextLink
       href={href}
       className={styles.imageLink}
-      rel={target === '_blank' ? `${rel ?? ''} noreferrer noopener`.trim() : rel}
+      rel={updateRelAccordingToTarget(rel, target)}
       target={target}
     >
       {/*
