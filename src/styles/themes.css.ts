@@ -7,6 +7,7 @@ export const colors = {
   gray: '#C8C8C8',
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
+  hoverBlue: 'rgba(30, 26, 222, 0.8)',
   purple: '#B01CF6',
   red: '#E6002F',
   lightRed: '#FBD4D4',
