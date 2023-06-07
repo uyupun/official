@@ -50,19 +50,14 @@ const height: ImageSize = {
 
 export const ImageLink: Story = () => {
   return (
-    <dl>
-      <dt>Default</dt>
-      <dd style={{ marginBottom: '16px' }}>
-        <CommonImageLink
-          href={pagesPath.$url()}
-          text="ゼウスくん"
-          sources={sources}
-          width={width}
-          height={height}
-        >
-          ゼウスくん
-        </CommonImageLink>
-      </dd>
-    </dl>
+    <CommonImageLink
+      href={pagesPath.$url()}
+      text="ゼウスくん"
+      sources={sources}
+      width={width}
+      height={height}
+    >
+      ゼウスくん
+    </CommonImageLink>
   );
 };
