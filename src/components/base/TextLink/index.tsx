@@ -1,7 +1,7 @@
 import NextLink, { LinkProps } from 'next/link';
 import { AnchorHTMLAttributes, ReactNode } from 'react';
 
-import { updateRelAccordingToTarget } from '@/utils/updateRelAccordingToTarget';
+import { getSafeLinkRel } from '@/utils/getSafeLinkRel';
 
 import { styles } from './styles.css';
 
@@ -30,7 +30,7 @@ const TextLink = ({ href, children, rel, target, ...props }: TextLinkProps) => {
       {...props}
       href={href}
       className={styles.link}
-      rel={updateRelAccordingToTarget(rel, target)}
+      rel={getSafeLinkRel(rel, target)}
       target={target}
     >
       {children}
