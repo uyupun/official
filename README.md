@@ -8,9 +8,9 @@
 
 ## ドキュメント
 
-- [環境構築](installation.md)
-- [コマンド一覧](commands.md)
-- [使用技術](tech.md)
+- [環境構築](docs/installation.md)
+- [コマンド一覧](docs/commands.md)
+- [使用技術](docs/tech.md)
 
 ## 参照
 
