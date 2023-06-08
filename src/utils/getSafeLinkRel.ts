@@ -1,6 +1,9 @@
 import { HTMLAttributeAnchorTarget } from 'react';
 
-export const getSafeLinkRel = (rel?: string, target?: HTMLAttributeAnchorTarget) => {
+export const getSafeLinkRel = (
+  rel?: string,
+  target?: HTMLAttributeAnchorTarget
+): string | undefined => {
   if (target !== '_blank') return rel;
 
   const requiredValues = ['noreferrer', 'noopener'];
