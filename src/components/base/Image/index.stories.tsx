@@ -1,6 +1,7 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
 import { staticPath } from '@/lib/$path';
+import { sprinkles } from '@/styles/sprinkles.css';
 
 import { Image as BaseImage, ImageSize, ImageSource } from '.';
 
@@ -47,6 +48,11 @@ const height: ImageSize = {
   mobile: 276,
   desktop: 413,
 };
+const style = sprinkles({
+  display: 'inline-block',
+  padding: 2,
+  backgroundColor: 'lightBlue',
+});
 
 export const Image: Story = () => {
   return (
@@ -58,6 +64,17 @@ export const Image: Story = () => {
       <dt>isLazy=false</dt>
       <dd style={{ marginBottom: '16px' }}>
         <BaseImage sources={sources} alt={alt} isLazy={false} width={width} height={height} />
+      </dd>
+      <dt>Custom style</dt>
+      <dd style={{ marginBottom: '16px' }}>
+        <BaseImage
+          sources={sources}
+          alt={alt}
+          isLazy={false}
+          width={width}
+          height={height}
+          className={style}
+        />
       </dd>
     </dl>
   );
