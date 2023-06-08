@@ -47,6 +47,7 @@ const styles = {
       width: '100%',
       height: '100%',
       opacity: 0,
+      transition: 'opacity 300ms',
       selectors: {
         [`${imageLink}:focus-visible &`]: {
           opacity: 1,
