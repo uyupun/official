@@ -2,6 +2,9 @@ name: Deploy Chromatic
 
 on:
   push:
+    branches-ignore:
+      - main
+      - dependabot/*
 
 jobs:
   deploy-chromatic:
@@ -34,4 +37,3 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          skip: dependabot/**
