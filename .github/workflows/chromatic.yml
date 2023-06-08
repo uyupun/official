@@ -1,10 +1,12 @@
-name: Chromatic
+name: Deploy Chromatic
 
-on: push
+on:
+  push:
 
 jobs:
-  chromatic-deployment:
-    runs-on: ubuntu-latest
+  deploy-chromatic:
+    runs-on:
+      - ubuntu-latest
 
     steps:
       - name: Checkout main branch
