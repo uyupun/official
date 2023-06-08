@@ -63,7 +63,7 @@ export const ImageLink: Story = () => {
           ゼウスくん
         </CommonImageLink>
       </dd>
-      <dt>target=&quot;_blank&quot;</dt>
+      <dt>target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;</dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
           href="https://example.com/"
