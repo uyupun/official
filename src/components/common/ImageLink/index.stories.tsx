@@ -77,6 +77,23 @@ export const ImageLink: Story = () => {
           ゼウスくん
         </CommonImageLink>
       </dd>
+      <dt>Complex children</dt>
+      <dd style={{ marginBottom: '16px' }}>
+        <CommonImageLink
+          href="https://example.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+          text="ゼウスくん"
+          sources={sources}
+          width={width}
+          height={height}
+        >
+          <div>
+            <div style={{ fontSize: '16px' }}>汎用五感伝達機構</div>
+            <div style={{ fontSize: '20px' }}>ウユンプニオン 零号機</div>
+          </div>
+        </CommonImageLink>
+      </dd>
     </dl>
   );
 };
