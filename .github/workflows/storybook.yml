@@ -20,5 +20,20 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Generate directory name
+        id: dir_name
+        run: |
+          DIR_NAME=${{ github.ref }}
+          DIR_NAME=${DIR_NAME#refs/heads/}
+          DIR_NAME=${DIR_NAME////_}
+          echo "DIR_NAME=$DIR_NAME" >> $GITHUB_ENV
+
       - name: Build Storybook
-        run: yarn run build-storybook
+        run: yarn run build-storybook -o dist/$DIR_NAME/storybook
+
+      - name: Display files
+        run: |
+          ls -la
+          ls -la dist
+          ls -la dist/$DIR_NAME
+          ls -la dist/$DIR_NAME/storybook
