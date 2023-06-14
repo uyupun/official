@@ -1,4 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-yarn pathpida && git add 'src/lib/$path.ts' && yarn lint-staged
