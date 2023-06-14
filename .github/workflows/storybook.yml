@@ -1,0 +1,13 @@
+name: Publish Storybook
+
+on:
+  push:
+
+jobs:
+  publish-storybook:
+    runs-on:
+      - ubuntu-latest
+
+    steps:
+      - name: Display "hello, world!"
+        run: echo "hello, world!"
