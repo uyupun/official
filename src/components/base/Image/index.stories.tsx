@@ -1,7 +1,7 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { staticPath } from '@/lib/$path';
 import { sprinkles } from '@/styles/sprinkles.css';
+import { staticPath } from '@/utils/$path';
 
 import { Image as BaseImage, ImageSize, ImageSource } from '.';
 
