@@ -5,6 +5,7 @@ on:
     branches-ignore:
       - main
       - dependabot/*
+      - gh-pages
 
 jobs:
   deploy-chromatic:
