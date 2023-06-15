@@ -1,0 +1,41 @@
+name: Publish Storybook
+
+on:
+  push:
+
+jobs:
+  publish-storybook:
+    runs-on:
+      - ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.15.0
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Generate directory name
+        id: dir_name
+        run: |
+          DIR_NAME=${{ github.ref }}
+          DIR_NAME=${DIR_NAME#refs/heads/}
+          DIR_NAME=${DIR_NAME////_}
+          echo "DIR_NAME=$DIR_NAME" >> $GITHUB_ENV
+
+      - name: Build Storybook
+        run: yarn run build-storybook -o dist/$DIR_NAME/storybook
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          keep_files: true
+          user_name: uyupunpopunpo
+          user_email: uyupun@gmail.com

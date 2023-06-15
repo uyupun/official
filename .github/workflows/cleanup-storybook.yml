@@ -1,0 +1,30 @@
+name: Cleanup storybook
+
+on:
+  delete:
+
+jobs:
+  cleanup-storybook:
+    runs-on:
+      - ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate directory name
+        id: dir_name
+        shell: bash
+        run: |
+          DIR_NAME=${{ github.event.ref }}
+          DIR_NAME=${DIR_NAME#refs/heads/}
+          DIR_NAME=${DIR_NAME////_}
+          echo "DIR_NAME=$DIR_NAME" >> $GITHUB_ENV
+
+      - name: Commit & Push
+        run: |
+          git config user.name uyupunpopunpo
+          git config user.email uyupun@gmail.com
+          git rm -r $DIR_NAME
+          git commit -m "Remove $DIR_NAME directory"
+          git push
