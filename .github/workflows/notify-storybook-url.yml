@@ -14,8 +14,7 @@ jobs:
       - name: Generate directory name
         id: dir_name
         run: |
-          DIR_NAME=${{ github.ref }}
-          DIR_NAME=${DIR_NAME#refs/heads/}
+          DIR_NAME=${{ github.head_ref }}
           DIR_NAME=${DIR_NAME////_}
           echo "DIR_NAME=$DIR_NAME" >> $GITHUB_ENV
 
