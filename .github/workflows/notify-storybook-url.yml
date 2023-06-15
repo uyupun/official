@@ -1,0 +1,34 @@
+name: Notify Storybook URL
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  notify-storybook-url:
+    runs-on:
+      - ubuntu-latest
+
+    steps:
+      - name: Generate directory name
+        id: dir_name
+        run: |
+          DIR_NAME=${{ github.ref }}
+          DIR_NAME=${DIR_NAME#refs/heads/}
+          DIR_NAME=${DIR_NAME////_}
+          echo "DIR_NAME=$DIR_NAME" >> $GITHUB_ENV
+
+      - name: Comment on PR
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issue_number = context.issue.number;
+            const dir_name = process.env.DIR_NAME;
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: `Storybook URL: https://uyupun.github.io/official/${dir_name}/storybook/`
+            });
