@@ -15,9 +15,9 @@
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
-    "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/lib/ && prettier --write 'src/lib/$path.ts'",
+    "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/utils/ && prettier --write 'src/utils/$path.ts'",
     "icons": "svgr -d src/components/base/Icons src/assets/icons",
-    "images": "node scripts/generateImages.js"
+    "images": "node src/scripts/generateImages.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",

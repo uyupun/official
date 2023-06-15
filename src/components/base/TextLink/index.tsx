@@ -10,7 +10,7 @@ type BaseProps = {
    * ハイパーリンクが指す先のURL
    *
    * @example
-   * import { pagesPath } from '@/lib/$path';
+   * import { pagesPath } from '@/utils/$path';
    *
    * <TextLink href={pagesPath.$url()}>link text</TextLink>
    */

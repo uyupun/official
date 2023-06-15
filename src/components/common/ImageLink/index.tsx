@@ -11,7 +11,7 @@ export type ImageLinkProps = Omit<ImageProps, 'alt'> & {
    * ハイパーリンクが指す先のURL
    *
    * @example
-   * import { pagesPath } from '@/lib/$path';
+   * import { pagesPath } from '@/utils/$path';
    *
    * <ImageLink href={pagesPath.$url()}>link text</ImageLink>
    */

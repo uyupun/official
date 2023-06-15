@@ -1,7 +1,7 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
 import { ImageSize, ImageSource } from '@/components/base/Image';
-import { pagesPath, staticPath } from '@/lib/$path';
+import { pagesPath, staticPath } from '@/utils/$path';
 
 import { ImageLink as CommonImageLink } from '.';
 

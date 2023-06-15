@@ -1,6 +1,6 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
-import { pagesPath } from '@/lib/$path';
+import { pagesPath } from '@/utils/$path';
 
 import { TextLink as CommonTextLink } from '.';
 

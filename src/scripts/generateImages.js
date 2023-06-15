@@ -74,5 +74,5 @@ const generateImages = async (dirPath) => {
   }
 };
 
-const directoryPath = path.join(__dirname, '..', 'public', 'images');
+const directoryPath = path.join(__dirname, '../..', 'public', 'images');
 generateImages(directoryPath).catch(console.error);
