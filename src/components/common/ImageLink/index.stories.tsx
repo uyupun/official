@@ -1,7 +1,7 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
 import { ImageSize, ImageSource } from '@/components/base/Image';
-import { pagesPath, staticPath } from '@/utils/$path';
+import { pagesPath } from '@/utils/$path';
 
 import { ImageLink as CommonImageLink } from '.';
 
@@ -12,30 +12,30 @@ export default {
 
 const sources: ImageSource[] = [
   {
-    srcset: staticPath.images.zeus.zeus_avif,
+    srcset: './images/zeus/zeus.avif',
     format: 'avif',
     isDesktop: true,
   },
   {
-    srcset: staticPath.images.zeus.zeus_webp,
+    srcset: './images/zeus/zeus.webp',
     format: 'webp',
     isDesktop: true,
   },
   {
-    srcset: staticPath.images.zeus.zeus_png,
+    srcset: './images/zeus/zeus.png',
     format: 'png',
     isDesktop: true,
   },
   {
-    srcset: staticPath.images.zeus.zeus_mobile_avif,
+    srcset: './images/zeus/zeus-mobile.avif',
     format: 'avif',
   },
   {
-    srcset: staticPath.images.zeus.zeus_mobile_webp,
+    srcset: './images/zeus/zeus-mobile.webp',
     format: 'webp',
   },
   {
-    srcset: staticPath.images.zeus.zeus_mobile_png,
+    srcset: './images/zeus/zeus-mobile.png',
     format: 'png',
   },
 ];
