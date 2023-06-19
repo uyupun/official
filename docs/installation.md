@@ -7,6 +7,9 @@ $ git clone https://github.com/uyupun/official.git
 # プロジェクトルートに移動
 $ cd official
 
+# envファイルの作成
+$ cp .env.example .env
+
 # 依存パッケージのインストール
 $ yarn install
 
