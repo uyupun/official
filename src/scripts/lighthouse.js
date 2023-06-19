@@ -6,4 +6,4 @@ const argv = minimist(process.argv.slice(2));
 const port = argv.p || 3000;
 const url = `http://localhost:${port}`;
 
-execSync(`lighthouse ${url} --output html`, { stdio: 'inherit' });
+execSync(`lighthouse ${url} --chrome-flags="--headless" --output html`, { stdio: 'inherit' });
