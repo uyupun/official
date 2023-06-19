@@ -1,4 +1,4 @@
-name: Notify Storybook URL
+name: Notify GitHub Pages URL
 
 on:
   pull_request:
