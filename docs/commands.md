@@ -78,3 +78,13 @@ $ open https://xxxx.jp.ngrok.io
 # Web UIを開く
 $ open http://localhost:4040
 ```
+
+## Lighthouse
+
+```bash
+# Lighthouseの実行(http://localhost:3000を測定)
+$ yarn lighthouse
+
+# ポートを指定してLighthouseを実行(http://localhost:3001を測定)
+$ yarn lighthouse -p 3001
+```
