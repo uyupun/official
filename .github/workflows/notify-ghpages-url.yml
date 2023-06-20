@@ -1,4 +1,4 @@
-name: Notify Storybook URL
+name: Notify GitHub Pages URL
 
 on:
   pull_request:
@@ -28,5 +28,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: `Storybook URL: https://uyupun.github.io/official/${dir_name}/storybook/`
+              body: `Storybook URL: https://uyupun.github.io/official/${dir_name}/storybook/\n` +
+                    `Lighthouse URL: https://uyupun.github.io/official/${dir_name}/lighthouse/`
             });

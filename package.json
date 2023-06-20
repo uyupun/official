@@ -17,7 +17,8 @@
     "build-storybook": "build-storybook -s public",
     "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/utils/ && prettier --write 'src/utils/$path.ts'",
     "icons": "svgr -d src/components/base/Icons src/assets/icons",
-    "images": "node src/scripts/generateImages.js"
+    "images": "node src/scripts/generateImages.js",
+    "lighthouse": "node src/scripts/lighthouse.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
@@ -56,7 +57,9 @@
     "eslint-plugin-storybook": "^0.6.10",
     "git-cz": "^4.9.0",
     "husky": "^7.0.0",
+    "lighthouse": "^10.3.0",
     "lint-staged": "^12.1.2",
+    "minimist": "^1.2.8",
     "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
     "prettier": "^2.8.3",
