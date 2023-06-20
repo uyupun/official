@@ -14,6 +14,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Copy env file
+        run: cp .env.example .env
+
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
@@ -43,7 +46,7 @@ jobs:
           DIR_NAME=${DIR_NAME////_}
           echo "DIR_NAME=$DIR_NAME" >> $GITHUB_ENV
 
-      - name: Move Lighthouse reports
+      - name: Move Lighthouse report
         run: |
           mkdir -p dist/$DIR_NAME/lighthouse
           mv .lighthouseci/lhr-*.html dist/$DIR_NAME/lighthouse/index.html
