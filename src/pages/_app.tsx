@@ -7,7 +7,10 @@ import '../styles/globals.css';
 const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
-      <DefaultSeo title={process.env.NEXT_PUBLIC_APP_NAME} />
+      <DefaultSeo
+        title={process.env.NEXT_PUBLIC_APP_NAME}
+        description="(´･ェ･｀)「あ、もしもし？ぅゅだけど…うん、そうぷんぽぷんぽ」"
+      />
       <Component {...pageProps} />
     </>
   );
