@@ -1,6 +1,6 @@
 # official
 
-[![Chromatic](https://github.com/uyupun/official/actions/workflows/chromatic.yml/badge.svg)](https://github.com/uyupun/official/actions/workflows/chromatic.yml)
+[![Chromatic](https://github.com/uyupun/official/actions/workflows/deploy-chromatic.yml/badge.svg)](https://github.com/uyupun/official/actions/workflows/deploy-chromatic.yml)
 
 <img src="logo.png" width="300px">
 
