@@ -4,10 +4,7 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head>
-        <meta
-          name="description"
-          content="(´･ェ･｀)「あ、もしもし？ぅゅだけど…うん、そうぷんぽぷんぽ」"
-        />
+        <meta name="description" content={process.env.NEXT_PUBLIC_DESC} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
