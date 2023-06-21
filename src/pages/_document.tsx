@@ -5,6 +5,12 @@ export default function Document() {
     <Html lang="ja">
       <Head>
         <meta name="description" content={process.env.NEXT_PUBLIC_DESC} />
+        <meta property="og:title" content={process.env.NEXT_PUBLIC_TITLE} />
+        <meta property="og:description" content={process.env.NEXT_PUBLIC_DESC} />
+        <meta property="og:image" content="https://i.imgur.com/cmu4u1h.png" />
+        <meta property="og:url" content="https://uyupun.tech" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="ja_JP" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
