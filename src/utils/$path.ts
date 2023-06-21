@@ -6,6 +6,7 @@ export type PagesPath = typeof pagesPath;
 
 export const staticPath = {
   images: {
+    ogp_image_png: '/images/ogp-image.png',
     zeus: {
       zeus_mobile_avif: '/images/zeus/zeus-mobile.avif',
       zeus_mobile_png: '/images/zeus/zeus-mobile.png',
