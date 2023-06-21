@@ -73,7 +73,7 @@ $ yarn dev
 $ ngrok http 3000
 
 # ngrokでプロキシされたリンクを開く
-$ open https://xxxx.jp.ngrok.io
+$ open https://xxxx.ngrok-free.app
 
 # Web UIを開く
 $ open http://localhost:4040
