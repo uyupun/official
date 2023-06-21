@@ -1,4 +1,4 @@
-name: Cleanup storybook
+name: Cleanup GitHub Pages
 
 on:
   delete:
