@@ -44,9 +44,8 @@ const generateImages = async (dirPath) => {
   for (const entry of entries) {
     const fullPath = path.join(dirPath, entry.name);
 
-    if (entry.isDirectory() && ignoreDirs.includes(entry.name)) continue;
-
     if (entry.isDirectory()) {
+      if (ignoreDirs.includes(entry.name)) continue;
       await generateImages(fullPath);
       continue;
     }
