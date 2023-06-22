@@ -37,11 +37,15 @@ const generateDesktopImage = async (fullPath, outputPath) => {
  */
 const generateImages = async (dirPath) => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
+  const ignoreDirs = fs
+    .readFileSync(path.join(__dirname, '../..', '.imagesignore'), 'utf-8')
+    .split('\n');
 
   for (const entry of entries) {
     const fullPath = path.join(dirPath, entry.name);
 
     if (entry.isDirectory()) {
+      if (ignoreDirs.includes(entry.name)) continue;
       await generateImages(fullPath);
       continue;
     }

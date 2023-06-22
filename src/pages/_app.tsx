@@ -8,7 +8,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>{process.env.NEXT_PUBLIC_APP_NAME}</title>
+        <title>{process.env.NEXT_PUBLIC_TITLE}</title>
       </Head>
       <Component {...pageProps} />
     </>

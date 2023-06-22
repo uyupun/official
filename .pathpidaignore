@@ -1,6 +1,7 @@
 # public
 /public/fonts
 /public/favicon.ico
+/public/images/ogp
 
 # misc
 .DS_Store
