@@ -17,7 +17,7 @@ export default function Document() {
         <meta name="twitter:title" content={process.env.NEXT_PUBLIC_TITLE} />
         <meta name="twitter:description" content={process.env.NEXT_PUBLIC_DESC} />
         <meta name="twitter:site" content="@uyupunpopunpo" />
-        <meta name="twitter:image" content="https://i.imgur.com/8a6Rp4N.png" />
+        <meta name="twitter:image" content="https://i.imgur.com/dAN3iuU.png" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
