@@ -12,8 +12,10 @@ jobs:
     runs-on:
       - ubuntu-latest
 
+    timeout-minutes: 10
+
     steps:
-      - name: Checkout main branch
+      - name: Checkout repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -23,10 +25,14 @@ jobs:
         with:
           node-version: 18.15.0
 
+      - name: Get yarn cache directory path
+        id: yarn_cache_dir_path
+        run: echo "YARN_CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
+
       - name: Cache yarn cache directory
         uses: actions/cache@v3
         with:
-          path: ~/.yarn-cache
+          path: ${{ env.YARN_CACHE_DIR_PATH }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
