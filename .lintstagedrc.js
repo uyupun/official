@@ -1,4 +1,4 @@
-const path = require('path');
+import path from 'path';
 
 const buildEslintCommand = (filenames) => {
   return `next lint --fix --file ${filenames
@@ -6,7 +6,7 @@ const buildEslintCommand = (filenames) => {
     .join(' --file ')}`;
 };
 
-module.exports = {
+export default {
   '*.{js,jsx,ts,tsx}': [buildEslintCommand],
   '*.{js,jsx,ts,tsx,json,html,css,yml,yaml}': 'yarn fix:prettier',
   '*.*': 'yarn lint:ls',
