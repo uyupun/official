@@ -9,8 +9,6 @@ const __dirname = path.dirname(__filename);
 
 /**
  * スマホ用の画像を生成する
- * @param {string} fullPath
- * @param {string} outputPath
  */
 const generateMobileImage = async (fullPath: string, outputPath: string): Promise<void> => {
   if (fs.existsSync(outputPath)) return;
@@ -30,8 +28,6 @@ const generateMobileImage = async (fullPath: string, outputPath: string): Promis
 
 /**
  * デスクトップ用の画像を生成する
- * @param {string} fullPath
- * @param {string} outputPath
  */
 const generateDesktopImage = async (fullPath: string, outputPath: string): Promise<void> => {
   if (fs.existsSync(outputPath)) return;
@@ -41,7 +37,6 @@ const generateDesktopImage = async (fullPath: string, outputPath: string): Promi
 /**
  * /public/images 以下のディレクトリ内にある png または jpg(jpeg) ファイルを元に webp と avif ファイルを生成する
  * またそれぞれの拡張子に応じたスマホ用のファイルも生成する
- * @param {string} dirPath
  */
 const generateImages = async (dirPath: string): Promise<void> => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
