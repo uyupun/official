@@ -1,17 +1,21 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 import sharp from 'sharp';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * スマホ用の画像を生成する
  * @param {string} fullPath
  * @param {string} outputPath
  */
-const generateMobileImage = async (fullPath, outputPath) => {
+const generateMobileImage = async (fullPath: any, outputPath: any) => {
   if (fs.existsSync(outputPath)) return;
   const image = sharp(fullPath);
-  const metadata = await image.metadata();
+  const metadata: any = await image.metadata();
   await image
     .resize({
       width: Math.round(metadata.width / 2),
@@ -25,7 +29,7 @@ const generateMobileImage = async (fullPath, outputPath) => {
  * @param {string} fullPath
  * @param {string} outputPath
  */
-const generateDesktopImage = async (fullPath, outputPath) => {
+const generateDesktopImage = async (fullPath: any, outputPath: any) => {
   if (fs.existsSync(outputPath)) return;
   await sharp(fullPath).toFile(outputPath);
 };
@@ -35,7 +39,7 @@ const generateDesktopImage = async (fullPath, outputPath) => {
  * またそれぞれの拡張子に応じたスマホ用のファイルも生成する
  * @param {string} dirPath
  */
-const generateImages = async (dirPath) => {
+const generateImages = async (dirPath: any) => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
   const ignoreDirs = fs
     .readFileSync(path.join(__dirname, '../..', '.imagesignore'), 'utf-8')
