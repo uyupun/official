@@ -6,7 +6,7 @@ on:
       - opened
 
 jobs:
-  notify-storybook-url:
+  notify-ghpages-url:
     runs-on:
       - ubuntu-latest
 
