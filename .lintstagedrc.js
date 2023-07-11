@@ -1,8 +1,9 @@
 const path = require('path');
 
 const buildEslintCommand = (filenames) => {
-  const baseCommand = 'next lint --ignore-path .eslintignore --cache --cache-strategy content';
-  const lintTargets = filenames.map((f) => `--file ${path.relative(process.cwd(), f)}`).join(' ');
+  const baseCommand =
+    'next lint --ignore-path .eslintignore --cache --cache-strategy content --file';
+  const lintTargets = filenames.map((f) => path.relative(process.cwd(), f)).join(' --file ');
   return `${baseCommand} ${lintTargets}`;
 };
 
