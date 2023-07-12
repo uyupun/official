@@ -13,9 +13,6 @@ $ cp .env.example .env
 # 依存パッケージのインストール
 $ yarn install
 
-# huskyのセットアップ
-$ yarn prepare
-
 # 開発用サーバの起動(http://localhost:3000)
 $ yarn dev
 ```
