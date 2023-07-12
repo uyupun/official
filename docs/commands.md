@@ -10,6 +10,15 @@ $ yarn build
 $ yarn start
 ```
 
+## Gitフック
+
+```bash
+# huskyのセットアップ
+# 通常はyarn install時に自動的に実行される
+# huskyの追加更新時にのみ実行する必要がある
+$ yarn prepare
+```
+
 ## リンター・フォーマッタ
 
 ```bash
