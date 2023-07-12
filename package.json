@@ -18,7 +18,8 @@
     "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/utils/ && prettier --write 'src/utils/$path.ts'",
     "icons": "svgr -d src/components/base/Icons src/assets/icons",
     "images": "node src/scripts/generateImages.js",
-    "lighthouse": "node src/scripts/lighthouse.js"
+    "lighthouse": "node src/scripts/lighthouse.js",
+    "husky": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
