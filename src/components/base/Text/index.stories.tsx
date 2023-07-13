@@ -1,16 +1,16 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Text as BaseText } from '.';
 
-export default {
+const meta: Meta<typeof BaseText> = {
   title: 'Base/Text',
   component: BaseText,
-} as ComponentMeta<typeof BaseText>;
+};
+export default meta;
 
-export const Text: Story = () => {
-  const fontSizeDefinition = 'fontSize={{ mobile: 18, desktop: 24 }}';
-
-  return (
+type Story = StoryObj<typeof BaseText>;
+export const Text: Story = {
+  render: () => (
     <dl>
       <dt style={{ marginBottom: '8px' }}>Tag</dt>
       <dd style={{ marginBottom: '24px' }}>
@@ -59,5 +59,5 @@ export const Text: Story = () => {
         </BaseText>
       </dd>
     </dl>
-  );
+  ),
 };
