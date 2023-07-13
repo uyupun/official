@@ -11,6 +11,7 @@ module.exports = {
   docs: {
     autodocs: true,
   },
+  staticDirs: ['../public'],
   core: {
     builder: '@storybook/builder-webpack5',
   },
