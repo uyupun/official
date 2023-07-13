@@ -1,7 +1,8 @@
-const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
-const { merge } = require('webpack-merge');
+import { StorybookConfig } from '@storybook/nextjs';
+import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
+import { merge } from 'webpack-merge';
 
-module.exports = {
+const config: StorybookConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-a11y'],
   framework: {
@@ -20,3 +21,5 @@ module.exports = {
       plugins: [new VanillaExtractPlugin()],
     }),
 };
+
+export default config;
