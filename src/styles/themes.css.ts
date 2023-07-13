@@ -5,6 +5,7 @@ export const colors = {
   black: '#333333',
   silver: '#F8F8F8',
   gray: '#C8C8C8',
+  darkGray: '#656565',
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
   hoverBlue: 'rgba(30, 26, 222, 0.8)',
@@ -43,6 +44,7 @@ export const spacing = {
 export const fontSize = {
   8: '0.5rem',
   10: '0.625rem',
+  12: '0.75rem',
   14: '0.875rem',
   16: '1rem',
   18: '1.125rem',
