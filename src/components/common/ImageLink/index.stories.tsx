@@ -1,15 +1,17 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { ImageSize, ImageSource } from '@/components/base/Image';
 import { pagesPath } from '@/utils/$path';
 
 import { ImageLink as CommonImageLink } from '.';
 
-export default {
+const meta: Meta<typeof CommonImageLink> = {
   title: 'Common/ImageLink',
   component: CommonImageLink,
-} as ComponentMeta<typeof CommonImageLink>;
+};
+export default meta;
 
+type Story = StoryObj<typeof CommonImageLink>;
 const sources: ImageSource[] = [
   {
     srcset: './images/zeus/zeus.avif',
@@ -48,8 +50,8 @@ const height: ImageSize = {
   desktop: 413,
 };
 
-export const ImageLink: Story = () => {
-  return (
+export const ImageLink: Story = {
+  render: () => (
     <dl>
       <dt>Default</dt>
       <dd style={{ marginBottom: '16px' }}>
@@ -95,5 +97,5 @@ export const ImageLink: Story = () => {
         </CommonImageLink>
       </dd>
     </dl>
-  );
+  ),
 };

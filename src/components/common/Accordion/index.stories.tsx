@@ -1,16 +1,18 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { isDesktop } from '@/utils/isDesktop';
 
 import { Accordion as CommonAccordion } from '.';
 
-export default {
+const meta: Meta<typeof CommonAccordion> = {
   title: 'Common/Accordion',
   component: CommonAccordion,
-} as ComponentMeta<typeof CommonAccordion>;
+};
+export default meta;
 
-export const Accordion: Story = () => {
-  return (
+type Story = StoryObj<typeof CommonAccordion>;
+export const Accordion: Story = {
+  render: () => (
     <>
       <CommonAccordion isOpen={true} buttonText="2023">
         {'isOpen={true}'}
@@ -22,5 +24,5 @@ export const Accordion: Story = () => {
         {'isOpen={isDesktop()} // 画面幅に応じて制御'}
       </CommonAccordion>
     </>
-  );
+  ),
 };

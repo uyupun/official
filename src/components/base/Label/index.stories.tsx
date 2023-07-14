@@ -1,14 +1,16 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Label as BaseLabel } from '.';
 
-export default {
+const meta: Meta<typeof BaseLabel> = {
   title: 'Base/Label',
   component: BaseLabel,
-} as ComponentMeta<typeof BaseLabel>;
+};
+export default meta;
 
-export const Label: Story = () => {
-  return (
+type Story = StoryObj<typeof BaseLabel>;
+export const Label: Story = {
+  render: () => (
     <dl>
       <dt style={{ marginBottom: '8px' }}>Default</dt>
       <dd style={{ marginBottom: '24px' }}>
@@ -19,5 +21,5 @@ export const Label: Story = () => {
         <BaseLabel isRequired={false}>Not required label</BaseLabel>
       </dd>
     </dl>
-  );
+  ),
 };

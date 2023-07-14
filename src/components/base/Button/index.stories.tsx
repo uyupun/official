@@ -1,17 +1,19 @@
 import { action } from '@storybook/addon-actions';
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { CloseIcon } from '@/components/base/Icons';
 
 import { Button as BaseButton } from '.';
 
-export default {
+const meta: Meta<typeof BaseButton> = {
   title: 'Base/Button',
   component: BaseButton,
-} as ComponentMeta<typeof BaseButton>;
+};
+export default meta;
 
-export const Button: Story = () => {
-  return (
+type Story = StoryObj<typeof BaseButton>;
+export const Button: Story = {
+  render: () => (
     <dl>
       <dt style={{ marginBottom: '8px' }}>Default</dt>
       <dd style={{ marginBottom: '24px' }}>
@@ -30,5 +32,5 @@ export const Button: Story = () => {
         <CloseIcon fill="white" />
       </BaseButton>
     </dl>
-  );
+  ),
 };

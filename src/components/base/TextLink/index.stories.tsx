@@ -1,27 +1,29 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { pagesPath } from '@/utils/$path';
 
-import { TextLink as CommonTextLink } from '.';
+import { TextLink as BaseTextLink } from '.';
 
-export default {
+const meta: Meta<typeof BaseTextLink> = {
   title: 'Base/TextLink',
-  component: CommonTextLink,
-} as ComponentMeta<typeof CommonTextLink>;
+  component: BaseTextLink,
+};
+export default meta;
 
-export const TextLink: Story = () => {
-  return (
+type Story = StoryObj<typeof BaseTextLink>;
+export const TextLink: Story = {
+  render: () => (
     <dl>
       <dt>Default</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <CommonTextLink href={pagesPath.$url()}>Default TextLink</CommonTextLink>
+        <BaseTextLink href={pagesPath.$url()}>Default TextLink</BaseTextLink>
       </dd>
       <dt>target=&quot;_blank&quot;</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <CommonTextLink href={pagesPath.$url()} target={'_blank'}>
+        <BaseTextLink href={pagesPath.$url()} target={'_blank'}>
           target=&quot;_blank&quot; TextLink
-        </CommonTextLink>
+        </BaseTextLink>
       </dd>
     </dl>
-  );
+  ),
 };

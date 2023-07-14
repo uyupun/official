@@ -1,7 +1,6 @@
-import clsx from 'clsx';
 import { ReactNode } from 'react';
 
-import { Color, FontSize, FontWeight, styles } from './styles.css';
+import { TextColor, TextFontWeight, TextSize, styles } from './styles.css';
 
 export type TextProps = {
   /**
@@ -11,15 +10,15 @@ export type TextProps = {
   /**
    * テキストのサイズ
    */
-  fontSize?: FontSize;
+  size?: TextSize;
   /**
    * テキストの太さ
    */
-  fontWeight?: FontWeight;
+  fontWeight?: TextFontWeight;
   /**
    * テキストのカラー
    */
-  color?: Color;
+  color?: TextColor;
   /**
    * テキストのコンテンツ
    */
@@ -28,15 +27,17 @@ export type TextProps = {
 
 const Text = ({
   tag = 'span',
-  fontSize = { mobile: 14, desktop: 16 },
+  size = 'md',
   fontWeight = 'normal',
   color = 'black',
   children,
 }: TextProps) => {
-  const className = clsx(
-    styles.text(fontSize, fontWeight, color),
-    tag === 'span' && styles.inlineBlock
-  );
+  const className = styles({
+    size,
+    color,
+    fontWeight,
+    display: tag === 'span' ? 'inlineBlock' : 'block',
+  });
 
   switch (tag) {
     case 'span':
