@@ -10,9 +10,10 @@ jobs:
     runs-on:
       - ubuntu-latest
 
-    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
-
     steps:
+      - name: Debug github.head_ref
+        run: echo "${{ github.head_ref }}"
+
       - name: Generate directory name
         id: dir_name
         run: |
