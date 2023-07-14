@@ -7,10 +7,10 @@
     "dev": "next dev",
     "build": "yarn pathpida && next build && next export",
     "start": "next start",
-    "lint:eslint": "next lint --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content",
+    "lint:eslint": "eslint --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content --cache-file=node_modules/.cache/eslint/.eslintcache",
     "lint:prettier": "prettier --check . --ignore-path .prettierignore --cache --cache-strategy content",
     "lint:ls": "ls-lint",
-    "fix:eslint": "next lint --fix --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content",
+    "fix:eslint": "eslint --fix --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content --cache-file=node_modules/.cache/eslint/.eslintcache",
     "fix:prettier": "prettier --write . --ignore-path .prettierignore --cache --cache-strategy content",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
@@ -19,7 +19,8 @@
     "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/utils/ && prettier --write 'src/utils/$path.ts'",
     "icons": "svgr -d src/components/base/Icons src/assets/icons",
     "images": "ts-node src/scripts/generateImages.ts",
-    "lighthouse": "ts-node src/scripts/lighthouse.ts"
+    "lighthouse": "ts-node src/scripts/lighthouse.ts",
+    "husky": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
