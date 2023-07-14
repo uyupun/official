@@ -4,9 +4,6 @@ const withVanillaExtract = createVanillaExtractPlugin();
 
 const nextConfig = {
   reactStrictMode: true,
-  eslint: {
-    dirs: ['src', 'public', '.storybook'],
-  },
 };
 
 export default withVanillaExtract(nextConfig);

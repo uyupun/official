@@ -1,14 +1,16 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { sprinkles } from '@/styles/sprinkles.css';
 
 import { Image as BaseImage, ImageSize, ImageSource } from '.';
 
-export default {
+const meta: Meta<typeof BaseImage> = {
   title: 'Base/Image',
   component: BaseImage,
-} as ComponentMeta<typeof BaseImage>;
+};
+export default meta;
 
+type Story = StoryObj<typeof BaseImage>;
 const sources: ImageSource[] = [
   {
     srcset: './images/zeus/zeus.avif',
@@ -53,8 +55,8 @@ const style = sprinkles({
   backgroundColor: 'lightBlue',
 });
 
-export const Image: Story = () => {
-  return (
+export const Image: Story = {
+  render: () => (
     <dl>
       <dt>isLazy=true</dt>
       <dd style={{ marginBottom: '16px' }}>
@@ -76,5 +78,5 @@ export const Image: Story = () => {
         />
       </dd>
     </dl>
-  );
+  ),
 };

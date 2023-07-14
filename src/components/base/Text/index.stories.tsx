@@ -1,43 +1,63 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Text as BaseText } from '.';
 
-export default {
+const meta: Meta<typeof BaseText> = {
   title: 'Base/Text',
   component: BaseText,
-} as ComponentMeta<typeof BaseText>;
+};
+export default meta;
 
-export const Text: Story = () => {
-  const fontSizeDefinition = 'fontSize={{ mobile: 18, desktop: 24 }}';
-
-  return (
+type Story = StoryObj<typeof BaseText>;
+export const Text: Story = {
+  render: () => (
     <dl>
-      <dt style={{ marginBottom: '8px' }}>Default</dt>
+      <dt style={{ marginBottom: '8px' }}>Tag</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText>Default span</BaseText>
-        <BaseText tag="p">Default paragraph</BaseText>
-        <BaseText tag="div">Default div</BaseText>
+        <BaseText>tag=&quot;span&quot;</BaseText>
+        <BaseText tag="p">tag=&quot;p&quot;</BaseText>
+        <BaseText tag="div">tag=&quot;div&quot;</BaseText>
       </dd>
-      <dt style={{ marginBottom: '8px' }}>fontWeight=&quot;bold&quot;</dt>
+      <dt style={{ marginBottom: '8px' }}>Font Weight</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText fontWeight="bold">fontWeight=&quot;bold&quot; span</BaseText>
+        <BaseText tag="p">fontWeight=&quot;normal&quot;</BaseText>
         <BaseText tag="p" fontWeight="bold">
-          fontWeight=&quot;bold&quot; paragraph
-        </BaseText>
-        <BaseText tag="div" fontWeight="bold">
-          fontWeight=&quot;bold&quot; div
+          fontWeight=&quot;bold&quot;
         </BaseText>
       </dd>
-      <dt style={{ marginBottom: '8px' }}>{fontSizeDefinition}</dt>
+      <dt style={{ marginBottom: '8px' }}>Size</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText fontSize={{ mobile: 18, desktop: 24 }}>{fontSizeDefinition} span</BaseText>
-        <BaseText tag="p" fontSize={{ mobile: 18, desktop: 24 }}>
-          {fontSizeDefinition} paragraph
+        <BaseText tag="p" size="xs">
+          size=&quot;xs&quot;
         </BaseText>
-        <BaseText tag="div" fontSize={{ mobile: 18, desktop: 24 }}>
-          {fontSizeDefinition} div
+        <BaseText tag="p" size="sm">
+          size=&quot;sm&quot;
+        </BaseText>
+        <BaseText tag="p" size="md">
+          size=&quot;md&quot;
+        </BaseText>
+        <BaseText tag="p" size="lg">
+          size=&quot;lg&quot;
+        </BaseText>
+        <BaseText tag="p" size="xl">
+          size=&quot;xl&quot;
+        </BaseText>
+      </dd>
+      <dt style={{ marginBottom: '8px' }}>Color</dt>
+      <dd style={{ marginBottom: '24px' }}>
+        <BaseText tag="p" color="white">
+          color=&quot;white&quot;
+        </BaseText>
+        <BaseText tag="p" color="black">
+          color=&quot;black&quot;
+        </BaseText>
+        <BaseText tag="p" color="red">
+          color=&quot;red&quot;
+        </BaseText>
+        <BaseText tag="p" color="darkGray">
+          color=&quot;darkGray&quot;
         </BaseText>
       </dd>
     </dl>
-  );
+  ),
 };

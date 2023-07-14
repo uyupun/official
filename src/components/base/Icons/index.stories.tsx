@@ -1,4 +1,4 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import * as Icons from '.';
 
@@ -15,9 +15,13 @@ const IconList = () => {
   );
 };
 
-export default {
+const meta: Meta<typeof IconList> = {
   title: 'Base/Icon',
   component: IconList,
-} as ComponentMeta<typeof IconList>;
+};
+export default meta;
 
-export const Icon: Story = () => <IconList />;
+type Story = StoryObj<typeof IconList>;
+export const Icon: Story = {
+  render: () => <IconList />,
+};

@@ -1,17 +1,19 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Heading as BaseHeading } from '.';
 
-export default {
+const meta: Meta<typeof BaseHeading> = {
   title: 'Base/Heading',
   component: BaseHeading,
-} as ComponentMeta<typeof BaseHeading>;
+};
+export default meta;
 
-export const Heading: Story = () => {
-  return (
+type Story = StoryObj<typeof BaseHeading>;
+export const Heading: Story = {
+  render: () => (
     <div>
       <BaseHeading>Heading level 1</BaseHeading>
       <BaseHeading tag="h2">Heading level 2</BaseHeading>
     </div>
-  );
+  ),
 };

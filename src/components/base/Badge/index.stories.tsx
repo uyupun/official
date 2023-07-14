@@ -1,19 +1,21 @@
-import { ComponentMeta, Story } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { Badge as BaseBadge } from '.';
 
-export default {
+const meta: Meta<typeof BaseBadge> = {
   title: 'Base/Badge',
   component: BaseBadge,
-} as ComponentMeta<typeof BaseBadge>;
+};
+export default meta;
 
-export const Badge: Story = () => {
-  return (
+type Story = StoryObj<typeof BaseBadge>;
+export const Badge: Story = {
+  render: () => (
     <dl>
       <dt style={{ marginBottom: '8px' }}>color=&quot;blue&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseBadge color="blue">Badge</BaseBadge>
       </dd>
     </dl>
-  );
+  ),
 };
