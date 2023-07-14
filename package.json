@@ -32,7 +32,6 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.7",
     "@ls-lint/ls-lint": "^2.0.0",
     "@storybook/addon-a11y": "^7.0.26",
     "@storybook/addon-actions": "^7.0.26",
@@ -49,7 +48,6 @@
     "@vanilla-extract/recipes": "^0.4.0",
     "@vanilla-extract/sprinkles": "^1.6.1",
     "@vanilla-extract/webpack-plugin": "^2.2.0",
-    "babel-loader": "^8.2.3",
     "chromatic": "^6.4.3",
     "eslint": "^8.32.0",
     "eslint-config-next": "13.2.4",
