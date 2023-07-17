@@ -1,6 +1,6 @@
-const { execSync } = require('child_process');
+import { execSync } from 'child_process';
 
-const minimist = require('minimist');
+import minimist from 'minimist';
 
 const argv = minimist(process.argv.slice(2));
 const port = argv.p || 3000;

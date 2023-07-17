@@ -1,17 +1,23 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const sharp = require('sharp');
+import sharp from 'sharp';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * スマホ用の画像を生成する
- * @param {string} fullPath
- * @param {string} outputPath
  */
-const generateMobileImage = async (fullPath, outputPath) => {
+const generateMobileImage = async (fullPath: string, outputPath: string): Promise<void> => {
   if (fs.existsSync(outputPath)) return;
   const image = sharp(fullPath);
   const metadata = await image.metadata();
+
+  // 通常は発生しないフローだが型定義が`undefined`を許容しており、TSの警告を回避するために記述している
+  if (!metadata.width || !metadata.height) return;
+
   await image
     .resize({
       width: Math.round(metadata.width / 2),
@@ -22,10 +28,8 @@ const generateMobileImage = async (fullPath, outputPath) => {
 
 /**
  * デスクトップ用の画像を生成する
- * @param {string} fullPath
- * @param {string} outputPath
  */
-const generateDesktopImage = async (fullPath, outputPath) => {
+const generateDesktopImage = async (fullPath: string, outputPath: string): Promise<void> => {
   if (fs.existsSync(outputPath)) return;
   await sharp(fullPath).toFile(outputPath);
 };
@@ -33,9 +37,8 @@ const generateDesktopImage = async (fullPath, outputPath) => {
 /**
  * /public/images 以下のディレクトリ内にある png または jpg(jpeg) ファイルを元に webp と avif ファイルを生成する
  * またそれぞれの拡張子に応じたスマホ用のファイルも生成する
- * @param {string} dirPath
  */
-const generateImages = async (dirPath) => {
+const generateImages = async (dirPath: string): Promise<void> => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
   const ignoreDirs = fs
     .readFileSync(path.join(__dirname, '../..', '.imagesignore'), 'utf-8')

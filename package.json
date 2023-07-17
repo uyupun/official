@@ -2,6 +2,7 @@
   "name": "official",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "yarn pathpida && next build && next export",
@@ -17,8 +18,8 @@
     "build-storybook": "storybook build",
     "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/utils/ && prettier --write 'src/utils/$path.ts'",
     "icons": "svgr -d src/components/base/Icons src/assets/icons",
-    "images": "node src/scripts/generateImages.js",
-    "lighthouse": "node src/scripts/lighthouse.js",
+    "images": "ts-node src/scripts/generateImages.ts",
+    "lighthouse": "ts-node src/scripts/lighthouse.ts",
     "husky": "husky install"
   },
   "dependencies": {
@@ -40,6 +41,7 @@
     "@storybook/nextjs": "^7.0.26",
     "@storybook/react": "^7.0.26",
     "@svgr/cli": "^6.5.1",
+    "@types/minimist": "^1.2.2",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
@@ -63,6 +65,7 @@
     "prettier": "^2.8.3",
     "sharp": "^0.32.1",
     "storybook": "^7.0.26",
+    "ts-node": "^10.9.1",
     "typescript": "4.9.5",
     "webpack-merge": "^5.9.0"
   },
