@@ -3,6 +3,7 @@ name: Publish GitHub Pages
 on:
   push:
     branches-ignore:
+      - dependabot/**
       - gh-pages
 
 jobs:

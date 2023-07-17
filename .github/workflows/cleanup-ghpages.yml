@@ -8,6 +8,8 @@ jobs:
     runs-on:
       - ubuntu-latest
 
+    if: ${{ !startsWith(github.ref, 'refs/heads/dependabot/') }}
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

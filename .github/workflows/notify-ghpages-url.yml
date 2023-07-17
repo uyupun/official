@@ -10,6 +10,8 @@ jobs:
     runs-on:
       - ubuntu-latest
 
+    if: ${{ !startsWith(github.head_ref, 'dependabot/') }}
+
     steps:
       - name: Generate directory name
         id: dir_name
