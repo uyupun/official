@@ -17,7 +17,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "pathpida": "pathpida --enableStatic --ignorePath .pathpidaignore --output src/utils/ && prettier --write 'src/utils/$path.ts'",
-    "icons": "svgr -d src/components/base/Icons src/assets/icons",
+    "icons": "svgr -d src/components/base/Icons src/assets/icons && eslint --fix 'src/components/base/Icons'",
     "images": "ts-node src/scripts/generateImages.ts",
     "lighthouse": "ts-node src/scripts/lighthouse.ts",
     "husky": "husky install"
