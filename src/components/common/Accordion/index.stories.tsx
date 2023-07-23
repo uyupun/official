@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { isDesktop } from '@/utils/isDesktop';
 
 import { Accordion as CommonAccordion } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof CommonAccordion> = {
   title: 'Common/Accordion',

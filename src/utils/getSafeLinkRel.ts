@@ -1,4 +1,4 @@
-import { HTMLAttributeAnchorTarget } from 'react';
+import type { HTMLAttributeAnchorTarget } from 'react';
 
 export const getSafeLinkRel = (
   rel?: string,
@@ -7,7 +7,12 @@ export const getSafeLinkRel = (
   if (target !== '_blank') return rel;
 
   const requiredValues = ['noreferrer', 'noopener'];
-  const missingRequiredValues = requiredValues.filter((value) => !rel?.includes(value));
+  let missingRequiredValues: string[];
+  if (rel === undefined) {
+    missingRequiredValues = [...requiredValues];
+  } else {
+    missingRequiredValues = requiredValues.filter((value) => !rel.includes(value));
+  }
   if (missingRequiredValues.length === 0) return rel;
   return `${rel ?? ''} ${missingRequiredValues.join(' ')}`.trim();
 };

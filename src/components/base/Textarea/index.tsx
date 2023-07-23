@@ -1,8 +1,14 @@
 import clsx from 'clsx';
-import { ComponentProps } from 'react';
-import { FieldErrors, FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form';
+import {
+  type FieldErrors,
+  type FieldValues,
+  type RegisterOptions,
+  type UseFormRegister,
+} from 'react-hook-form';
 
 import { styles } from './styles.css';
+
+import type { ComponentProps, FC } from 'react';
 
 type BaseProps = {
   /**
@@ -29,12 +35,12 @@ type BaseProps = {
 
 export type TextareaProps = BaseProps & Omit<ComponentProps<'textarea'>, keyof BaseProps>;
 
-const Textarea = ({ id, placeholder, register, options, errors, ...props }: TextareaProps) => {
+const Textarea: FC<TextareaProps> = ({ id, placeholder, register, options, errors, ...props }) => {
   return (
     <textarea
       {...props}
       id={id}
-      className={clsx(styles.textarea, errors[id] && styles.error)}
+      className={clsx(styles.textarea, errors[id] != null && styles.error)}
       placeholder={placeholder}
       {...register(id, options)}
     />

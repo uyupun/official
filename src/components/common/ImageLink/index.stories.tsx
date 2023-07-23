@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react';
-
-import { ImageSize, ImageSource } from '@/components/base/Image';
 import { pagesPath } from '@/utils/$path';
 
 import { ImageLink as CommonImageLink } from '.';
+
+import type { ImageSize, ImageSource } from '@/components/base/Image';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof CommonImageLink> = {
   title: 'Common/ImageLink',

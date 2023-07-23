@@ -1,9 +1,10 @@
-import NextLink, { LinkProps } from 'next/link';
-import { AnchorHTMLAttributes, ReactNode } from 'react';
+import NextLink, { type LinkProps } from 'next/link';
 
 import { getSafeLinkRel } from '@/utils/getSafeLinkRel';
 
 import { styles } from './styles.css';
+
+import type { AnchorHTMLAttributes, FC, ReactNode } from 'react';
 
 type BaseProps = {
   /**
@@ -24,7 +25,7 @@ type BaseProps = {
 export type TextLinkProps = BaseProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof BaseProps>;
 
-const TextLink = ({ href, children, rel, target, ...props }: TextLinkProps) => {
+const TextLink: FC<TextLinkProps> = ({ href, children, rel, target, ...props }) => {
   return (
     <NextLink
       {...props}

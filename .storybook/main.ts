@@ -1,6 +1,7 @@
-import { StorybookConfig } from '@storybook/nextjs';
 import { VanillaExtractPlugin } from '@vanilla-extract/webpack-plugin';
 import { merge } from 'webpack-merge';
+
+import type { StorybookConfig } from '@storybook/nextjs';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],

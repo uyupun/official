@@ -1,5 +1,5 @@
 import { Dialog as HDialog, Transition } from '@headlessui/react';
-import { Fragment, ReactNode } from 'react';
+import { Fragment, type FC, type ReactNode } from 'react';
 
 import { styles } from './styles.css';
 
@@ -18,7 +18,7 @@ export type DialogProps = {
   onClose: () => void;
 };
 
-const Dialog = ({ isOpen, children, onClose }: DialogProps) => {
+const Dialog: FC<DialogProps> = ({ isOpen, children, onClose }) => {
   return (
     <Transition
       show={isOpen}

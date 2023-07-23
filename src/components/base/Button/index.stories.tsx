@@ -1,9 +1,10 @@
 import { action } from '@storybook/addon-actions';
-import { Meta, StoryObj } from '@storybook/react';
 
 import { CloseIcon } from '@/components/base/Icons';
 
 import { Button as BaseButton } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BaseButton> = {
   title: 'Base/Button',

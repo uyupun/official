@@ -4,8 +4,8 @@ import { fileURLToPath } from 'url';
 
 import sharp from 'sharp';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const _filename = fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 
 /**
  * スマホ用の画像を生成する
@@ -16,7 +16,7 @@ const generateMobileImage = async (fullPath: string, outputPath: string): Promis
   const metadata = await image.metadata();
 
   // 通常は発生しないフローだが型定義が`undefined`を許容しており、TSの警告を回避するために記述している
-  if (!metadata.width || !metadata.height) return;
+  if (metadata.width === undefined || metadata.height === undefined) return;
 
   await image
     .resize({
@@ -81,5 +81,5 @@ const generateImages = async (dirPath: string): Promise<void> => {
   }
 };
 
-const directoryPath = path.join(__dirname, '../..', 'public', 'images');
+const directoryPath = path.join(_dirname, '../..', 'public', 'images');
 generateImages(directoryPath).catch(console.error);

@@ -1,7 +1,8 @@
 import clsx from 'clsx';
-import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import { styles } from './styles.css';
+
+import type { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 
 type BaseProps = {
   /**
@@ -29,13 +30,13 @@ type BaseProps = {
 export type ButtonProps = BaseProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps>;
 
-const Button = ({
+const Button: FC<ButtonProps> = ({
   variant = 'default',
   className,
   type = 'button',
   children,
   ...props
-}: ButtonProps) => {
+}) => {
   return (
     <button
       {...props}

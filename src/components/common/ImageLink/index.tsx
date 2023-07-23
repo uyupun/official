@@ -1,10 +1,11 @@
-import NextLink, { LinkProps } from 'next/link';
-import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
+import NextLink, { type LinkProps } from 'next/link';
 
-import { Image, ImageProps } from '@/components/base/Image';
+import { Image, type ImageProps } from '@/components/base/Image';
 import { getSafeLinkRel } from '@/utils/getSafeLinkRel';
 
 import { styles } from './styles.css';
+
+import type { FC, HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
 export type ImageLinkProps = Omit<ImageProps, 'alt'> & {
   /**
@@ -34,7 +35,7 @@ export type ImageLinkProps = Omit<ImageProps, 'alt'> & {
   children: ReactNode;
 };
 
-const ImageLink = ({ href, target, rel, text, children, ...rest }: ImageLinkProps) => {
+const ImageLink: FC<ImageLinkProps> = ({ href, target, rel, text, children, ...rest }) => {
   return (
     <NextLink
       href={href}

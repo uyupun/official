@@ -1,10 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { action } from '@storybook/addon-actions';
-import { Meta, StoryObj } from '@storybook/react';
 import { useForm } from 'react-hook-form';
 import { object, string } from 'zod';
 
 import { Textbox as BaseTextbox } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BaseTextbox> = {
   title: 'Base/Textbox',

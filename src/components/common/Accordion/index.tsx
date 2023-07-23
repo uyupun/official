@@ -1,10 +1,11 @@
 import { Disclosure } from '@headlessui/react';
 import clsx from 'clsx';
-import { ReactNode } from 'react';
 
 import { ExpandMoreIcon } from '../../base/Icons';
 
 import { styles } from './styles.css';
+
+import type { FC, ReactNode } from 'react';
 
 export type AccordionProps = {
   /**
@@ -21,7 +22,7 @@ export type AccordionProps = {
   children: ReactNode;
 };
 
-const Accordion = ({ isOpen, buttonText, children }: AccordionProps) => {
+const Accordion: FC<AccordionProps> = ({ isOpen, buttonText, children }) => {
   return (
     <Disclosure defaultOpen={isOpen}>
       {({ open }) => (

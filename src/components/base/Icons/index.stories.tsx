@@ -1,8 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import * as Icons from '.';
 
-const IconList = () => {
+import type { Meta, StoryObj } from '@storybook/react';
+import type { FC } from 'react';
+
+const IconList: FC = () => {
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
       {Object.entries(Icons).map(([iconName, IconComponent], index) => (

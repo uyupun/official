@@ -1,7 +1,8 @@
 import clsx from 'clsx';
-import { ComponentProps } from 'react';
 
 import { styles } from './styles.css';
+
+import type { ComponentProps, FC } from 'react';
 
 type BaseProps = {
   /**
@@ -12,7 +13,7 @@ type BaseProps = {
 
 export type LabelProps = BaseProps & Omit<ComponentProps<'label'>, keyof BaseProps>;
 
-const Label = ({ isRequired = true, htmlFor, children }: LabelProps) => {
+const Label: FC<LabelProps> = ({ isRequired = true, htmlFor, children }) => {
   return (
     <label htmlFor={htmlFor} className={clsx(styles.label, isRequired && styles.requiredMark)}>
       {children}

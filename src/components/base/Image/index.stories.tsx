@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { sprinkles } from '@/styles/sprinkles.css';
 
-import { Image as BaseImage, ImageSize, ImageSource } from '.';
+import { Image as BaseImage, type ImageSize, type ImageSource } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BaseImage> = {
   title: 'Base/Image',
