@@ -26,3 +26,4 @@ ignore:
   - next-env.d.ts
   - README.md
   - storybook-static
+  - tsconfig.eslint.json
