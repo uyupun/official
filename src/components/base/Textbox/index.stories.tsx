@@ -35,7 +35,7 @@ export const Textbox: Story = {
             <label htmlFor="title">Title</label>
           </dt>
           <dd style={{ marginBottom: '24px' }}>
-            <BaseTextbox id="title" register={register} errors={errors} />
+            <BaseTextbox errors={errors} id="title" register={register} />
           </dd>
         </dl>
         <button type="submit">Submit</button>

@@ -39,8 +39,8 @@ const Textarea: FC<TextareaProps> = ({ id, placeholder, register, options, error
   return (
     <textarea
       {...props}
-      id={id}
       className={clsx(styles.textarea, errors[id] != null && styles.error)}
+      id={id}
       placeholder={placeholder}
       {...register(id, options)}
     />

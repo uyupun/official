@@ -60,21 +60,21 @@ export const Image: Story = {
     <dl>
       <dt>isLazy=true</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <BaseImage sources={sources} alt={alt} isLazy={true} width={width} height={height} />
+        <BaseImage alt={alt} height={height} isLazy={true} sources={sources} width={width} />
       </dd>
       <dt>isLazy=false</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <BaseImage sources={sources} alt={alt} isLazy={false} width={width} height={height} />
+        <BaseImage alt={alt} height={height} isLazy={false} sources={sources} width={width} />
       </dd>
       <dt>Custom style</dt>
       <dd style={{ marginBottom: '16px' }}>
         <BaseImage
-          sources={sources}
           alt={alt}
-          isLazy={false}
-          width={width}
-          height={height}
           className={style}
+          height={height}
+          isLazy={false}
+          sources={sources}
+          width={width}
         />
       </dd>
     </dl>

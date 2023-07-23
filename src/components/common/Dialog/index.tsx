@@ -21,7 +21,6 @@ export type DialogProps = {
 const Dialog: FC<DialogProps> = ({ isOpen, children, onClose }) => {
   return (
     <Transition
-      show={isOpen}
       as={Fragment}
       enter={styles.transition.enter}
       enterFrom={styles.transition.enterFrom}
@@ -29,6 +28,7 @@ const Dialog: FC<DialogProps> = ({ isOpen, children, onClose }) => {
       leave={styles.transition.leave}
       leaveFrom={styles.transition.leaveFrom}
       leaveTo={styles.transition.leaveTo}
+      show={isOpen}
     >
       <HDialog className={styles.dialog} onClose={onClose}>
         <div className={styles.container}>

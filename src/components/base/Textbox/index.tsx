@@ -34,10 +34,10 @@ const Textbox: FC<TextboxProps> = ({ id, placeholder, register, options, errors,
   return (
     <input
       {...props}
-      id={id}
-      type={'text'}
       className={clsx(styles.textbox, errors[id] != null && styles.error)}
+      id={id}
       placeholder={placeholder}
+      type={'text'}
       {...register(id, options)}
     />
   );

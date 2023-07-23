@@ -6,31 +6,31 @@ const Document: FC = () => {
   return (
     <Html lang="ja">
       <Head>
-        <meta name="description" content={process.env.NEXT_PUBLIC_DESC} />
+        <meta content={process.env.NEXT_PUBLIC_DESC} name="description" />
 
-        <meta property="og:title" content={process.env.NEXT_PUBLIC_TITLE} />
-        <meta property="og:description" content={process.env.NEXT_PUBLIC_DESC} />
+        <meta content={process.env.NEXT_PUBLIC_TITLE} property="og:title" />
+        <meta content={process.env.NEXT_PUBLIC_DESC} property="og:description" />
         <meta
-          property="og:image"
           content="https://raw.githubusercontent.com/uyupun/official/main/public/images/ogp/ogp-image.png"
+          property="og:image"
         />
-        <meta property="og:image:alt" content={process.env.NEXT_PUBLIC_TITLE} />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:url" content="https://uyupun.tech" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="ja_JP" />
+        <meta content={process.env.NEXT_PUBLIC_TITLE} property="og:image:alt" />
+        <meta content="image/png" property="og:image:type" />
+        <meta content="https://uyupun.tech" property="og:url" />
+        <meta content="website" property="og:type" />
+        <meta content="ja_JP" property="og:locale" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={process.env.NEXT_PUBLIC_TITLE} />
-        <meta name="twitter:description" content={process.env.NEXT_PUBLIC_DESC} />
-        <meta name="twitter:site" content="@uyupunpopunpo" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta content={process.env.NEXT_PUBLIC_TITLE} name="twitter:title" />
+        <meta content={process.env.NEXT_PUBLIC_DESC} name="twitter:description" />
+        <meta content="@uyupunpopunpo" name="twitter:site" />
         <meta
-          name="twitter:image"
           content="https://raw.githubusercontent.com/uyupun/official/main/public/images/ogp/twitter-image.png"
+          name="twitter:image"
         />
-        <meta name="twitter:image:alt" content={process.env.NEXT_PUBLIC_TITLE} />
+        <meta content={process.env.NEXT_PUBLIC_TITLE} name="twitter:image:alt" />
 
-        <link rel="icon" href="/favicon.ico" />
+        <link href="/favicon.ico" rel="icon" />
       </Head>
       <body>
         <Main />

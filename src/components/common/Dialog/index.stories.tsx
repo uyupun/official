@@ -23,10 +23,10 @@ export const Dialog: Story = {
     return (
       <div>
         <button
-          type="button"
           onClick={() => {
             setIsOpen(true);
           }}
+          type="button"
         >
           Open Dialog
         </button>

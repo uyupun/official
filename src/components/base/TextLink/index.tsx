@@ -29,8 +29,8 @@ const TextLink: FC<TextLinkProps> = ({ href, children, rel, target, ...props }) 
   return (
     <NextLink
       {...props}
-      href={href}
       className={styles.link}
+      href={href}
       rel={getSafeLinkRel(rel, target)}
       target={target}
     >

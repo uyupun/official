@@ -70,23 +70,23 @@ const Image: FC<ImageProps> = ({ sources, alt, className, isLazy = true, height,
       {sources.map((source, index) => {
         return (
           <source
+            height={source.isDesktop === true ? height.desktop : height.mobile}
             key={index}
+            media={source.isDesktop === true ? breakpoint : undefined}
             srcSet={source.srcset}
             type={`image/${source.format}`}
-            media={source.isDesktop === true ? breakpoint : undefined}
             width={source.isDesktop === true ? width.desktop : width.mobile}
-            height={source.isDesktop === true ? height.desktop : height.mobile}
           />
         );
       })}
       <img
-        src={sourceForImgElement.srcset}
         alt={alt}
         className={className}
-        loading={isLazy ? 'lazy' : 'eager'}
         decoding="async"
-        width={sourceForImgElement.isDesktop === true ? width.desktop : width.mobile}
         height={sourceForImgElement.isDesktop === true ? height.desktop : height.mobile}
+        loading={isLazy ? 'lazy' : 'eager'}
+        src={sourceForImgElement.srcset}
+        width={sourceForImgElement.isDesktop === true ? width.desktop : width.mobile}
       />
     </picture>
   );

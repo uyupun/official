@@ -40,12 +40,12 @@ const Button: FC<ButtonProps> = ({
   return (
     <button
       {...props}
-      type={type}
       className={clsx(
         styles.button,
         variant === 'default' ? styles.default : styles.circle,
         className
       )}
+      type={type}
     >
       {children}
     </button>

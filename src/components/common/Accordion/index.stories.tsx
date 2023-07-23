@@ -14,10 +14,10 @@ type Story = StoryObj<typeof CommonAccordion>;
 export const Accordion: Story = {
   render: () => (
     <>
-      <CommonAccordion isOpen={true} buttonText="2023">
+      <CommonAccordion buttonText="2023" isOpen={true}>
         {'isOpen={true}'}
       </CommonAccordion>
-      <CommonAccordion isOpen={false} buttonText="2022">
+      <CommonAccordion buttonText="2022" isOpen={false}>
         {'isOpen={false}'}
       </CommonAccordion>
       <CommonAccordion buttonText="2021" isOpen={isDesktop()}>

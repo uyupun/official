@@ -35,7 +35,7 @@ export const Textarea: Story = {
             <label htmlFor="description">Description</label>
           </dt>
           <dd style={{ marginBottom: '24px' }}>
-            <BaseTextarea id="description" register={register} errors={errors} />
+            <BaseTextarea errors={errors} id="description" register={register} />
           </dd>
         </dl>
         <button type="submit">Submit</button>

@@ -15,7 +15,7 @@ export type LabelProps = BaseProps & Omit<ComponentProps<'label'>, keyof BasePro
 
 const Label: FC<LabelProps> = ({ isRequired = true, htmlFor, children }) => {
   return (
-    <label htmlFor={htmlFor} className={clsx(styles.label, isRequired && styles.requiredMark)}>
+    <label className={clsx(styles.label, isRequired && styles.requiredMark)} htmlFor={htmlFor}>
       {children}
     </label>
   );

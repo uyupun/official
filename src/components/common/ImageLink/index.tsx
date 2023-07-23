@@ -38,8 +38,8 @@ export type ImageLinkProps = Omit<ImageProps, 'alt'> & {
 const ImageLink: FC<ImageLinkProps> = ({ href, target, rel, text, children, ...rest }) => {
   return (
     <NextLink
-      href={href}
       className={styles.imageLink}
+      href={href}
       rel={getSafeLinkRel(rel, target)}
       target={target}
     >
