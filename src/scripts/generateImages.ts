@@ -4,8 +4,8 @@ import { fileURLToPath } from 'url';
 
 import sharp from 'sharp';
 
-const _filename = fileURLToPath(import.meta.url);
-const _dirname = path.dirname(_filename);
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 /**
  * スマホ用の画像を生成する
@@ -81,5 +81,5 @@ const generateImages = async (dirPath: string): Promise<void> => {
   }
 };
 
-const directoryPath = path.join(_dirname, '../..', 'public', 'images');
+const directoryPath = path.join(dirname, '../..', 'public', 'images');
 generateImages(directoryPath).catch(console.error);
