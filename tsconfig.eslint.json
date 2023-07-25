@@ -6,6 +6,7 @@
     "**/*.tsx",
     "next.config.js",
     "changelog.config.cjs",
+    ".svgrrc.cjs",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx"
   ]
