@@ -51,8 +51,7 @@ const height: ImageSize = {
 };
 const style = sprinkles({
   display: 'inline-block',
-  padding: 2,
-  backgroundColor: 'lightBlue',
+  marginX: 10,
 });
 
 export const Image: Story = {
