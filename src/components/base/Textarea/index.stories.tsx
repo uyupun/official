@@ -1,10 +1,11 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { action } from '@storybook/addon-actions';
-import { Meta, StoryObj } from '@storybook/react';
 import { useForm } from 'react-hook-form';
 import { object, string } from 'zod';
 
 import { Textarea as BaseTextarea } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BaseTextarea> = {
   title: 'Base/Textarea',
@@ -34,7 +35,7 @@ export const Textarea: Story = {
             <label htmlFor="description">Description</label>
           </dt>
           <dd style={{ marginBottom: '24px' }}>
-            <BaseTextarea id="description" register={register} errors={errors} />
+            <BaseTextarea errors={errors} id="description" register={register} />
           </dd>
         </dl>
         <button type="submit">Submit</button>

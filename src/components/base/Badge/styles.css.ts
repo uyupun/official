@@ -2,7 +2,8 @@ import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '@/styles/sprinkles.css';
-import { Color } from '@/styles/themes.css';
+
+import type { Color } from '@/styles/themes.css';
 
 export type BadgeColor = Extract<Color, 'blue'>;
 

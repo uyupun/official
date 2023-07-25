@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { styles, type TextColor, type TextFontWeight, type TextSize } from './styles.css';
 
-import { TextColor, TextFontWeight, TextSize, styles } from './styles.css';
+import type { FC, ReactNode } from 'react';
 
 export type TextProps = {
   /**
@@ -25,13 +25,13 @@ export type TextProps = {
   children: ReactNode;
 };
 
-const Text = ({
+const Text: FC<TextProps> = ({
   tag = 'span',
   size = 'md',
   fontWeight = 'normal',
   color = 'black',
   children,
-}: TextProps) => {
+}) => {
   const className = styles({
     size,
     color,

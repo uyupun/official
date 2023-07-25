@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { Text as BaseText } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BaseText> = {
   title: 'Base/Text',
@@ -21,40 +21,40 @@ export const Text: Story = {
       <dt style={{ marginBottom: '8px' }}>Font Weight</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseText tag="p">fontWeight=&quot;normal&quot;</BaseText>
-        <BaseText tag="p" fontWeight="bold">
+        <BaseText fontWeight="bold" tag="p">
           fontWeight=&quot;bold&quot;
         </BaseText>
       </dd>
       <dt style={{ marginBottom: '8px' }}>Size</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText tag="p" size="xs">
+        <BaseText size="xs" tag="p">
           size=&quot;xs&quot;
         </BaseText>
-        <BaseText tag="p" size="sm">
+        <BaseText size="sm" tag="p">
           size=&quot;sm&quot;
         </BaseText>
-        <BaseText tag="p" size="md">
+        <BaseText size="md" tag="p">
           size=&quot;md&quot;
         </BaseText>
-        <BaseText tag="p" size="lg">
+        <BaseText size="lg" tag="p">
           size=&quot;lg&quot;
         </BaseText>
-        <BaseText tag="p" size="xl">
+        <BaseText size="xl" tag="p">
           size=&quot;xl&quot;
         </BaseText>
       </dd>
       <dt style={{ marginBottom: '8px' }}>Color</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText tag="p" color="white">
+        <BaseText color="white" tag="p">
           color=&quot;white&quot;
         </BaseText>
-        <BaseText tag="p" color="black">
+        <BaseText color="black" tag="p">
           color=&quot;black&quot;
         </BaseText>
-        <BaseText tag="p" color="red">
+        <BaseText color="red" tag="p">
           color=&quot;red&quot;
         </BaseText>
-        <BaseText tag="p" color="darkGray">
+        <BaseText color="darkGray" tag="p">
           color=&quot;darkGray&quot;
         </BaseText>
       </dd>

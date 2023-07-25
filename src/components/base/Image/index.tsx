@@ -1,5 +1,7 @@
 import { breakpoint } from '@/styles/breakpoint';
 
+import type { FC } from 'react';
+
 export type ImageSource = {
   srcset: string;
   format: 'jpeg' | 'png' | 'webp' | 'avif';
@@ -47,7 +49,7 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
   };
 
   const compareIsDesktop = (a: ImageSource, b: ImageSource): number => {
-    return (a.isDesktop ? 1 : 0) - (b.isDesktop ? 1 : 0);
+    return (a.isDesktop === true ? 1 : 0) - (b.isDesktop === true ? 1 : 0);
   };
 
   const sortedSources = [...sources].sort((a, b) => {
@@ -59,7 +61,7 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
   return sortedSources[0];
 };
 
-const Image = ({ sources, alt, className, isLazy = true, height, width }: ImageProps) => {
+const Image: FC<ImageProps> = ({ sources, alt, className, isLazy = true, height, width }) => {
   const sourceForImgElement = getSource(sources);
   if (sourceForImgElement === null) return <></>;
 
@@ -68,23 +70,23 @@ const Image = ({ sources, alt, className, isLazy = true, height, width }: ImageP
       {sources.map((source, index) => {
         return (
           <source
+            height={source.isDesktop === true ? height.desktop : height.mobile}
             key={index}
+            media={source.isDesktop === true ? breakpoint : undefined}
             srcSet={source.srcset}
             type={`image/${source.format}`}
-            media={source.isDesktop ? breakpoint : undefined}
-            width={source.isDesktop ? width.desktop : width.mobile}
-            height={source.isDesktop ? height.desktop : height.mobile}
+            width={source.isDesktop === true ? width.desktop : width.mobile}
           />
         );
       })}
       <img
-        src={sourceForImgElement.srcset}
         alt={alt}
         className={className}
-        loading={isLazy ? 'lazy' : 'eager'}
         decoding="async"
-        width={sourceForImgElement.isDesktop ? width.desktop : width.mobile}
-        height={sourceForImgElement.isDesktop ? height.desktop : height.mobile}
+        height={sourceForImgElement.isDesktop === true ? height.desktop : height.mobile}
+        loading={isLazy ? 'lazy' : 'eager'}
+        src={sourceForImgElement.srcset}
+        width={sourceForImgElement.isDesktop === true ? width.desktop : width.mobile}
       />
     </picture>
   );

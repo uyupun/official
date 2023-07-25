@@ -1,14 +1,16 @@
-import { IconProps } from '@/components/base/Icons/props';
 import { colors } from '@/styles/themes.css';
-const SvgCloseIcon = ({ fill, stroke, ...props }: IconProps) => (
+
+import type { IconProps } from '@/components/base/Icons/props';
+import type { FC } from 'react';
+const SvgCloseIcon: FC<IconProps> = ({ fill, stroke, ...props }) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden={true}
+    fill={fill !== undefined ? colors[fill] : colors.black}
     height={24}
+    stroke={stroke}
     viewBox="0 0 24 24"
     width={24}
-    fill={fill ? colors[fill] : colors.black}
-    stroke={stroke}
-    aria-hidden={true}
+    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
     <path d="M0 0h24v24H0V0z" fill="none" />

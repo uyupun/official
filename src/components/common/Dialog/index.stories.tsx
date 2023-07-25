@@ -1,7 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
 import { Dialog as CommonDialog } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof CommonDialog> = {
   title: 'Common/Dialog',
@@ -21,10 +22,20 @@ export const Dialog: Story = {
 
     return (
       <div>
-        <button type="button" onClick={() => setIsOpen(true)}>
+        <button
+          onClick={() => {
+            setIsOpen(true);
+          }}
+          type="button"
+        >
           Open Dialog
         </button>
-        <CommonDialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <CommonDialog
+          isOpen={isOpen}
+          onClose={() => {
+            setIsOpen(false);
+          }}
+        >
           <div style={{ height: '1000px' }}>コンテンツ</div>
         </CommonDialog>
       </div>

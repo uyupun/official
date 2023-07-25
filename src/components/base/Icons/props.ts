@@ -1,8 +1,5 @@
-import { ComponentProps } from 'react';
-
-import { colors } from '@/styles/themes.css';
-
-type Color = keyof typeof colors;
+import type { Color } from '@/styles/themes.css';
+import type { ComponentProps } from 'react';
 
 export type IconProps = Omit<ComponentProps<'svg'>, 'fill' | 'stroke'> & {
   fill?: Color;

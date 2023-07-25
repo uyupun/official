@@ -2,7 +2,7 @@ module.exports = {
   typescript: true,
   filenameCase: 'camel',
   svgProps: {
-    fill: '{fill ? colors[fill] : colors.black}',
+    fill: '{fill !== undefined ? colors[fill] : colors.black}',
     stroke: '{stroke}',
     'aria-hidden': true,
   },
@@ -20,10 +20,12 @@ module.exports = {
   },
   template: (variables, { tpl }) => {
     return tpl`
-      import { IconProps } from '@/components/base/Icons/props';
       import { colors } from '@/styles/themes.css';
 
-      const ${variables.componentName} = ({ fill, stroke, ...props }: IconProps) => (
+      import type { IconProps } from '@/components/base/Icons/props';
+      import type { FC } from 'react';
+
+      const ${`${variables.componentName}: FC<IconProps>`} = ({ fill, stroke, ...props }) => (
         ${variables.jsx}
       );
 

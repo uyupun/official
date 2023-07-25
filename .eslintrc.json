@@ -1,5 +1,17 @@
 {
-  "extends": ["next/core-web-vitals", "next", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "extends": ["standard-with-typescript", "next/core-web-vitals", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.eslint.json",
+    "jsx": true
+  },
   "rules": {
     "import/order": [
       "warn",
@@ -19,6 +31,24 @@
         "alphabetize": { "order": "asc", "caseInsensitive": true }
       }
     ],
-    "eqeqeq": "error"
-  }
+    "eqeqeq": "error",
+    "@typescript-eslint/no-misused-promises": [
+      "error",
+      {
+        "checksVoidReturn": {
+          "attributes": false
+        }
+      }
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "react/jsx-sort-props": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["next-env.d.ts"],
+      "rules": {
+        "@typescript-eslint/triple-slash-reference": "off"
+      }
+    }
+  ]
 }

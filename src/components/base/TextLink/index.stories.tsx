@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from '@storybook/react';
-
 import { pagesPath } from '@/utils/$path';
 
 import { TextLink as BaseTextLink } from '.';
+
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof BaseTextLink> = {
   title: 'Base/TextLink',

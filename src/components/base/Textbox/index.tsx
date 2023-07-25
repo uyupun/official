@@ -1,8 +1,9 @@
 import clsx from 'clsx';
-import { ComponentProps } from 'react';
-import { FieldErrors, FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form';
 
 import { styles } from './styles.css';
+
+import type { ComponentProps, FC } from 'react';
+import type { FieldErrors, FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form';
 
 type BaseProps = {
   /**
@@ -29,14 +30,14 @@ type BaseProps = {
 
 export type TextboxProps = BaseProps & Omit<ComponentProps<'input'>, keyof BaseProps>;
 
-const Textbox = ({ id, placeholder, register, options, errors, ...props }: TextboxProps) => {
+const Textbox: FC<TextboxProps> = ({ id, placeholder, register, options, errors, ...props }) => {
   return (
     <input
       {...props}
+      className={clsx(styles.textbox, errors[id] != null && styles.error)}
       id={id}
-      type={'text'}
-      className={clsx(styles.textbox, errors[id] && styles.error)}
       placeholder={placeholder}
+      type={'text'}
       {...register(id, options)}
     />
   );

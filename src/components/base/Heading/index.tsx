@@ -1,7 +1,8 @@
 import clsx from 'clsx';
-import { ReactNode } from 'react';
 
 import { styles } from './styles.css';
+
+import type { FC, ReactNode } from 'react';
 
 export type HeadingProps = {
   /**
@@ -14,7 +15,7 @@ export type HeadingProps = {
   children: ReactNode;
 };
 
-const Heading = ({ tag = 'h1', children }: HeadingProps) => {
+const Heading: FC<HeadingProps> = ({ tag = 'h1', children }) => {
   switch (tag) {
     case 'h1':
       return <h1 className={clsx(styles.common, styles.h1)}>{children}</h1>;

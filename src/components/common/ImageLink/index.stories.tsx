@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react';
-
-import { ImageSize, ImageSource } from '@/components/base/Image';
 import { pagesPath } from '@/utils/$path';
 
 import { ImageLink as CommonImageLink } from '.';
+
+import type { ImageSize, ImageSource } from '@/components/base/Image';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof CommonImageLink> = {
   title: 'Common/ImageLink',
@@ -56,11 +56,11 @@ export const ImageLink: Story = {
       <dt>Default</dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
-          href={pagesPath.$url()}
-          text="ゼウスくん"
-          sources={sources}
-          width={width}
           height={height}
+          href={pagesPath.$url()}
+          sources={sources}
+          text="ゼウスくん"
+          width={width}
         >
           ゼウスくん
         </CommonImageLink>
@@ -68,13 +68,13 @@ export const ImageLink: Story = {
       <dt>target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;</dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
-          href="https://example.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-          text="ゼウスくん"
-          sources={sources}
-          width={width}
           height={height}
+          href="https://example.com/"
+          rel="noreferrer noopener"
+          sources={sources}
+          target="_blank"
+          text="ゼウスくん"
+          width={width}
         >
           ゼウスくん
         </CommonImageLink>
@@ -82,13 +82,13 @@ export const ImageLink: Story = {
       <dt>Complex children</dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
-          href="https://example.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-          text="ゼウスくん"
-          sources={sources}
-          width={width}
           height={height}
+          href="https://example.com/"
+          rel="noreferrer noopener"
+          sources={sources}
+          target="_blank"
+          text="ゼウスくん"
+          width={width}
         >
           <div>
             <div style={{ fontSize: '16px' }}>汎用五感伝達機構</div>
