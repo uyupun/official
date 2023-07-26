@@ -1,3 +1,7 @@
+!.*.js
+!.*.cjs
+!.*/
+
 # dependencies
 /node_modules
 /.pnp
@@ -16,7 +20,3 @@
 
 # vercel
 .vercel
-
-!.*.js
-!.*.cjs
-!/.storybook

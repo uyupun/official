@@ -1,13 +1,17 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
     "**/*.cjs",
-    ".svgrrc.cjs",
-    ".storybook/**/*.ts",
-    ".storybook/**/*.tsx"
+    "**/.*/*.ts",
+    "**/.*/*.tsx",
+    "**/.*/*.js",
+    "**/.*/*.cjs",
+    "**/.*.ts",
+    "**/.*.tsx",
+    "**/.*.js",
+    "**/.*.cjs"
   ]
 }
