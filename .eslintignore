@@ -18,4 +18,5 @@
 .vercel
 
 !.*.js
+!.*.cjs
 !/.storybook

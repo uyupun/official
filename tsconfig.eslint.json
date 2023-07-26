@@ -4,8 +4,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js",
-    "changelog.config.cjs",
+    "**/*.js",
+    "**/*.cjs",
     ".svgrrc.cjs",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx"
