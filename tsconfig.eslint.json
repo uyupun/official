@@ -1,11 +1,17 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next.config.js",
-    ".storybook/**/*.ts",
-    ".storybook/**/*.tsx"
+    "**/*.js",
+    "**/*.cjs",
+    "**/.*/*.ts",
+    "**/.*/*.tsx",
+    "**/.*/*.js",
+    "**/.*/*.cjs",
+    "**/.*.ts",
+    "**/.*.tsx",
+    "**/.*.js",
+    "**/.*.cjs"
   ]
 }
