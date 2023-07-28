@@ -15,15 +15,15 @@ globalFontFace(font, {
 });
 
 globalFontFace(font, {
-  src: `url('/fonts/Cica-Oblique.ttf') format('truetype')`,
+  src: `url('/fonts/Cica-RegularItalic.ttf') format('truetype')`,
   fontWeight: 'normal',
-  fontStyle: 'oblique',
+  fontStyle: 'italic',
 });
 
 globalFontFace(font, {
-  src: `url('/fonts/Cica-BoldOblique.ttf') format('truetype')`,
+  src: `url('/fonts/Cica-BoldItalic.ttf') format('truetype')`,
   fontWeight: 'bold',
-  fontStyle: 'oblique',
+  fontStyle: 'italic',
 });
 
 globalStyle('body', {
