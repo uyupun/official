@@ -1,29 +1,29 @@
 import { globalFontFace, globalStyle } from '@vanilla-extract/css';
 
-const font = 'RictyDiminished';
+const font = 'Cica';
 
 globalFontFace(font, {
-  src: `url('/fonts/RictyDiminished-Regular.ttf') format('truetype')`,
+  src: `url('/fonts/Cica-Regular.ttf') format('truetype')`,
   fontWeight: 'normal',
   fontStyle: 'normal',
 });
 
 globalFontFace(font, {
-  src: `url('/fonts/RictyDiminished-Bold.ttf') format('truetype')`,
+  src: `url('/fonts/Cica-Bold.ttf') format('truetype')`,
   fontWeight: 'bold',
   fontStyle: 'normal',
 });
 
 globalFontFace(font, {
-  src: `url('/fonts/RictyDiminished-Oblique.ttf') format('truetype')`,
+  src: `url('/fonts/Cica-RegularItalic.ttf') format('truetype')`,
   fontWeight: 'normal',
-  fontStyle: 'oblique',
+  fontStyle: 'italic',
 });
 
 globalFontFace(font, {
-  src: `url('/fonts/RictyDiminished-BoldOblique.ttf') format('truetype')`,
+  src: `url('/fonts/Cica-BoldItalic.ttf') format('truetype')`,
   fontWeight: 'bold',
-  fontStyle: 'oblique',
+  fontStyle: 'italic',
 });
 
 globalStyle('body', {

@@ -25,6 +25,13 @@ export const Text: Story = {
           fontWeight=&quot;bold&quot;
         </BaseText>
       </dd>
+      <dt style={{ marginBottom: '8px' }}>Font Style</dt>
+      <dd style={{ marginBottom: '24px' }}>
+        <BaseText tag="p">fontStyle=&quot;normal&quot;</BaseText>
+        <BaseText fontStyle="italic" tag="p">
+          fontStyle=&quot;italic&quot;
+        </BaseText>
+      </dd>
       <dt style={{ marginBottom: '8px' }}>Size</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseText size="xs" tag="p">
