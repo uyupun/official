@@ -8,6 +8,7 @@ export type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TextFontWeight = 'normal' | 'bold';
 export type TextColor = Extract<Color, 'white' | 'black' | 'red' | 'darkGray'>;
 export type TextDisplay = 'block' | 'inlineBlock';
+export type TextFontStyle = 'normal' | 'italic';
 
 const size: { [Key in TextSize]: string } = {
   xs: sprinkles({
@@ -75,6 +76,15 @@ const display: { [Key in TextDisplay]: string } = {
   }),
 };
 
+const fontStyle: { [Key in TextFontStyle]: string } = {
+  normal: sprinkles({
+    fontStyle: 'normal',
+  }),
+  italic: sprinkles({
+    fontStyle: 'italic',
+  }),
+};
+
 const styles = recipe({
   base: sprinkles({
     lineHeight: 'text',
@@ -84,6 +94,7 @@ const styles = recipe({
     fontWeight,
     color,
     display,
+    fontStyle,
   },
 });
 

@@ -79,9 +79,10 @@ const selectorProperties = defineProperties({
   },
 });
 
-const fontWeightProperties = defineProperties({
+const fontProperties = defineProperties({
   properties: {
     fontWeight: ['normal', 'bold'],
+    fontStyle: ['normal', 'italic'],
   },
 });
 
@@ -89,7 +90,7 @@ export const sprinkles = createSprinkles(
   responsiveProperties,
   colorProperties,
   lineHeightProperties,
-  fontWeightProperties,
+  fontProperties,
   selectorProperties
 );
 

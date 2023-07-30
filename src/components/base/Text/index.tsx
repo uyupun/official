@@ -1,4 +1,10 @@
-import { styles, type TextColor, type TextFontWeight, type TextSize } from './styles.css';
+import {
+  styles,
+  type TextColor,
+  type TextFontStyle,
+  type TextFontWeight,
+  type TextSize,
+} from './styles.css';
 
 import type { FC, ReactNode } from 'react';
 
@@ -16,6 +22,10 @@ export type TextProps = {
    */
   fontWeight?: TextFontWeight;
   /**
+   * テキストのスタイル
+   */
+  fontStyle?: TextFontStyle;
+  /**
    * テキストのカラー
    */
   color?: TextColor;
@@ -29,6 +39,7 @@ const Text: FC<TextProps> = ({
   tag = 'span',
   size = 'md',
   fontWeight = 'normal',
+  fontStyle = 'normal',
   color = 'black',
   children,
 }) => {
@@ -37,6 +48,7 @@ const Text: FC<TextProps> = ({
     color,
     fontWeight,
     display: tag === 'span' ? 'inlineBlock' : 'block',
+    fontStyle,
   });
 
   switch (tag) {
