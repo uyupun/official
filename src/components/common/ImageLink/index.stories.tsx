@@ -2,8 +2,9 @@ import { pagesPath } from '@/utils/$path';
 
 import { ImageLink as CommonImageLink } from '.';
 
-import type { ImageSize, ImageSource } from '@/components/base/Image';
+import type { Image } from '@/components/base/Image';
 import type { Meta, StoryObj } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
 const meta: Meta<typeof CommonImageLink> = {
   title: 'Common/ImageLink',
@@ -12,7 +13,7 @@ const meta: Meta<typeof CommonImageLink> = {
 export default meta;
 
 type Story = StoryObj<typeof CommonImageLink>;
-const sources: ImageSource[] = [
+const sources: ComponentProps<typeof Image>['sources'] = [
   {
     srcset: './images/zeus/zeus.avif',
     format: 'avif',
@@ -41,11 +42,11 @@ const sources: ImageSource[] = [
     format: 'png',
   },
 ];
-const width: ImageSize = {
+const width: ComponentProps<typeof Image>['width'] = {
   mobile: 200,
   desktop: 300,
 };
-const height: ImageSize = {
+const height: ComponentProps<typeof Image>['height'] = {
   mobile: 276,
   desktop: 413,
 };

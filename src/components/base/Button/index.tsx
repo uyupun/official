@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import { styles } from './styles.css';
 
-import type { ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
 type BaseProps = {
   /**
@@ -27,10 +27,9 @@ type BaseProps = {
   children: ReactNode;
 };
 
-export type ButtonProps = BaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, keyof BaseProps>;
+type Props = BaseProps & Omit<ComponentPropsWithoutRef<'button'>, keyof BaseProps>;
 
-const Button: FC<ButtonProps> = ({
+const Button: FC<Props> = ({
   variant = 'default',
   className,
   type = 'button',

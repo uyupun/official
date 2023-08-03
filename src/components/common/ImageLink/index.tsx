@@ -1,13 +1,13 @@
 import NextLink, { type LinkProps } from 'next/link';
 
-import { Image, type ImageProps } from '@/components/base/Image';
+import { Image } from '@/components/base/Image';
 import { getSafeLinkRel } from '@/utils/getSafeLinkRel';
 
 import { styles } from './styles.css';
 
-import type { FC, HTMLAttributeAnchorTarget, ReactNode } from 'react';
+import type { ComponentProps, FC, HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
-export type ImageLinkProps = Omit<ImageProps, 'alt'> & {
+type Props = Omit<ComponentProps<typeof Image>, 'alt'> & {
   /**
    * ハイパーリンクが指す先のURL
    *
@@ -35,7 +35,7 @@ export type ImageLinkProps = Omit<ImageProps, 'alt'> & {
   children: ReactNode;
 };
 
-const ImageLink: FC<ImageLinkProps> = ({ href, target, rel, text, children, ...rest }) => {
+const ImageLink: FC<Props> = ({ href, target, rel, text, children, ...rest }) => {
   return (
     <NextLink
       className={styles.imageLink}
