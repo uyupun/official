@@ -7,7 +7,7 @@ import { styles } from './styles.css';
 
 import type { ComponentProps, FC, HTMLAttributeAnchorTarget, ReactNode } from 'react';
 
-type Props = Omit<ComponentProps<typeof Image>, 'alt'> & {
+type BaseProps = {
   /**
    * ハイパーリンクが指す先のURL
    *
@@ -34,6 +34,8 @@ type Props = Omit<ComponentProps<typeof Image>, 'alt'> & {
    */
   children: ReactNode;
 };
+
+type Props = BaseProps & Omit<ComponentProps<typeof Image>, keyof BaseProps | 'alt'>;
 
 const ImageLink: FC<Props> = ({ href, target, rel, text, children, ...rest }) => {
   return (
