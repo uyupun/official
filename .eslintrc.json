@@ -49,6 +49,12 @@
       "rules": {
         "@typescript-eslint/triple-slash-reference": "off"
       }
+    },
+    {
+      "files": [".svgrrc.cjs"],
+      "rules": {
+        "@typescript-eslint/restrict-template-expressions": "off"
+      }
     }
   ]
 }
