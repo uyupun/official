@@ -2,18 +2,18 @@ import { breakpoint } from '@/styles/breakpoint';
 
 import type { FC } from 'react';
 
-export type ImageSource = {
+type ImageSource = {
   srcset: string;
   format: 'jpeg' | 'png' | 'webp' | 'avif';
   isDesktop?: boolean;
 };
 
-export type ImageSize = {
+type ImageSize = {
   mobile: number;
   desktop: number;
 };
 
-export type ImageProps = {
+type Props = {
   /**
    * source 要素で使用する値を持つ配列
    */
@@ -61,7 +61,7 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
   return sortedSources[0];
 };
 
-const Image: FC<ImageProps> = ({ sources, alt, className, isLazy = true, height, width }) => {
+const Image: FC<Props> = ({ sources, alt, className, isLazy = true, height, width }) => {
   const sourceForImgElement = getSource(sources);
   if (sourceForImgElement === null) return <></>;
 
