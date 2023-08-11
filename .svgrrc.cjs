@@ -19,6 +19,7 @@ module.exports = {
     ],
   },
   template: (variables, { tpl }) => {
+    /* eslint-disable @typescript-eslint/restrict-template-expressions */
     return tpl`
       import { colors } from '@/styles/themes.css';
 
@@ -31,5 +32,6 @@ module.exports = {
 
       ${variables.exports};
     `;
+    /* eslint-enable @typescript-eslint/restrict-template-expressions */
   },
 };
