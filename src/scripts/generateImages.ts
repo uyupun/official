@@ -10,9 +10,9 @@ const dirname = path.dirname(filename);
 /**
  * スマホ用の画像を生成する
  */
-const generateMobileImage = async (fullPath: string, outputPath: string): Promise<void> => {
+const generateMobileImage = async (inputPath: string, outputPath: string): Promise<void> => {
   if (fs.existsSync(outputPath)) return;
-  const image = sharp(fullPath);
+  const image = sharp(inputPath);
   const metadata = await image.metadata();
 
   // 通常は発生しないフローだが型定義が`undefined`を許容しており、TSの警告を回避するために記述している
@@ -29,57 +29,56 @@ const generateMobileImage = async (fullPath: string, outputPath: string): Promis
 /**
  * デスクトップ用の画像を生成する
  */
-const generateDesktopImage = async (fullPath: string, outputPath: string): Promise<void> => {
+const generateDesktopImage = async (inputPath: string, outputPath: string): Promise<void> => {
   if (fs.existsSync(outputPath)) return;
-  await sharp(fullPath).toFile(outputPath);
+  await sharp(inputPath).toFile(outputPath);
 };
 
 /**
  * /public/images 以下のディレクトリ内にある png または jpg(jpeg) ファイルを元に webp と avif ファイルを生成する
  * またそれぞれの拡張子に応じたスマホ用のファイルも生成する
  */
-const generateImages = async (dirPath: string): Promise<void> => {
-  const entries = fs.readdirSync(dirPath, { withFileTypes: true });
-  const ignoreDirs = fs
-    .readFileSync(path.join(__dirname, '../..', '.imagesignore'), 'utf-8')
-    .split('\n');
+const generateImages = async (imagesPath: string, ignorePath: string): Promise<void> => {
+  const images = fs.readdirSync(imagesPath, { withFileTypes: true });
+  const ignoreDirs = fs.readFileSync(ignorePath, 'utf-8').split('\n');
 
-  for (const entry of entries) {
-    const fullPath = path.join(dirPath, entry.name);
+  for (const image of images) {
+    const imagePath = path.join(imagesPath, image.name);
 
-    if (entry.isDirectory()) {
-      if (ignoreDirs.includes(entry.name)) continue;
-      await generateImages(fullPath);
+    if (image.isDirectory()) {
+      if (ignoreDirs.includes(image.name)) continue;
+      await generateImages(imagePath, ignorePath);
       continue;
     }
 
-    if (!entry.isFile()) {
+    if (!image.isFile()) {
       console.error(
         '予期しないエントリタイプが検出されました。ファイルまたはディレクトリのみが許可されています。'
       );
       break;
     }
 
-    const fileExtension = path.extname(fullPath);
-    const fileName = path.basename(fullPath, fileExtension);
+    const imageExtension = path.extname(imagePath);
+    const imageName = path.basename(imagePath, imageExtension);
 
-    const validFileExtensions = ['.png', '.jpg', '.jpeg'];
-    if (!validFileExtensions.includes(fileExtension) || fileName.includes('mobile')) continue;
+    const validImageExtensions = ['.png', '.jpg', '.jpeg'];
+    if (!validImageExtensions.includes(imageExtension) || imageName.includes('mobile')) continue;
 
-    const outputPathMobile = path.join(dirPath, `${fileName}-mobile${fileExtension}`);
-    await generateMobileImage(fullPath, outputPathMobile);
+    const outputMobilePath = path.join(imagesPath, `${imageName}-mobile${imageExtension}`);
+    await generateMobileImage(imagePath, outputMobilePath);
 
-    const outputPathWebp = path.join(dirPath, `${fileName}.webp`);
-    const outputPathWebpMobile = path.join(dirPath, `${fileName}-mobile.webp`);
-    await generateDesktopImage(fullPath, outputPathWebp);
-    await generateMobileImage(fullPath, outputPathWebpMobile);
+    const outputWebpPath = path.join(imagesPath, `${imageName}.webp`);
+    const outputWebpMobilePath = path.join(imagesPath, `${imageName}-mobile.webp`);
+    await generateDesktopImage(imagePath, outputWebpPath);
+    await generateMobileImage(imagePath, outputWebpMobilePath);
 
-    const outputPathAvif = path.join(dirPath, `${fileName}.avif`);
-    const outputPathAvifMobile = path.join(dirPath, `${fileName}-mobile.avif`);
-    await generateDesktopImage(fullPath, outputPathAvif);
-    await generateMobileImage(fullPath, outputPathAvifMobile);
+    const outputAvifPath = path.join(imagesPath, `${imageName}.avif`);
+    const outputAvifMobilePath = path.join(imagesPath, `${imageName}-mobile.avif`);
+    await generateDesktopImage(imagePath, outputAvifPath);
+    await generateMobileImage(imagePath, outputAvifMobilePath);
   }
 };
 
-const directoryPath = path.join(dirname, '../..', 'public', 'images');
-generateImages(directoryPath).catch(console.error);
+const imagesPath = path.join(dirname, '../..', 'public', 'images');
+const ignorePath = path.join(dirname, '../..', '.imagesignore');
+generateImages(imagesPath, ignorePath).catch(console.error);
