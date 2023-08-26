@@ -31,11 +31,17 @@ $ yarn lint:prettier
 # ls-lintの実行
 $ yarn lint:ls
 
+# CSpellの実行
+$ yarn lint:cspell
+
 # ESLintの実行と問題の自動修正
 $ yarn fix:eslint
 
 # Prettierの実行と問題の自動修正
 $ yarn fix:prettier
+
+# CSpellで定義されている未使用の単語の削除
+$ yarn clean:cspell
 
 # ステージングされているファイルに対して、ESLintとPrettierを実行
 $ yarn lint-staged

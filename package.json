@@ -21,7 +21,8 @@
     "icons": "svgr -d src/components/base/Icons src/assets/icons && eslint --fix 'src/components/base/Icons'",
     "images": "ts-node src/scripts/generateImages.ts",
     "lighthouse": "ts-node src/scripts/lighthouse.ts",
-    "husky": "husky install"
+    "husky": "husky install",
+    "clean:cspell": "ts-node src/scripts/cleanCspellWords.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
@@ -42,6 +43,7 @@
     "@storybook/nextjs": "^7.0.26",
     "@storybook/react": "^7.0.26",
     "@svgr/cli": "^6.5.1",
+    "@types/micromatch": "^4.0.2",
     "@types/minimist": "^1.2.2",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
@@ -66,6 +68,7 @@
     "husky": "^7.0.0",
     "lighthouse": "^10.3.0",
     "lint-staged": "^12.1.2",
+    "micromatch": "^4.0.5",
     "minimist": "^1.2.8",
     "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
