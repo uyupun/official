@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import { minimatch } from 'minimatch';
+import mm from 'micromatch';
 
 const cleanCspellWords = (dirPath: string): void => {
   const configPath = path.join(dirPath, '.cspell.json');
@@ -32,7 +32,7 @@ const getFilePaths = (dirPath: string, ignorePaths: string[]): string[] => {
   for (const entry of entries) {
     const newDirPath = path.join(dirPath, entry.name);
 
-    const isIgnored = ignorePaths.some((pattern) => minimatch(newDirPath, pattern, { dot: true }));
+    const isIgnored = ignorePaths.some((pattern) => mm.isMatch(newDirPath, pattern, { dot: true }));
     if (isIgnored) {
       continue;
     }
