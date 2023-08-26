@@ -1,4 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn pathpida && git add 'src/utils/$path.ts' && yarn lint-staged
+yarn pathpida && \
+git add 'src/utils/$path.ts' && \
+yarn clean:cspell && \
+git add '.cspell.json' && \
+yarn lint-staged
