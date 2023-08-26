@@ -1,0 +1,28 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [".next", "node_modules", "out", "**/*.avif", "public/fonts/LICENSE"],
+  "overrides": [
+    {
+      "filename": "**",
+      "words": [
+        "authtoken",
+        "BCCD",
+        "cica",
+        "clsx",
+        "headlessui",
+        "hookform",
+        "imagesignore",
+        "nextjs",
+        "noopener",
+        "noreferrer",
+        "pathpida",
+        "pathpidaignore",
+        "svgr",
+        "textbox",
+        "uyupunpopunpo",
+        "webp"
+      ]
+    }
+  ]
+}
