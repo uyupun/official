@@ -5,19 +5,19 @@ import { fileURLToPath } from 'url';
 import { minimatch } from 'minimatch';
 
 const cleanCspellWords = (dirPath: string): void => {
-  const cspellPath = path.join(dirPath, '.cspell.json');
-  const cspellConfig = JSON.parse(fs.readFileSync(cspellPath, 'utf-8'));
+  const configPath = path.join(dirPath, '.cspell.json');
+  const config = JSON.parse(fs.readFileSync(configPath, 'utf-8'));
 
-  const ignorePaths = cspellConfig.ignorePaths;
+  const ignorePaths = config.ignorePaths;
   const fullIgnorePaths = getFullIgnorePaths(dirPath, ignorePaths);
 
   const filePaths = getFilePaths(dirPath, fullIgnorePaths);
 
-  const words = cspellConfig.overrides[0].words;
+  const words = config.overrides[0].words;
   const usedWords = getUsedWords(filePaths, words);
-  cspellConfig.overrides[0].words = usedWords;
+  config.overrides[0].words = usedWords;
 
-  removeCspellWords(cspellPath, cspellConfig);
+  removeCspellWords(configPath, config);
 };
 
 const getFullIgnorePaths = (dirPath: string, ignorePaths: string[]): string[] => {
