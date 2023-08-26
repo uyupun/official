@@ -7,9 +7,9 @@ import { minimatch } from 'minimatch';
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
-const getFiles = (dirPath: string, ignorePaths: string[]): string[] => {
+const getFilePaths = (dirPath: string, ignorePaths: string[]): string[] => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
-  let files: string[] = [];
+  let filePaths: string[] = [];
 
   for (const entry of entries) {
     const newDirPath = path.join(dirPath, entry.name);
@@ -20,24 +20,42 @@ const getFiles = (dirPath: string, ignorePaths: string[]): string[] => {
     }
 
     if (entry.isDirectory()) {
-      files = files.concat(getFiles(newDirPath, ignorePaths));
+      filePaths = filePaths.concat(getFilePaths(newDirPath, ignorePaths));
     } else {
-      files.push(newDirPath);
+      filePaths.push(newDirPath);
     }
   }
 
-  return files;
+  return filePaths;
 };
 
-const containsWords = (files: string[], word: string): boolean => {
-  for (const file of files) {
-    const content = fs.readFileSync(file, 'utf-8');
+const getUnnecessaryWords = (filePaths: string[], words: string[]): string[] => {
+  const newWords = [];
+  for (const word of words) {
+    const isUsed = containsWords(filePaths, word);
+    if (isUsed) {
+      newWords.push(word);
+    } else {
+      console.log(`Removed: ${word}`);
+    }
+  }
+  return newWords;
+};
+
+const containsWords = (filePaths: string[], word: string): boolean => {
+  for (const filePath of filePaths) {
+    const content = fs.readFileSync(filePath, 'utf-8');
     const isUsed = content.includes(word);
     if (isUsed) {
       return true;
     }
   }
   return false;
+};
+
+const cleanCspellWords = (path: string, config: object): void => {
+  const configJson = JSON.stringify(config, null, 2) + '\n';
+  fs.writeFileSync(path, configJson);
 };
 
 const dirPath = path.join(dirname, '../..');
@@ -48,16 +66,10 @@ const cspellConfig = JSON.parse(fs.readFileSync(cspellPath, 'utf-8'));
 const ignorePaths = cspellConfig.ignorePaths;
 const fullIgnorePaths = ignorePaths.map((ignorePath: string) => path.join(dirPath, ignorePath));
 
-const files = getFiles(dirPath, fullIgnorePaths);
+const filePaths = getFilePaths(dirPath, fullIgnorePaths);
 
 const words = cspellConfig.overrides[0].words;
-const newWords = [];
-for (const word of words) {
-  const isUsed = containsWords(files, word);
-  if (isUsed) {
-    newWords.push(word);
-  }
-}
+const newWords = getUnnecessaryWords(filePaths, words);
+
 cspellConfig.overrides[0].words = newWords;
-const updatedJson = JSON.stringify(cspellConfig, null, 2) + '\n';
-fs.writeFileSync(cspellPath, updatedJson);
+cleanCspellWords(cspellPath, cspellConfig);
