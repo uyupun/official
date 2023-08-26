@@ -1,28 +1,47 @@
 {
   "version": "0.2",
   "language": "en",
-  "ignorePaths": [".next", "node_modules", "out", "**/*.avif", "public/fonts/LICENSE"],
+  "ignorePaths": [
+    ".git",
+    ".husky",
+    ".next",
+    "node_modules",
+    "out",
+    "**/*.avif",
+    "public/fonts/LICENSE"
+  ],
   "overrides": [
     {
       "filename": "**",
       "words": [
         "authtoken",
+        "autodocs",
         "BCCD",
+        "chromaui",
         "cica",
         "clsx",
+        "dbaeumer",
         "esbenp",
+        "ghpages",
+        "GHPAGES",
         "headlessui",
         "hookform",
         "imagesignore",
+        "lighthouseci",
         "nextjs",
         "noopener",
         "noreferrer",
         "pathpida",
         "pathpidaignore",
+        "peaceiris",
         "svgr",
+        "takashi",
         "textbox",
+        "treosh",
+        "tyokinuhata",
         "uyupunpopunpo",
-        "webp"
+        "webp",
+        "vercel"
       ]
     }
   ]
