@@ -22,7 +22,7 @@
     "images": "ts-node src/scripts/generateImages.ts",
     "lighthouse": "ts-node src/scripts/lighthouse.ts",
     "husky": "husky install",
-    "clean:cspell": "ts-node src/scripts/cleanCspell.ts"
+    "clean:cspell": "ts-node src/scripts/cleanCspellWords.ts"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",

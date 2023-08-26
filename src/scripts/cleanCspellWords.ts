@@ -4,8 +4,26 @@ import { fileURLToPath } from 'url';
 
 import { minimatch } from 'minimatch';
 
-const filename = fileURLToPath(import.meta.url);
-const dirname = path.dirname(filename);
+const cleanCspellWords = (dirPath: string): void => {
+  const cspellPath = path.join(dirPath, '.cspell.json');
+  const cspellConfig = JSON.parse(fs.readFileSync(cspellPath, 'utf-8'));
+
+  const ignorePaths = cspellConfig.ignorePaths;
+  const fullIgnorePaths = getFullIgnorePaths(dirPath, ignorePaths);
+
+  const filePaths = getFilePaths(dirPath, fullIgnorePaths);
+
+  const words = cspellConfig.overrides[0].words;
+  const usedWords = getUsedWords(filePaths, words);
+  cspellConfig.overrides[0].words = usedWords;
+
+  removeCspellWords(cspellPath, cspellConfig);
+};
+
+const getFullIgnorePaths = (dirPath: string, ignorePaths: string[]): string[] => {
+  const fullIgnorePaths = ignorePaths.map((ignorePath: string) => path.join(dirPath, ignorePath));
+  return fullIgnorePaths;
+};
 
 const getFilePaths = (dirPath: string, ignorePaths: string[]): string[] => {
   const entries = fs.readdirSync(dirPath, { withFileTypes: true });
@@ -29,17 +47,17 @@ const getFilePaths = (dirPath: string, ignorePaths: string[]): string[] => {
   return filePaths;
 };
 
-const getUnnecessaryWords = (filePaths: string[], words: string[]): string[] => {
-  const newWords = [];
+const getUsedWords = (filePaths: string[], words: string[]): string[] => {
+  const usedWords = [];
   for (const word of words) {
     const isUsed = containsWords(filePaths, word);
     if (isUsed) {
-      newWords.push(word);
+      usedWords.push(word);
     } else {
       console.log(`Removed: ${word}`);
     }
   }
-  return newWords;
+  return usedWords;
 };
 
 const containsWords = (filePaths: string[], word: string): boolean => {
@@ -53,23 +71,13 @@ const containsWords = (filePaths: string[], word: string): boolean => {
   return false;
 };
 
-const cleanCspellWords = (path: string, config: object): void => {
+const removeCspellWords = (configPath: string, config: object): void => {
   const configJson = JSON.stringify(config, null, 2) + '\n';
-  fs.writeFileSync(path, configJson);
+  fs.writeFileSync(configPath, configJson);
 };
 
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 const dirPath = path.join(dirname, '../..');
 
-const cspellPath = path.join(dirname, '../../.cspell.json');
-const cspellConfig = JSON.parse(fs.readFileSync(cspellPath, 'utf-8'));
-
-const ignorePaths = cspellConfig.ignorePaths;
-const fullIgnorePaths = ignorePaths.map((ignorePath: string) => path.join(dirPath, ignorePath));
-
-const filePaths = getFilePaths(dirPath, fullIgnorePaths);
-
-const words = cspellConfig.overrides[0].words;
-const newWords = getUnnecessaryWords(filePaths, words);
-
-cspellConfig.overrides[0].words = newWords;
-cleanCspellWords(cspellPath, cspellConfig);
+cleanCspellWords(dirPath);
