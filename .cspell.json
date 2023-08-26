@@ -1,11 +1,12 @@
 {
   "language": "en",
   "ignorePaths": [
-    ".git",
-    ".husky",
-    ".next",
-    "node_modules",
-    "out",
+    ".cspell.json",
+    ".git/**",
+    ".husky/**",
+    ".next/**",
+    "node_modules/**",
+    "out/**",
     "**/*.avif",
     "public/fonts/LICENSE"
   ],
