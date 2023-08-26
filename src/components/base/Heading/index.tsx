@@ -4,7 +4,7 @@ import { styles } from './styles.css';
 
 import type { FC, ReactNode } from 'react';
 
-export type HeadingProps = {
+type Props = {
   /**
    * 見出しのタグ
    */
@@ -15,7 +15,7 @@ export type HeadingProps = {
   children: ReactNode;
 };
 
-const Heading: FC<HeadingProps> = ({ tag = 'h1', children }) => {
+const Heading: FC<Props> = ({ tag = 'h1', children }) => {
   switch (tag) {
     case 'h1':
       return <h1 className={clsx(styles.common, styles.h1)}>{children}</h1>;

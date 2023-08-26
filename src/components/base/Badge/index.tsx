@@ -1,6 +1,6 @@
 import { styles, type BadgeColor } from './styles.css';
 
-import type { ComponentProps, FC, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
 type BaseProps = {
   /**
@@ -13,9 +13,9 @@ type BaseProps = {
   children: ReactNode;
 };
 
-export type BadgeProps = BaseProps & Omit<ComponentProps<'span'>, keyof BaseProps>;
+type Props = BaseProps & Omit<ComponentPropsWithoutRef<'span'>, keyof BaseProps>;
 
-const Badge: FC<BadgeProps> = ({ color, children, ...props }) => {
+const Badge: FC<Props> = ({ color, children, ...props }) => {
   return (
     <span {...props} className={styles({ color })}>
       {children}

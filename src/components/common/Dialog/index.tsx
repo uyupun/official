@@ -3,7 +3,7 @@ import { Fragment, type FC, type ReactNode } from 'react';
 
 import { styles } from './styles.css';
 
-export type DialogProps = {
+type Props = {
   /**
    * ダイアログを開いているかどうか
    */
@@ -18,7 +18,7 @@ export type DialogProps = {
   onClose: () => void;
 };
 
-const Dialog: FC<DialogProps> = ({ isOpen, children, onClose }) => {
+const Dialog: FC<Props> = ({ isOpen, children, onClose }) => {
   return (
     <Transition
       as={Fragment}

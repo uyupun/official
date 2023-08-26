@@ -8,7 +8,7 @@ import {
 
 import { styles } from './styles.css';
 
-import type { ComponentProps, FC } from 'react';
+import type { ComponentPropsWithoutRef, FC } from 'react';
 
 type BaseProps = {
   /**
@@ -33,9 +33,9 @@ type BaseProps = {
   errors: FieldErrors<FieldValues>;
 };
 
-export type TextareaProps = BaseProps & Omit<ComponentProps<'textarea'>, keyof BaseProps>;
+type Props = BaseProps & Omit<ComponentPropsWithoutRef<'textarea'>, keyof BaseProps>;
 
-const Textarea: FC<TextareaProps> = ({ id, placeholder, register, options, errors, ...props }) => {
+const Textarea: FC<Props> = ({ id, placeholder, register, options, errors, ...props }) => {
   return (
     <textarea
       {...props}

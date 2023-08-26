@@ -7,7 +7,7 @@ import { styles } from './styles.css';
 
 import type { FC, ReactNode } from 'react';
 
-export type AccordionProps = {
+type Props = {
   /**
    * 初期描画時のアコーディオンの状態
    */
@@ -22,7 +22,7 @@ export type AccordionProps = {
   children: ReactNode;
 };
 
-const Accordion: FC<AccordionProps> = ({ isOpen, buttonText, children }) => {
+const Accordion: FC<Props> = ({ isOpen, buttonText, children }) => {
   return (
     <Disclosure defaultOpen={isOpen}>
       {({ open }) => (

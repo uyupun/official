@@ -1,8 +1,9 @@
 import { sprinkles } from '@/styles/sprinkles.css';
 
-import { Image as BaseImage, type ImageSize, type ImageSource } from '.';
+import { Image as BaseImage } from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
+import type { ComponentProps } from 'react';
 
 const meta: Meta<typeof BaseImage> = {
   title: 'Base/Image',
@@ -11,7 +12,7 @@ const meta: Meta<typeof BaseImage> = {
 export default meta;
 
 type Story = StoryObj<typeof BaseImage>;
-const sources: ImageSource[] = [
+const sources: ComponentProps<typeof BaseImage>['sources'] = [
   {
     srcset: './images/zeus/zeus.avif',
     format: 'avif',
@@ -41,11 +42,11 @@ const sources: ImageSource[] = [
   },
 ];
 const alt = 'ゼウスくん';
-const width: ImageSize = {
+const width: ComponentProps<typeof BaseImage>['width'] = {
   mobile: 200,
   desktop: 300,
 };
-const height: ImageSize = {
+const height: ComponentProps<typeof BaseImage>['height'] = {
   mobile: 276,
   desktop: 413,
 };

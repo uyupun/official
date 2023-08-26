@@ -8,7 +8,7 @@ import {
 
 import type { FC, ReactNode } from 'react';
 
-export type TextProps = {
+type Props = {
   /**
    * テキストのタグ
    */
@@ -35,7 +35,7 @@ export type TextProps = {
   children: ReactNode;
 };
 
-const Text: FC<TextProps> = ({
+const Text: FC<Props> = ({
   tag = 'span',
   size = 'md',
   fontWeight = 'normal',

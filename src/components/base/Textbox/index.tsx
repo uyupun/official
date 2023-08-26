@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 import { styles } from './styles.css';
 
-import type { ComponentProps, FC } from 'react';
+import type { ComponentPropsWithoutRef, FC } from 'react';
 import type { FieldErrors, FieldValues, RegisterOptions, UseFormRegister } from 'react-hook-form';
 
 type BaseProps = {
@@ -28,9 +28,9 @@ type BaseProps = {
   errors: FieldErrors<FieldValues>;
 };
 
-export type TextboxProps = BaseProps & Omit<ComponentProps<'input'>, keyof BaseProps>;
+type Props = BaseProps & Omit<ComponentPropsWithoutRef<'input'>, keyof BaseProps>;
 
-const Textbox: FC<TextboxProps> = ({ id, placeholder, register, options, errors, ...props }) => {
+const Textbox: FC<Props> = ({ id, placeholder, register, options, errors, ...props }) => {
   return (
     <input
       {...props}
