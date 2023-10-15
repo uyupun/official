@@ -34,20 +34,20 @@ export const Text: Story = {
       </dd>
       <dt style={{ marginBottom: '8px' }}>Size</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText size="xs" tag="p">
-          size=&quot;xs&quot;
+        <BaseText fontSize={{ mobile: 10, desktop: 12 }} tag="p">
+          {'fontSize={{ mobile: 10, desktop: 12 }}'}
         </BaseText>
-        <BaseText size="sm" tag="p">
-          size=&quot;sm&quot;
+        <BaseText fontSize={{ mobile: 12, desktop: 14 }} tag="p">
+          {'fontSize={{ mobile: 12, desktop: 14 }}'}
         </BaseText>
-        <BaseText size="md" tag="p">
-          size=&quot;md&quot;
+        <BaseText fontSize={{ mobile: 14, desktop: 16 }} tag="p">
+          {'fontSize={{ mobile: 14, desktop: 16 }}'}
         </BaseText>
-        <BaseText size="lg" tag="p">
-          size=&quot;lg&quot;
+        <BaseText fontSize={{ mobile: 16, desktop: 18 }} tag="p">
+          {'fontSize={{ mobile: 16, desktop: 18 }}'}
         </BaseText>
-        <BaseText size="xl" tag="p">
-          size=&quot;xl&quot;
+        <BaseText fontSize={{ mobile: 18, desktop: 20 }} tag="p">
+          {'fontSize={{ mobile: 18, desktop: 20 }}'}
         </BaseText>
       </dd>
       <dt style={{ marginBottom: '8px' }}>Color</dt>

@@ -1,9 +1,15 @@
+import { assignInlineVars } from '@vanilla-extract/dynamic';
+import clsx from 'clsx';
+
+import { vars, type FontSize } from '@/styles/themes.css';
+
 import {
-  styles,
+  baseStyles,
+  recipeStyles,
+  themeVars,
   type TextColor,
   type TextFontStyle,
   type TextFontWeight,
-  type TextSize,
 } from './styles.css';
 
 import type { FC, ReactNode } from 'react';
@@ -16,7 +22,10 @@ type Props = {
   /**
    * テキストのサイズ
    */
-  size?: TextSize;
+  fontSize?: {
+    mobile: FontSize;
+    desktop: FontSize;
+  };
   /**
    * テキストの太さ
    */
@@ -37,14 +46,16 @@ type Props = {
 
 const Text: FC<Props> = ({
   tag = 'span',
-  size = 'md',
+  fontSize = {
+    mobile: 14,
+    desktop: 16,
+  },
   fontWeight = 'normal',
   fontStyle = 'normal',
   color = 'black',
   children,
 }) => {
-  const className = styles({
-    size,
+  const recipeClassName = recipeStyles({
     color,
     fontWeight,
     display: tag === 'span' ? 'inlineBlock' : 'block',
@@ -53,11 +64,47 @@ const Text: FC<Props> = ({
 
   switch (tag) {
     case 'span':
-      return <span className={className}>{children}</span>;
+      return (
+        <span
+          className={clsx(baseStyles, recipeClassName)}
+          style={assignInlineVars(themeVars, {
+            fontSize: {
+              mobile: vars.fontSize[fontSize.mobile],
+              desktop: vars.fontSize[fontSize.desktop],
+            },
+          })}
+        >
+          {children}
+        </span>
+      );
     case 'p':
-      return <p className={className}>{children}</p>;
+      return (
+        <p
+          className={clsx(baseStyles, recipeClassName)}
+          style={assignInlineVars(themeVars, {
+            fontSize: {
+              mobile: vars.fontSize[fontSize.mobile],
+              desktop: vars.fontSize[fontSize.desktop],
+            },
+          })}
+        >
+          {children}
+        </p>
+      );
     case 'div':
-      return <div className={className}>{children}</div>;
+      return (
+        <div
+          className={clsx(baseStyles, recipeClassName)}
+          style={assignInlineVars(themeVars, {
+            fontSize: {
+              mobile: vars.fontSize[fontSize.mobile],
+              desktop: vars.fontSize[fontSize.desktop],
+            },
+          })}
+        >
+          {children}
+        </div>
+      );
   }
 };
 

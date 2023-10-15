@@ -1,47 +1,15 @@
+import { createThemeContract, style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
+import { breakpointStyle } from '@/styles/breakpoint';
 import { sprinkles } from '@/styles/sprinkles.css';
 
 import type { Color } from '@/styles/themes.css';
 
-export type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 export type TextFontWeight = 'normal' | 'bold';
 export type TextColor = Extract<Color, 'white' | 'black' | 'red' | 'darkGray'>;
 export type TextDisplay = 'block' | 'inlineBlock';
 export type TextFontStyle = 'normal' | 'italic';
-
-const size: { [Key in TextSize]: string } = {
-  xs: sprinkles({
-    fontSize: {
-      mobile: 8,
-      desktop: 10,
-    },
-  }),
-  sm: sprinkles({
-    fontSize: {
-      mobile: 12,
-      desktop: 14,
-    },
-  }),
-  md: sprinkles({
-    fontSize: {
-      mobile: 14,
-      desktop: 16,
-    },
-  }),
-  lg: sprinkles({
-    fontSize: {
-      mobile: 18,
-      desktop: 24,
-    },
-  }),
-  xl: sprinkles({
-    fontSize: {
-      mobile: 20,
-      desktop: 36,
-    },
-  }),
-};
 
 const fontWeight: { [Key in TextFontWeight]: string } = {
   normal: sprinkles({
@@ -85,12 +53,8 @@ const fontStyle: { [Key in TextFontStyle]: string } = {
   }),
 };
 
-const styles = recipe({
-  base: sprinkles({
-    lineHeight: 'text',
-  }),
+const recipeStyles = recipe({
   variants: {
-    size,
     fontWeight,
     color,
     display,
@@ -98,4 +62,25 @@ const styles = recipe({
   },
 });
 
-export { styles };
+const themeVars = createThemeContract({
+  fontSize: {
+    mobile: null,
+    desktop: null,
+  },
+});
+
+const baseStyles = style([
+  sprinkles({
+    lineHeight: 'text',
+  }),
+  breakpointStyle(
+    {
+      fontSize: themeVars.fontSize.mobile,
+    },
+    {
+      fontSize: themeVars.fontSize.desktop,
+    }
+  ),
+]);
+
+export { baseStyles, recipeStyles, themeVars };
