@@ -42,7 +42,6 @@ export const spacing = {
 } as const;
 
 export const fontSize = {
-  8: '0.5rem',
   10: '0.625rem',
   12: '0.75rem',
   14: '0.875rem',
@@ -55,6 +54,8 @@ export const fontSize = {
   48: '3rem',
   64: '4rem',
 } as const;
+
+export type FontSize = keyof typeof fontSize;
 
 export const lineHeight = {
   text: '1.8',
