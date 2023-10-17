@@ -73,14 +73,10 @@ const baseStyles = style([
   sprinkles({
     lineHeight: 'text',
   }),
-  breakpointStyle(
-    {
-      fontSize: themeVars.fontSize.mobile,
-    },
-    {
-      fontSize: themeVars.fontSize.desktop,
-    }
-  ),
+  breakpointStyle({
+    mobileStyle: { fontSize: themeVars.fontSize.mobile },
+    desktopStyle: { fontSize: themeVars.fontSize.desktop },
+  }),
 ]);
 
 export { baseStyles, recipeStyles, themeVars };
