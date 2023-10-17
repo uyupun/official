@@ -15,7 +15,7 @@ export default meta;
 
 type Story = StoryObj<typeof BaseTextarea>;
 const schema = object({
-  description: string().nonempty().max(10),
+  description: string().min(1).max(10),
 });
 
 export const Textarea: Story = {
