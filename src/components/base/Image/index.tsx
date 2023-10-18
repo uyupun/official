@@ -92,7 +92,7 @@ const Image: FC<Props> = ({ sources, alt, className, isLazy, height, width }) =>
       <img
         alt={alt}
         className={className}
-        decoding="async"
+        decoding="auto"
         height={sourceForImgElement.isDesktop === true ? height.desktop : height.mobile}
         loading={isLazy ? 'lazy' : 'eager'}
         src={sourceForImgElement.srcset}
