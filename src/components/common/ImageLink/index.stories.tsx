@@ -59,6 +59,7 @@ export const ImageLink: Story = {
         <CommonImageLink
           height={height}
           href={pagesPath.$url()}
+          isLazy={false}
           sources={sources}
           text="ゼウスくん"
           width={width}
@@ -71,6 +72,7 @@ export const ImageLink: Story = {
         <CommonImageLink
           height={height}
           href="https://example.com/"
+          isLazy={false}
           rel="noreferrer noopener"
           sources={sources}
           target="_blank"
@@ -85,6 +87,7 @@ export const ImageLink: Story = {
         <CommonImageLink
           height={height}
           href="https://example.com/"
+          isLazy={true}
           rel="noreferrer noopener"
           sources={sources}
           target="_blank"
