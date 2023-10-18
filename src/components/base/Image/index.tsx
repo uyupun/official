@@ -31,7 +31,7 @@ type Props = {
    * ビューポート外にある画像: true
    * ビューポート内にある画像: false
    */
-  isLazy?: boolean;
+  isLazy: boolean;
   /**
    * 画像の横幅
    */
@@ -71,7 +71,7 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
  *
  * ref: https://zenn.dev/ixkaito/articles/deep-dive-into-decoding
  */
-const Image: FC<Props> = ({ sources, alt, className, isLazy = true, height, width }) => {
+const Image: FC<Props> = ({ sources, alt, className, isLazy, height, width }) => {
   const sourceForImgElement = getSource(sources);
   if (sourceForImgElement === null) return <></>;
 
