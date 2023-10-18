@@ -3,14 +3,14 @@ import { style, type StyleRule } from '@vanilla-extract/css';
 export const breakpoint = 'screen and (min-width: 768px)';
 
 type BreakpointStyleRule = {
-  mobileStyle: StyleRule;
-  desktopStyle: StyleRule;
+  mobile: StyleRule;
+  desktop: StyleRule;
 };
-export const breakpointStyle = ({ mobileStyle, desktopStyle }: BreakpointStyleRule): string => {
+export const breakpointStyle = ({ mobile, desktop }: BreakpointStyleRule): string => {
   return style({
-    ...mobileStyle,
+    ...mobile,
     '@media': {
-      'screen and (min-width: 768px)': desktopStyle,
+      'screen and (min-width: 768px)': desktop,
     },
   });
 };

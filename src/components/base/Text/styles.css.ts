@@ -74,8 +74,8 @@ const baseStyles = style([
     lineHeight: 'text',
   }),
   breakpointStyle({
-    mobileStyle: { fontSize: themeVars.fontSize.mobile },
-    desktopStyle: { fontSize: themeVars.fontSize.desktop },
+    mobile: { fontSize: themeVars.fontSize.mobile },
+    desktop: { fontSize: themeVars.fontSize.desktop },
   }),
 ]);
 
