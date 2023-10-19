@@ -28,8 +28,10 @@ type Props = {
   className?: string;
   /**
    * 画像の読み込みを遅延させるかどうか
+   * ビューポート外にある画像: true
+   * ビューポート内にある画像: false
    */
-  isLazy?: boolean;
+  isLazy: boolean;
   /**
    * 画像の横幅
    */
@@ -61,7 +63,15 @@ const getSource = (sources: ImageSource[]): ImageSource | null => {
   return sortedSources[0];
 };
 
-const Image: FC<Props> = ({ sources, alt, className, isLazy = true, height, width }) => {
+/**
+ * ビューポートのどこで使用するかによって isLazy の値を以下のように変更する
+ * ビューポート外にある画像: true
+ * ビューポート内にある画像: false
+ * また decoding の値は常に auto とし、ブラウザに任せる
+ *
+ * ref: https://zenn.dev/ixkaito/articles/deep-dive-into-decoding
+ */
+const Image: FC<Props> = ({ sources, alt, className, isLazy, height, width }) => {
   const sourceForImgElement = getSource(sources);
   if (sourceForImgElement === null) return <></>;
 
@@ -82,7 +92,7 @@ const Image: FC<Props> = ({ sources, alt, className, isLazy = true, height, widt
       <img
         alt={alt}
         className={className}
-        decoding="async"
+        decoding="auto"
         height={sourceForImgElement.isDesktop === true ? height.desktop : height.mobile}
         loading={isLazy ? 'lazy' : 'eager'}
         src={sourceForImgElement.srcset}
