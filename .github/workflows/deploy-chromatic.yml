@@ -3,7 +3,6 @@ name: Deploy Chromatic
 on:
   push:
     branches-ignore:
-      - main
       - dependabot/**
       - gh-pages
 
