@@ -32,24 +32,6 @@ export const Text: Story = {
           fontStyle=&quot;italic&quot;
         </BaseText>
       </dd>
-      <dt style={{ marginBottom: '8px' }}>Size</dt>
-      <dd style={{ marginBottom: '24px' }}>
-        <BaseText size="xs" tag="p">
-          size=&quot;xs&quot;
-        </BaseText>
-        <BaseText size="sm" tag="p">
-          size=&quot;sm&quot;
-        </BaseText>
-        <BaseText size="md" tag="p">
-          size=&quot;md&quot;
-        </BaseText>
-        <BaseText size="lg" tag="p">
-          size=&quot;lg&quot;
-        </BaseText>
-        <BaseText size="xl" tag="p">
-          size=&quot;xl&quot;
-        </BaseText>
-      </dd>
       <dt style={{ marginBottom: '8px' }}>Color</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseText color="white" tag="p">

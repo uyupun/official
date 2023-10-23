@@ -1,10 +1,4 @@
-import {
-  styles,
-  type TextColor,
-  type TextFontStyle,
-  type TextFontWeight,
-  type TextSize,
-} from './styles.css';
+import { styles, type TextColor, type TextFontStyle, type TextFontWeight } from './styles.css';
 
 import type { FC, ReactNode } from 'react';
 
@@ -13,10 +7,6 @@ type Props = {
    * テキストのタグ
    */
   tag?: 'span' | 'p' | 'div';
-  /**
-   * テキストのサイズ
-   */
-  size?: TextSize;
   /**
    * テキストの太さ
    */
@@ -37,14 +27,12 @@ type Props = {
 
 const Text: FC<Props> = ({
   tag = 'span',
-  size = 'md',
   fontWeight = 'normal',
   fontStyle = 'normal',
   color = 'black',
   children,
 }) => {
   const className = styles({
-    size,
     color,
     fontWeight,
     display: tag === 'span' ? 'inlineBlock' : 'block',
