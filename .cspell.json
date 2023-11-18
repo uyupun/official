@@ -8,7 +8,8 @@
     "node_modules/**",
     "out/**",
     "**/*.avif",
-    "public/fonts/LICENSE"
+    "public/fonts/LICENSE",
+    "storybook-static/**"
   ],
   "overrides": [
     {
