@@ -20,8 +20,8 @@ jobs:
         with:
           node-version: 18.17.0
 
-      - name: Install yarn v3
-        run: npm install -g yarn@3
+      - name: Upgrade to yarn v3
+        run: yarn set version berry
 
       - name: Get yarn cache directory path
         id: yarn_cache_dir_path
