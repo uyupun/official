@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "yarn pathpida && next build",
-    "start": "next start",
+    "start": "serve out",
     "lint:eslint": "eslint --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content --cache-file=node_modules/.cache/eslint/.eslintcache",
     "lint:prettier": "prettier --check . --ignore-path .prettierignore --cache --cache-strategy content",
     "lint:ls": "ls-lint",
@@ -73,6 +73,7 @@
     "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
     "prettier": "^2.8.3",
+    "serve": "^14.2.1",
     "sharp": "^0.32.1",
     "storybook": "^7.0.26",
     "ts-node": "^10.9.1",
