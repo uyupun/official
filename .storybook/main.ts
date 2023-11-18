@@ -14,9 +14,6 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   staticDirs: ['../public'],
-  core: {
-    builder: '@storybook/builder-webpack5',
-  },
   webpackFinal: async (config) =>
     merge(config, {
       plugins: [new VanillaExtractPlugin()],
