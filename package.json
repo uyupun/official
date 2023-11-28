@@ -81,7 +81,9 @@
     "webpack-merge": "^5.9.0"
   },
   "engines": {
-    "node": "18.17.0"
+    "node": "18.17.0",
+    "npm": "use yarn instead",
+    "yarn": "4.0.2"
   },
   "resolutions": {
     "@types/react": "18.2.37"
@@ -90,5 +92,6 @@
     "commitizen": {
       "path": "git-cz"
     }
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
