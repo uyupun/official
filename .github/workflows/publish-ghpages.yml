@@ -75,6 +75,9 @@ jobs:
         with:
           node-version: 18.17.0
 
+      - name: Upgrade to yarn
+        run: yarn set version 4.0.2
+
       - name: Get yarn cache directory path
         id: cache_dir_path
         run: echo "CACHE_DIR_PATH=$(yarn config get cacheFolder)" >> $GITHUB_ENV
