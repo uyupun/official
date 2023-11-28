@@ -24,13 +24,13 @@ jobs:
         run: yarn set version 4.0.2
 
       - name: Get yarn cache directory path
-        id: yarn_cache_dir_path
-        run: echo "YARN_CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
+        id: cache_dir_path
+        run: echo "CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
 
       - name: Cache yarn cache directory
         uses: actions/cache@v3
         with:
-          path: ${{ env.YARN_CACHE_DIR_PATH }}
+          path: ${{ env.CACHE_DIR_PATH }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
@@ -79,13 +79,13 @@ jobs:
         run: yarn set version 4.0.2
 
       - name: Get yarn cache directory path
-        id: yarn_cache_dir_path
-        run: echo "YARN_CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
+        id: cache_dir_path
+        run: echo "CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
 
       - name: Cache yarn cache directory
         uses: actions/cache@v3
         with:
-          path: ${{ env.YARN_CACHE_DIR_PATH }}
+          path: ${{ env.CACHE_DIR_PATH }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
