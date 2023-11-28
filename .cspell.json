@@ -9,7 +9,8 @@
     "out/**",
     "**/*.avif",
     "public/fonts/LICENSE",
-    "storybook-static/**"
+    "storybook-static/**",
+    ".yarn/**"
   ],
   "overrides": [
     {
