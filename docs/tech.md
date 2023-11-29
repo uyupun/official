@@ -4,6 +4,7 @@
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
+- [Yarn](https://yarnpkg.com)
 
 ## リンター・フォーマッタ
 
