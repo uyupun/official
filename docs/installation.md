@@ -10,6 +10,9 @@ $ cd official
 # envファイルの作成
 $ cp .env.example .env
 
+# Corepackを有効化
+$ corepack enable
+
 # 依存パッケージのインストール
 $ yarn install
 
