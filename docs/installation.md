@@ -1,5 +1,7 @@
 # 環境構築
 
+開発環境にはNode.js v18.17.0とYarn v4.0.2を使用する。
+
 ```bash
 # リポジトリのクローン
 $ git clone https://github.com/uyupun/official.git
