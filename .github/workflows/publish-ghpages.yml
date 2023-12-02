@@ -35,7 +35,7 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: yarn install --immutable --immutable-cache
 
       - name: Generate directory name
         id: dir_name
@@ -90,7 +90,7 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: yarn install --immutable --immutable-cache
 
       - name: Build Next.js app
         run: yarn build
