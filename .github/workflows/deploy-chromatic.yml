@@ -28,13 +28,13 @@ jobs:
         run: yarn set version 4.0.2
 
       - name: Get yarn cache directory path
-        id: cache_dir_path
-        run: echo "CACHE_DIR_PATH=$(yarn config get cacheFolder)" >> $GITHUB_ENV
+        id: package_manager_cache_dir_path
+        run: echo "PACKAGE_MANAGER_CACHE_DIR_PATH=$(yarn config get cacheFolder)" >> $GITHUB_ENV
 
       - name: Cache yarn cache directory
         uses: actions/cache@v3
         with:
-          path: ${{ env.CACHE_DIR_PATH }}
+          path: ${{ env.PACKAGE_MANAGER_CACHE_DIR_PATH }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
