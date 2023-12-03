@@ -13,7 +13,7 @@ $ cd official
 $ cp .env.example .env
 
 # Corepackの有効化
-# Corepackを有効化してYarnを使用できるようにするため(https://yarnpkg.com/corepack)
+# Corepackを有効化してYarn (Berry)を使用できるようにするため(https://yarnpkg.com/corepack)
 $ corepack enable
 
 # 依存パッケージのインストール
