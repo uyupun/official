@@ -12,8 +12,8 @@ $ cd official
 # envファイルの作成
 $ cp .env.example .env
 
-# Corepackを有効化
-# Yarn公式がCorepackで管理することを推奨しているため(https://yarnpkg.com/corepack)
+# Corepackの有効化
+# Corepackを有効化してYarnを使用できるようにするため(https://yarnpkg.com/corepack)
 $ corepack enable
 
 # 依存パッケージのインストール
