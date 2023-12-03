@@ -13,6 +13,7 @@ $ cd official
 $ cp .env.example .env
 
 # Corepackを有効化
+# Yarn公式がCorepackで管理することを推奨しているため(https://yarnpkg.com/corepack)
 $ corepack enable
 
 # 依存パッケージのインストール
