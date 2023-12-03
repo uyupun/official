@@ -3,7 +3,7 @@
 ## 開発環境
 
 - [Node.js](https://nodejs.org)
-- [Yarn](https://yarnpkg.com)
+- [Yarn (Berry)](https://yarnpkg.com)
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
 
