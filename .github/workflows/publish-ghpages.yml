@@ -18,21 +18,24 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.15.0
+          node-version: 18.17.0
+
+      - name: Upgrade to yarn
+        run: yarn set version 4.0.2
 
       - name: Get yarn cache directory path
-        id: yarn_cache_dir_path
-        run: echo "YARN_CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
+        id: package_manager_cache_dir_path
+        run: echo "PACKAGE_MANAGER_CACHE_DIR_PATH=$(yarn config get cacheFolder)" >> $GITHUB_ENV
 
       - name: Cache yarn cache directory
         uses: actions/cache@v3
         with:
-          path: ${{ env.YARN_CACHE_DIR_PATH }}
+          path: ${{ env.PACKAGE_MANAGER_CACHE_DIR_PATH }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install --immutable --check-cache
 
       - name: Generate directory name
         id: dir_name
@@ -70,21 +73,24 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.15.0
+          node-version: 18.17.0
+
+      - name: Upgrade to yarn
+        run: yarn set version 4.0.2
 
       - name: Get yarn cache directory path
-        id: yarn_cache_dir_path
-        run: echo "YARN_CACHE_DIR_PATH=$(yarn cache dir)" >> $GITHUB_ENV
+        id: package_manager_cache_dir_path
+        run: echo "PACKAGE_MANAGER_CACHE_DIR_PATH=$(yarn config get cacheFolder)" >> $GITHUB_ENV
 
       - name: Cache yarn cache directory
         uses: actions/cache@v3
         with:
-          path: ${{ env.YARN_CACHE_DIR_PATH }}
+          path: ${{ env.PACKAGE_MANAGER_CACHE_DIR_PATH }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install --immutable --check-cache
 
       - name: Build Next.js app
         run: yarn build

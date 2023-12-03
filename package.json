@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "yarn pathpida && next build && next export",
-    "start": "next start",
+    "build": "yarn pathpida && next build",
+    "start": "serve out",
     "lint:eslint": "eslint --max-warnings 0 . --ignore-path .eslintignore --cache --cache-strategy content --cache-file=node_modules/.cache/eslint/.eslintcache",
     "lint:prettier": "prettier --check . --ignore-path .prettierignore --cache --cache-strategy content",
     "lint:ls": "ls-lint",
@@ -28,7 +28,7 @@
     "@headlessui/react": "^1.7.4",
     "@hookform/resolvers": "^2.9.11",
     "clsx": "^1.2.1",
-    "next": "13.5.0",
+    "next": "14.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.43.7",
@@ -36,18 +36,18 @@
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "^2.0.0",
-    "@storybook/addon-a11y": "^7.0.26",
-    "@storybook/addon-actions": "^7.0.26",
-    "@storybook/addon-essentials": "^7.0.26",
-    "@storybook/addon-links": "^7.0.26",
-    "@storybook/nextjs": "^7.0.26",
-    "@storybook/react": "^7.0.26",
+    "@storybook/addon-a11y": "^7.5.3",
+    "@storybook/addon-actions": "^7.5.3",
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/nextjs": "^7.5.3",
+    "@storybook/react": "^7.5.3",
     "@svgr/cli": "^6.5.1",
     "@types/micromatch": "^4.0.2",
     "@types/minimist": "^1.2.2",
-    "@types/node": "18.15.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
+    "@types/node": "18.17.0",
+    "@types/react": "18.2.37",
+    "@types/react-dom": "18.2.15",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "@vanilla-extract/css": "^1.12.0",
     "@vanilla-extract/next-plugin": "^2.1.3",
@@ -63,7 +63,7 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-storybook": "^0.6.12",
+    "eslint-plugin-storybook": "^0.6.15",
     "git-cz": "^4.9.0",
     "husky": "^7.0.0",
     "lighthouse": "^10.3.0",
@@ -73,21 +73,25 @@
     "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
     "prettier": "^2.8.3",
+    "serve": "^14.2.1",
     "sharp": "^0.32.1",
-    "storybook": "^7.0.26",
+    "storybook": "^7.5.3",
     "ts-node": "^10.9.1",
     "typescript": "4.9.5",
     "webpack-merge": "^5.9.0"
   },
   "engines": {
-    "node": "18.15.0"
+    "node": "18.17.0",
+    "npm": "use yarn instead",
+    "yarn": "4.0.2"
   },
   "resolutions": {
-    "@types/react": "18.0.28"
+    "@types/react": "18.2.37"
   },
   "config": {
     "commitizen": {
       "path": "git-cz"
     }
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
