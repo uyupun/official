@@ -55,8 +55,9 @@ export const fontSize = {
 } as const;
 
 export const lineHeight = {
-  text: '1.8',
-  heading: '1.3',
+  1: '1',
+  1.3: '1.3',
+  1.8: '1.8',
 } as const;
 
 /**

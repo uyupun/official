@@ -14,7 +14,7 @@ const styles = {
         desktop: 16,
         mobile: 14,
       },
-      lineHeight: 'text',
+      lineHeight: 1.8,
       color: 'black',
       paddingX: 1,
       paddingY: 1.25,

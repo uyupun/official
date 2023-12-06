@@ -53,7 +53,7 @@ const fontStyle: { [Key in TextFontStyle]: string } = {
 
 const styles = recipe({
   base: sprinkles({
-    lineHeight: 'text',
+    lineHeight: 1.8,
     fontSize: {
       mobile: 14,
       desktop: 16,
