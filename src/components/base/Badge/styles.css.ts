@@ -2,15 +2,22 @@ import { style } from '@vanilla-extract/css';
 import { recipe } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '@/styles/sprinkles.css';
+import { vars } from '@/styles/themes.css';
 
-import type { Color } from '@/styles/themes.css';
-
-export type BadgeColor = Extract<Color, 'blue'>;
+const badgeColor = {
+  expo: '#000000',
+  fastApi: '#009485',
+} as const;
+export type BadgeColor = keyof typeof badgeColor;
 
 const color: { [Key in BadgeColor]: string } = {
-  blue: sprinkles({
-    color: 'white',
-    backgroundColor: 'blue',
+  expo: style({
+    color: vars.colors.white,
+    backgroundColor: badgeColor.expo,
+  }),
+  fastApi: style({
+    color: vars.colors.white,
+    backgroundColor: badgeColor.fastApi,
   }),
 };
 
