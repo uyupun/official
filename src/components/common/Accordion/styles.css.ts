@@ -19,9 +19,9 @@ const styles = {
       outlineColor: {
         focusVisible: 'blue',
       },
+      lineHeight: 1,
     }),
     style({
-      lineHeight: 'normal',
       backgroundColor: 'transparent',
       cursor: 'pointer',
       padding: 0,

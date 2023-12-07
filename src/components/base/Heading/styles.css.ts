@@ -2,7 +2,7 @@ import { sprinkles } from '@/styles/sprinkles.css';
 
 const styles = {
   common: sprinkles({
-    lineHeight: 'heading',
+    lineHeight: 1.3,
     fontWeight: 'bold',
     color: 'black',
   }),
