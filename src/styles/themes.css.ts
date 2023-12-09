@@ -16,6 +16,13 @@ export const colors = {
 
 export type Color = keyof typeof colors;
 
+export const technologyColors = {
+  Expo: '#000000',
+  FastApi: '#009485',
+} as const;
+
+export type Technology = keyof typeof technologyColors;
+
 export const spacing = {
   0.5: '4px',
   1: '8px',
@@ -75,6 +82,7 @@ export const size = {
 
 export const vars = createGlobalTheme(':root', {
   colors,
+  technologyColors,
   spacing,
   fontSize,
   lineHeight,
