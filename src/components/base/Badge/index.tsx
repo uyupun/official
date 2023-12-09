@@ -1,24 +1,21 @@
-import { styles, type BadgeColor } from './styles.css';
+import { styles } from './styles.css';
 
-import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
+import type { Technology } from '@/styles/themes.css';
+import type { ComponentPropsWithoutRef, FC } from 'react';
 
 type BaseProps = {
   /**
-   * バッジのカラー
+   * バッジのラベル
    */
-  color: BadgeColor;
-  /**
-   * バッジのコンテンツ
-   */
-  children: ReactNode;
+  label: Technology;
 };
 
 type Props = BaseProps & Omit<ComponentPropsWithoutRef<'span'>, keyof BaseProps>;
 
-const Badge: FC<Props> = ({ color, children, ...props }) => {
+const Badge: FC<Props> = ({ label, ...props }) => {
   return (
-    <span {...props} className={styles({ color })}>
-      {children}
+    <span {...props} className={styles({ label })}>
+      {label}
     </span>
   );
 };

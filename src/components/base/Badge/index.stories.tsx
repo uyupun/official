@@ -12,13 +12,13 @@ type Story = StoryObj<typeof BaseBadge>;
 export const Badge: Story = {
   render: () => (
     <dl>
-      <dt style={{ marginBottom: '8px' }}>color=&quot;expo&quot;</dt>
+      <dt style={{ marginBottom: '8px' }}>label=&quot;Expo&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseBadge color="expo">Expo</BaseBadge>
+        <BaseBadge label="Expo"></BaseBadge>
       </dd>
-      <dt style={{ marginBottom: '8px' }}>color=&quot;fastApi&quot;</dt>
+      <dt style={{ marginBottom: '8px' }}>label=&quot;FastApi&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseBadge color="fastApi">FastAPI</BaseBadge>
+        <BaseBadge label="FastApi"></BaseBadge>
       </dd>
     </dl>
   ),
