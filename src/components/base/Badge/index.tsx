@@ -1,12 +1,10 @@
-import { styles, type BadgeColor } from './styles.css';
+import clsx from 'clsx';
+
+import { styles } from './styles.css';
 
 import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
 type BaseProps = {
-  /**
-   * バッジのカラー
-   */
-  color: BadgeColor;
   /**
    * バッジのコンテンツ
    */
@@ -15,9 +13,9 @@ type BaseProps = {
 
 type Props = BaseProps & Omit<ComponentPropsWithoutRef<'span'>, keyof BaseProps>;
 
-const Badge: FC<Props> = ({ color, children, ...props }) => {
+const Badge: FC<Props> = ({ children, className, ...props }) => {
   return (
-    <span {...props} className={styles({ color })}>
+    <span {...props} className={clsx(styles.badge, className)}>
       {children}
     </span>
   );
