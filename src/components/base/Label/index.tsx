@@ -6,6 +6,10 @@ import type { ComponentPropsWithoutRef, FC } from 'react';
 
 type BaseProps = {
   /**
+   * ラベルのテキスト
+   */
+  text?: string;
+  /**
    * 必須かどうか
    */
   isRequired?: boolean;
@@ -13,9 +17,15 @@ type BaseProps = {
 
 type Props = BaseProps & Omit<ComponentPropsWithoutRef<'label'>, keyof BaseProps>;
 
-const Label: FC<Props> = ({ isRequired = true, htmlFor, children }) => {
+const Label: FC<Props> = ({ text, isRequired = true, className, children, ...props }) => {
   return (
-    <label className={clsx(styles.label, isRequired && styles.requiredMark)} htmlFor={htmlFor}>
+    <label className={clsx(styles.label, className)} {...props}>
+      {text}
+      {isRequired && (
+        <span aria-hidden className={styles.requiredMark}>
+          *
+        </span>
+      )}
       {children}
     </label>
   );
