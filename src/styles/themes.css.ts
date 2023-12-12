@@ -10,7 +10,7 @@ export const colors = {
   lightBlue: '#0080FF',
   hoverBlue: 'rgba(30, 26, 222, 0.8)',
   purple: '#B01CF6',
-  red: '#E6002F',
+  red: '#FF4747',
   lightRed: '#FBD4D4',
 } as const;
 
