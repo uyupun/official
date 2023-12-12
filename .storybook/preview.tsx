@@ -19,10 +19,11 @@ export const parameters: Parameters = {
     ),
   },
   backgrounds: {
+    default: 'gradientBlue',
     values: [
       {
-        name: 'blue',
-        value: colors.blue,
+        name: 'gradientBlue',
+        value: colors.gradientBlue,
       },
     ],
   },
