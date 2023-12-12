@@ -22,12 +22,9 @@ export const Label: Story = {
       </dd>
       <dt style={{ color: 'white', marginBottom: '8px' }}>Form</dt>
       <dd style={{ color: 'white', marginBottom: '24px' }}>
-        <BaseLabel text="textbox 1">
-          <input aria-required style={{ marginLeft: '16px' }} type="text" />
-        </BaseLabel>
-        <div style={{ display: 'flex', flexDirection: 'column', marginTop: '16px' }}>
-          <BaseLabel htmlFor="textbox2" text="textbox 2" />
-          <input aria-required id="textbox2" type="text" />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <BaseLabel htmlFor="textbox" text="textbox" />
+          <input aria-required id="textbox" type="text" />
         </div>
       </dd>
     </dl>

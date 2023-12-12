@@ -8,7 +8,7 @@ type BaseProps = {
   /**
    * ラベルのテキスト
    */
-  text?: string;
+  text: string;
   /**
    * 必須かどうか
    */
@@ -17,7 +17,7 @@ type BaseProps = {
 
 type Props = BaseProps & Omit<ComponentPropsWithoutRef<'label'>, keyof BaseProps>;
 
-const Label: FC<Props> = ({ text, isRequired = true, className, children, ...props }) => {
+const Label: FC<Props> = ({ text, isRequired = true, className, ...props }) => {
   return (
     <label className={clsx(styles.label, className)} {...props}>
       {text}
@@ -26,7 +26,6 @@ const Label: FC<Props> = ({ text, isRequired = true, className, children, ...pro
           *
         </span>
       )}
-      {children}
     </label>
   );
 };
