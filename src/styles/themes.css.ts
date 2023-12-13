@@ -12,6 +12,7 @@ export const colors = {
   purple: '#B01CF6',
   red: '#E6002F',
   lightRed: '#FBD4D4',
+  gradientBlue: 'linear-gradient(#0078B7, #001E43)',
 } as const;
 
 export type Color = keyof typeof colors;

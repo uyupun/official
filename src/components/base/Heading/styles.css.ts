@@ -4,7 +4,7 @@ const styles = {
   common: sprinkles({
     lineHeight: 1.3,
     fontWeight: 'bold',
-    color: 'black',
+    color: 'white',
   }),
   h1: sprinkles({
     fontSize: {
