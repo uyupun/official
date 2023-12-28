@@ -14,6 +14,7 @@ export const colors = {
   red: '#FF4747',
   lightRed: '#FBD4D4',
   gradientBlue: 'linear-gradient(#0078B7, #001E43)',
+  transparent: 'transparent',
 } as const;
 
 export type Color = keyof typeof colors;
@@ -70,7 +71,10 @@ export const size = {
   24: '1.5rem',
   36: '2.25rem',
   40: '2.5rem',
+  48: '3rem',
   100: '6.25rem',
+  120: '7.5rem',
+  150: '9.375rem',
   200: '12.5rem',
   300: '18.75rem',
 };
