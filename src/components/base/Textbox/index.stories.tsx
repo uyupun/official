@@ -32,7 +32,9 @@ export const Textbox: Story = {
       <form onSubmit={handleSubmit(action('handleSubmit'))}>
         <dl>
           <dt style={{ marginBottom: '8px' }}>
-            <label htmlFor="title">Title</label>
+            <label htmlFor="title" style={{ color: 'white' }}>
+              Title
+            </label>
           </dt>
           <dd style={{ marginBottom: '24px' }}>
             <BaseTextbox errors={errors} id="title" register={register} />

@@ -5,31 +5,37 @@ import { sprinkles } from '@/styles/sprinkles.css';
 const styles = {
   textbox: style([
     sprinkles({
-      height: {
-        desktop: 40,
-        mobile: 36,
-      },
-      fontSize: {
-        desktop: 16,
-        mobile: 14,
-      },
-      color: 'black',
+      height: 40,
+      fontSize: 16,
+      lineHeight: 1,
+      color: 'white',
       paddingX: 1,
-      borderColor: {
-        default: 'gray',
-        focusVisible: 'blue',
+      borderColor: 'white',
+      outlineWidth: {
+        focusVisible: 2,
+      },
+      outlineStyle: {
+        focusVisible: 'solid',
+      },
+      outlineColor: {
+        focusVisible: 'white',
+      },
+      outlineOffset: {
+        focusVisible: -1,
       },
     }),
     {
       width: '100%',
-      borderWidth: '1px',
+      backgroundColor: 'transparent',
+      borderWidth: 1,
       borderStyle: 'solid',
-      borderRadius: '5px',
+      borderRadius: 5,
+      outline: 'none',
     },
   ]),
   error: sprinkles({
+    color: 'red',
     borderColor: 'red',
-    backgroundColor: 'lightRed',
   }),
 };
 
