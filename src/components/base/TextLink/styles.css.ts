@@ -10,13 +10,16 @@ const styles = {
         mobile: 14,
         desktop: 16,
       },
-      color: 'lightBlue',
-      outlineColor: {
-        focusVisible: 'lightBlue',
+      lineHeight: 1,
+      color: 'white',
+      outlineWidth: {
+        focusVisible: 1,
       },
-      opacity: {
-        focusVisible: 0.8,
-        hover: 0.8,
+      outlineStyle: {
+        focusVisible: 'solid',
+      },
+      outlineColor: {
+        focusVisible: 'white',
       },
       cursor: {
         default: 'pointer',
