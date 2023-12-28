@@ -44,18 +44,6 @@ const responsiveProperties = defineProperties({
   },
 });
 
-const colorProperties = defineProperties({
-  conditions: {
-    default: {},
-    visited: { selector: '&:visited' },
-  },
-  defaultCondition: 'default',
-  properties: {
-    color: vars.colors,
-    backgroundColor: vars.colors,
-  },
-});
-
 const lineHeightProperties = defineProperties({
   properties: {
     lineHeight: vars.lineHeight,
@@ -72,8 +60,10 @@ const selectorProperties = defineProperties({
   },
   defaultCondition: 'default',
   properties: {
+    color: vars.colors,
+    backgroundColor: vars.colors,
     borderColor: vars.colors,
-    outlineWidth: [2],
+    outlineWidth: [1, 2],
     outlineStyle: ['solid'],
     outlineColor: vars.colors,
     outlineOffset: [-1],
@@ -91,7 +81,6 @@ const fontProperties = defineProperties({
 
 export const sprinkles = createSprinkles(
   responsiveProperties,
-  colorProperties,
   lineHeightProperties,
   fontProperties,
   selectorProperties

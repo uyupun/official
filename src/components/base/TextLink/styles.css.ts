@@ -10,10 +10,7 @@ const styles = {
         mobile: 14,
         desktop: 16,
       },
-      color: {
-        default: 'lightBlue',
-        visited: 'purple',
-      },
+      color: 'lightBlue',
       outlineColor: {
         focusVisible: 'lightBlue',
       },
