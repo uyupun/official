@@ -1,7 +1,5 @@
 import { action } from '@storybook/addon-actions';
 
-import { CloseIcon } from '@/components/base/Icons';
-
 import { Button as BaseButton } from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
@@ -28,10 +26,6 @@ export const Button: Story = {
           Disabled Button
         </BaseButton>
       </dd>
-      <dt style={{ marginBottom: '8px' }}>Circle</dt>
-      <BaseButton aria-label="閉じる" onClick={action('clicked')} type="button" variant="circle">
-        <CloseIcon fill="white" />
-      </BaseButton>
     </dl>
   ),
 };

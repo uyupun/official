@@ -6,10 +6,6 @@ import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
 type BaseProps = {
   /**
-   * ボタンの種類
-   */
-  variant?: 'default' | 'circle';
-  /**
    * スタイルの拡張
    *
    * @example
@@ -29,23 +25,9 @@ type BaseProps = {
 
 type Props = BaseProps & Omit<ComponentPropsWithoutRef<'button'>, keyof BaseProps>;
 
-const Button: FC<Props> = ({
-  variant = 'default',
-  className,
-  type = 'button',
-  children,
-  ...props
-}) => {
+const Button: FC<Props> = ({ className, type = 'button', children, ...props }) => {
   return (
-    <button
-      {...props}
-      className={clsx(
-        styles.button,
-        variant === 'default' ? styles.default : styles.circle,
-        className
-      )}
-      type={type}
-    >
+    <button {...props} className={clsx(styles.button, className)} type={type}>
       {children}
     </button>
   );

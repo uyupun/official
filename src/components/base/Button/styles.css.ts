@@ -25,17 +25,6 @@ const styles = {
         default: 'pointer',
         disabled: 'not-allowed',
       },
-    }),
-    {
-      justifyContent: 'center',
-      alignItems: 'center',
-      whiteSpace: 'nowrap',
-      border: 'none',
-      outline: '2px solid',
-    },
-  ]),
-  default: style([
-    sprinkles({
       paddingX: {
         mobile: 1.5,
         desktop: 2.5,
@@ -46,22 +35,12 @@ const styles = {
       },
     }),
     {
-      borderRadius: '4px',
-    },
-  ]),
-  circle: style([
-    sprinkles({
-      paddingX: {
-        mobile: 0.5,
-        desktop: 0.5,
-      },
-      paddingY: {
-        mobile: 0.5,
-        desktop: 0.5,
-      },
-    }),
-    {
-      borderRadius: '50%',
+      justifyContent: 'center',
+      alignItems: 'center',
+      whiteSpace: 'nowrap',
+      border: 'none',
+      borderRadius: 4,
+      outline: '2px solid',
     },
   ]),
 };
