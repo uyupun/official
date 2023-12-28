@@ -29,6 +29,14 @@ const styles = {
       textDecoration: 'underline',
     },
   ]),
+  large: sprinkles({
+    fontSize: {
+      mobile: 24,
+      desktop: 36,
+    },
+    fontWeight: 'bold',
+    lineHeight: 1.3,
+  }),
 };
 
 export { styles };
