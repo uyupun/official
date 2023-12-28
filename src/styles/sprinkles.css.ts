@@ -73,7 +73,10 @@ const selectorProperties = defineProperties({
   defaultCondition: 'default',
   properties: {
     borderColor: vars.colors,
+    outlineWidth: [2],
+    outlineStyle: ['solid'],
     outlineColor: vars.colors,
+    outlineOffset: [-1],
     opacity: [0.3, 0.8, 1],
     cursor: ['pointer', 'not-allowed'],
   },
