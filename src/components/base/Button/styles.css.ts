@@ -6,20 +6,26 @@ const styles = {
   button: style([
     sprinkles({
       display: 'inline-flex',
+      minWidth: {
+        mobile: 120,
+        desktop: 150,
+      },
+      height: {
+        mobile: 40,
+        desktop: 48,
+      },
       fontSize: {
         mobile: 14,
         desktop: 16,
       },
-      color: 'white',
-      backgroundColor: 'blue',
-      outlineColor: {
-        focusVisible: 'lightBlue',
+      color: {
+        default: 'white',
+        disabled: 'gray',
       },
-      opacity: {
-        focusVisible: 0.8,
-        hover: 0.8,
-        disabled: 0.3,
-        disabledHover: 0.3,
+      backgroundColor: {
+        default: 'transparent',
+        hover: 'indigo',
+        disabledHover: 'transparent',
       },
       cursor: {
         default: 'pointer',
@@ -29,18 +35,30 @@ const styles = {
         mobile: 1.5,
         desktop: 2.5,
       },
-      paddingY: {
-        mobile: 1,
-        desktop: 1.5,
+      borderColor: {
+        default: 'white',
+        disabled: 'gray',
+      },
+      outlineWidth: {
+        focusVisible: 2,
+      },
+      outlineStyle: {
+        focusVisible: 'solid',
+      },
+      outlineColor: {
+        focusVisible: 'white',
+      },
+      outlineOffset: {
+        focusVisible: -1,
       },
     }),
     {
       justifyContent: 'center',
       alignItems: 'center',
       whiteSpace: 'nowrap',
-      border: 'none',
+      borderWidth: 1,
+      borderStyle: 'solid',
       borderRadius: 4,
-      outline: '2px solid',
     },
   ]),
 };
