@@ -6,62 +6,59 @@ const styles = {
   button: style([
     sprinkles({
       display: 'inline-flex',
+      minWidth: {
+        mobile: 120,
+        desktop: 150,
+      },
+      height: {
+        mobile: 40,
+        desktop: 48,
+      },
       fontSize: {
         mobile: 14,
         desktop: 16,
       },
-      color: 'white',
-      backgroundColor: 'blue',
-      outlineColor: {
-        focusVisible: 'lightBlue',
+      color: {
+        default: 'white',
+        disabled: 'gray',
       },
-      opacity: {
-        focusVisible: 0.8,
-        hover: 0.8,
-        disabled: 0.3,
-        disabledHover: 0.3,
+      backgroundColor: {
+        default: 'transparent',
+        hover: 'hoverWhite',
+        disabledHover: 'transparent',
       },
       cursor: {
         default: 'pointer',
         disabled: 'not-allowed',
+      },
+      paddingX: {
+        mobile: 1.5,
+        desktop: 2.5,
+      },
+      borderColor: {
+        default: 'white',
+        disabled: 'gray',
+      },
+      outlineWidth: {
+        focusVisible: 2,
+      },
+      outlineStyle: {
+        focusVisible: 'solid',
+      },
+      outlineColor: {
+        focusVisible: 'white',
+      },
+      outlineOffset: {
+        focusVisible: -1,
       },
     }),
     {
       justifyContent: 'center',
       alignItems: 'center',
       whiteSpace: 'nowrap',
-      border: 'none',
-      outline: '2px solid',
-    },
-  ]),
-  default: style([
-    sprinkles({
-      paddingX: {
-        mobile: 1.5,
-        desktop: 2.5,
-      },
-      paddingY: {
-        mobile: 1,
-        desktop: 1.5,
-      },
-    }),
-    {
-      borderRadius: '4px',
-    },
-  ]),
-  circle: style([
-    sprinkles({
-      paddingX: {
-        mobile: 0.5,
-        desktop: 0.5,
-      },
-      paddingY: {
-        mobile: 0.5,
-        desktop: 0.5,
-      },
-    }),
-    {
-      borderRadius: '50%',
+      borderWidth: 1,
+      borderStyle: 'solid',
+      borderRadius: 4,
     },
   ]),
 };

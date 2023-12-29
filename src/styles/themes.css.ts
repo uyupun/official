@@ -2,17 +2,20 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const colors = {
   white: '#FEFEFE',
+  hoverWhite: 'rgba(255, 255, 255, 0.25)',
   black: '#333333',
   silver: '#F8F8F8',
-  gray: '#C8C8C8',
+  gray: '#94989B',
   darkGray: '#656565',
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
   hoverBlue: 'rgba(30, 26, 222, 0.8)',
+  indigo: '#0054A6',
   purple: '#B01CF6',
   red: '#FF4747',
   lightRed: '#FBD4D4',
   gradientBlue: 'linear-gradient(#0078B7, #001E43)',
+  transparent: 'transparent',
 } as const;
 
 export type Color = keyof typeof colors;
@@ -69,7 +72,10 @@ export const size = {
   24: '1.5rem',
   36: '2.25rem',
   40: '2.5rem',
+  48: '3rem',
   100: '6.25rem',
+  120: '7.5rem',
+  150: '9.375rem',
   200: '12.5rem',
   300: '18.75rem',
 };
