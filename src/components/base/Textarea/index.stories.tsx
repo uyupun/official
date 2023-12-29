@@ -32,7 +32,9 @@ export const Textarea: Story = {
       <form onSubmit={handleSubmit(action('handleSubmit'))}>
         <dl>
           <dt style={{ marginBottom: '8px' }}>
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description" style={{ color: 'white' }}>
+              Description
+            </label>
           </dt>
           <dd style={{ marginBottom: '24px' }}>
             <BaseTextarea errors={errors} id="description" register={register} />
