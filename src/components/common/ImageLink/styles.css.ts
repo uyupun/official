@@ -68,10 +68,7 @@ const styles = {
       fontSize: {
         mobile: 18,
       },
-      color: {
-        default: 'lightBlue',
-        visited: 'purple',
-      },
+      color: 'lightBlue',
       marginTop: {
         mobile: 1,
       },

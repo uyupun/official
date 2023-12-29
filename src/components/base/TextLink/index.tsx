@@ -2,7 +2,7 @@ import NextLink, { type LinkProps } from 'next/link';
 
 import { getSafeLinkRel } from '@/utils/getSafeLinkRel';
 
-import { styles } from './styles.css';
+import { styles, type Size } from './styles.css';
 
 import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
@@ -17,6 +17,10 @@ type BaseProps = {
    */
   href: LinkProps['href'];
   /**
+   * 文字のサイズ
+   */
+  size?: Size;
+  /**
    * リンクのコンテンツ
    */
   children: ReactNode;
@@ -24,11 +28,11 @@ type BaseProps = {
 
 type Props = BaseProps & Omit<ComponentPropsWithoutRef<'a'>, keyof BaseProps>;
 
-const TextLink: FC<Props> = ({ href, children, rel, target, ...props }) => {
+const TextLink: FC<Props> = ({ href, size = 'md', children, rel, target, ...props }) => {
   return (
     <NextLink
       {...props}
-      className={styles.link}
+      className={styles({ size })}
       href={href}
       rel={getSafeLinkRel(rel, target)}
       target={target}
