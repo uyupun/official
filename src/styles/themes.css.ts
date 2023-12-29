@@ -2,6 +2,7 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const colors = {
   white: '#FEFEFE',
+  hoverWhite: 'rgba(255, 255, 255, 0.25)',
   black: '#333333',
   silver: '#F8F8F8',
   gray: '#94989B',
