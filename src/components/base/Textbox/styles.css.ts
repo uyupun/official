@@ -36,6 +36,9 @@ const styles = {
   error: sprinkles({
     color: 'red',
     borderColor: 'red',
+    outlineColor: {
+      focusVisible: 'red',
+    },
   }),
 };
 
