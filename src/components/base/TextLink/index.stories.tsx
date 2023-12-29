@@ -24,10 +24,10 @@ export const TextLink: Story = {
           target=&quot;_blank&quot; TextLink
         </BaseTextLink>
       </dd>
-      <dt style={{ color: 'white' }}>isLarge=&quot;true&quot;</dt>
+      <dt style={{ color: 'white' }}>size=&quot;lg&quot;</dt>
       <dd style={{ marginBottom: '16px' }}>
-        <BaseTextLink href={pagesPath.$url()} isLarge={true}>
-          isLarge=&quot;true&quot; TextLink
+        <BaseTextLink href={pagesPath.$url()} size={'lg'}>
+          size=&quot;lg&quot; TextLink
         </BaseTextLink>
       </dd>
     </dl>

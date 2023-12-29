@@ -1,15 +1,29 @@
 import { style } from '@vanilla-extract/css';
+import { recipe } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '@/styles/sprinkles.css';
 
-const styles = {
-  link: style([
+type Size = 'md' | 'lg';
+
+const size: { [Key in Size]: string } = {
+  md: sprinkles({
+    fontSize: {
+      mobile: 14,
+      desktop: 16,
+    },
+  }),
+  lg: sprinkles({
+    fontSize: {
+      mobile: 24,
+      desktop: 36,
+    },
+  }),
+};
+
+const styles = recipe({
+  base: style([
     sprinkles({
       display: 'inline-block',
-      fontSize: {
-        mobile: 14,
-        desktop: 16,
-      },
       lineHeight: 1,
       color: 'white',
       outlineWidth: {
@@ -29,14 +43,9 @@ const styles = {
       textDecoration: 'underline',
     },
   ]),
-  large: sprinkles({
-    fontSize: {
-      mobile: 24,
-      desktop: 36,
-    },
-    fontWeight: 'bold',
-    lineHeight: 1.3,
-  }),
-};
+  variants: {
+    size,
+  },
+});
 
-export { styles };
+export { styles, type Size };
