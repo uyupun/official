@@ -9,7 +9,7 @@ export const colors = {
   darkGray: '#656565',
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
-  hoverBlue: 'rgba(30, 26, 222, 0.8)',
+  hoverBlue: 'rgba(11, 96, 223, 0.8)',
   indigo: '#0054A6',
   purple: '#B01CF6',
   red: '#FF4747',
