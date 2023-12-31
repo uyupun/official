@@ -50,7 +50,9 @@ const ImageLink: FC<Props> = ({ href, target, rel, text, children, ...rest }) =>
         refs: https://www.w3.org/WAI/tutorials/images/functional
               https://dequeuniversity.com/rules/axe/4.4/image-redundant-alt
       */}
-      <Image {...rest} alt="" />
+      <div className={styles.imageWrapper}>
+        <Image {...rest} alt="" />
+      </div>
       <div className={styles.hoverContainer}>{children}</div>
       <div className={styles.linkText}>{text}</div>
     </NextLink>

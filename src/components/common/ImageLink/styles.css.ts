@@ -11,12 +11,14 @@ const imageLink = style([
       desktop: 20,
     },
     color: 'white',
-    outlineColor: {
-      focusVisible: 'lightBlue',
+    outlineWidth: {
+      focusVisible: 1,
     },
-    opacity: {
-      focusVisible: 0.8,
-      hover: 0.8,
+    outlineStyle: {
+      focusVisible: 'solid',
+    },
+    outlineColor: {
+      focusVisible: 'white',
     },
     cursor: {
       default: 'pointer',
@@ -27,57 +29,67 @@ const imageLink = style([
   },
 ]);
 
+const imageWrapper = sprinkles({
+  backgroundColor: 'white',
+});
+
+const hoverContainer = style([
+  sprinkles({
+    position: 'absolute',
+    display: {
+      mobile: 'none',
+      desktop: 'inline-flex',
+    },
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'hoverBlue',
+    padding: 1,
+  }),
+  {
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    opacity: 0,
+    transition: 'opacity 300ms',
+    selectors: {
+      [`${imageLink}:focus-visible &`]: {
+        opacity: 1,
+      },
+      [`${imageLink}:hover &`]: {
+        opacity: 1,
+      },
+    },
+  },
+]);
+
+const linkText = style([
+  sprinkles({
+    display: {
+      mobile: 'inline-flex',
+      desktop: 'none',
+    },
+    justifyContent: 'center',
+    fontSize: {
+      mobile: 18,
+    },
+    lineHeight: 1,
+    color: 'white',
+    marginTop: {
+      mobile: 1,
+    },
+  }),
+  {
+    width: '100%',
+    textDecoration: 'underline',
+  },
+]);
+
 const styles = {
   imageLink,
-  hoverContainer: style([
-    sprinkles({
-      position: 'absolute',
-      display: {
-        mobile: 'none',
-        desktop: 'inline-flex',
-      },
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'hoverBlue',
-      padding: 1,
-    }),
-    {
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      opacity: 0,
-      transition: 'opacity 300ms',
-      selectors: {
-        [`${imageLink}:focus-visible &`]: {
-          opacity: 1,
-        },
-        [`${imageLink}:hover &`]: {
-          opacity: 1,
-        },
-      },
-    },
-  ]),
-  linkText: style([
-    sprinkles({
-      display: {
-        mobile: 'inline-flex',
-        desktop: 'none',
-      },
-      justifyContent: 'center',
-      fontSize: {
-        mobile: 18,
-      },
-      color: 'lightBlue',
-      marginTop: {
-        mobile: 1,
-      },
-    }),
-    {
-      width: '100%',
-      textDecoration: 'underline',
-    },
-  ]),
+  imageWrapper,
+  hoverContainer,
+  linkText,
 };
 
 export { styles };
