@@ -29,7 +29,7 @@ const Text: FC<Props> = ({
   tag = 'span',
   fontWeight = 'normal',
   fontStyle = 'normal',
-  color = 'black',
+  color = 'white',
   children,
 }) => {
   const className = styles({

@@ -37,14 +37,11 @@ export const Text: Story = {
         <BaseText color="white" tag="p">
           color=&quot;white&quot;
         </BaseText>
-        <BaseText color="black" tag="p">
-          color=&quot;black&quot;
-        </BaseText>
         <BaseText color="red" tag="p">
           color=&quot;red&quot;
         </BaseText>
-        <BaseText color="darkGray" tag="p">
-          color=&quot;darkGray&quot;
+        <BaseText color="lightGray" tag="p">
+          color=&quot;lightGray&quot;
         </BaseText>
       </dd>
     </dl>
