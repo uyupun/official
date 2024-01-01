@@ -15,7 +15,7 @@ const styles = {
         mobile: 24,
         desktop: 36,
       },
-      color: 'black',
+      color: 'white',
       outlineColor: {
         focusVisible: 'blue',
       },
