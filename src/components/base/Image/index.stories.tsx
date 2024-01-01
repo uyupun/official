@@ -53,7 +53,7 @@ const height: ComponentProps<typeof BaseImage>['height'] = {
 const style = sprinkles({
   display: 'inline-block',
   padding: 2,
-  backgroundColor: 'lightBlue',
+  backgroundColor: 'white',
 });
 
 export const Image: Story = {
