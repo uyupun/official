@@ -54,7 +54,7 @@ const height: ComponentProps<typeof Image>['height'] = {
 export const ImageLink: Story = {
   render: () => (
     <dl>
-      <dt>Default</dt>
+      <dt style={{ color: 'white' }}>Default</dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
           height={height}
@@ -67,7 +67,9 @@ export const ImageLink: Story = {
           ゼウスくん
         </CommonImageLink>
       </dd>
-      <dt>target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;</dt>
+      <dt style={{ color: 'white' }}>
+        target=&quot;_blank&quot; rel=&quot;noreferrer noopener&quot;
+      </dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
           height={height}
@@ -82,7 +84,7 @@ export const ImageLink: Story = {
           ゼウスくん
         </CommonImageLink>
       </dd>
-      <dt>Complex children</dt>
+      <dt style={{ color: 'white' }}>Complex children</dt>
       <dd style={{ marginBottom: '16px' }}>
         <CommonImageLink
           height={height}
