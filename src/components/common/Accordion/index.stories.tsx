@@ -15,13 +15,13 @@ export const Accordion: Story = {
   render: () => (
     <>
       <CommonAccordion buttonText="2023" isOpen={true}>
-        {'isOpen={true}'}
+        <div style={{ color: 'white' }}>{'isOpen={true}'}</div>
       </CommonAccordion>
       <CommonAccordion buttonText="2022" isOpen={false}>
-        {'isOpen={false}'}
+        <div style={{ color: 'white' }}>{'isOpen={false}'}</div>
       </CommonAccordion>
       <CommonAccordion buttonText="2021" isOpen={isDesktop()}>
-        {'isOpen={isDesktop()} // 画面幅に応じて制御'}
+        <div style={{ color: 'white' }}>{'isOpen={isDesktop()} // 画面幅に応じて制御'}</div>
       </CommonAccordion>
     </>
   ),

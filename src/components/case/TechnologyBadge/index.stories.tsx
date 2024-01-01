@@ -12,11 +12,11 @@ type Story = StoryObj<typeof CaseTechnologyBadge>;
 export const TechnologyBadge: Story = {
   render: () => (
     <dl>
-      <dt style={{ marginBottom: '8px' }}>label=&quot;expo&quot;</dt>
+      <dt style={{ color: 'white', marginBottom: '8px' }}>label=&quot;expo&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
         <CaseTechnologyBadge label="expo" />
       </dd>
-      <dt style={{ marginBottom: '8px' }}>label=&quot;fastApi&quot;</dt>
+      <dt style={{ color: 'white', marginBottom: '8px' }}>label=&quot;fastApi&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
         <CaseTechnologyBadge label="fastApi" />
       </dd>
