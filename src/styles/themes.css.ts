@@ -3,16 +3,12 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 export const colors = {
   white: '#FEFEFE',
   hoverWhite: 'rgba(255, 255, 255, 0.25)',
-  silver: '#F8F8F8',
   gray: '#94989B',
   lightGray: '#E2E2E2',
   blue: '#1E1ADE',
   lightBlue: '#0080FF',
   hoverBlue: 'rgba(11, 96, 223, 0.8)',
-  indigo: '#0054A6',
-  purple: '#B01CF6',
   red: '#FF4747',
-  lightRed: '#FBD4D4',
   gradientBlue: 'linear-gradient(#0078B7, #001E43)',
   transparent: 'transparent',
 } as const;
