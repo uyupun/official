@@ -8,7 +8,7 @@ const IconList: FC = () => {
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
       {Object.entries(Icons).map(([iconName, IconComponent], index) => (
         <div key={index} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <IconComponent fill="white" />
+          <IconComponent />
           <div style={{ color: 'white' }}>{iconName}</div>
         </div>
       ))}
