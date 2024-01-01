@@ -53,21 +53,21 @@ const height: ComponentProps<typeof BaseImage>['height'] = {
 const style = sprinkles({
   display: 'inline-block',
   padding: 2,
-  backgroundColor: 'lightBlue',
+  backgroundColor: 'white',
 });
 
 export const Image: Story = {
   render: () => (
     <dl>
-      <dt>isLazy=true</dt>
+      <dt style={{ color: 'white' }}>isLazy=true</dt>
       <dd style={{ marginBottom: '16px' }}>
         <BaseImage alt={alt} height={height} isLazy={true} sources={sources} width={width} />
       </dd>
-      <dt>isLazy=false</dt>
+      <dt style={{ color: 'white' }}>isLazy=false</dt>
       <dd style={{ marginBottom: '16px' }}>
         <BaseImage alt={alt} height={height} isLazy={false} sources={sources} width={width} />
       </dd>
-      <dt>Custom style</dt>
+      <dt style={{ color: 'white' }}>Custom style</dt>
       <dd style={{ marginBottom: '16px' }}>
         <BaseImage
           alt={alt}

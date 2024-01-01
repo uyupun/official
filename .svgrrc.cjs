@@ -2,7 +2,7 @@ module.exports = {
   typescript: true,
   filenameCase: 'camel',
   svgProps: {
-    fill: '{fill !== undefined ? colors[fill] : colors.black}',
+    fill: '{fill !== undefined ? colors[fill] : colors.white}',
     stroke: '{stroke}',
     'aria-hidden': true,
   },

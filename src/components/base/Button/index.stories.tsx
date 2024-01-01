@@ -14,13 +14,13 @@ type Story = StoryObj<typeof BaseButton>;
 export const Button: Story = {
   render: () => (
     <dl>
-      <dt style={{ marginBottom: '8px' }}>Default</dt>
+      <dt style={{ color: 'white', marginBottom: '8px' }}>Default</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseButton onClick={action('clicked')} type="button">
           Default Button
         </BaseButton>
       </dd>
-      <dt style={{ marginBottom: '8px' }}>Disabled</dt>
+      <dt style={{ color: 'white', marginBottom: '8px' }}>Disabled</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseButton disabled onClick={action('clicked')} type="button">
           Disabled Button

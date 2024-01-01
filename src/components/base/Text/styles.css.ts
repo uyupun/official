@@ -5,7 +5,7 @@ import { sprinkles } from '@/styles/sprinkles.css';
 import type { Color } from '@/styles/themes.css';
 
 export type TextFontWeight = 'normal' | 'bold';
-export type TextColor = Extract<Color, 'white' | 'black' | 'red' | 'darkGray'>;
+export type TextColor = Extract<Color, 'white' | 'red' | 'lightGray'>;
 export type TextDisplay = 'block' | 'inlineBlock';
 export type TextFontStyle = 'normal' | 'italic';
 
@@ -22,14 +22,11 @@ const color: { [Key in TextColor]: string } = {
   white: sprinkles({
     color: 'white',
   }),
-  black: sprinkles({
-    color: 'black',
-  }),
   red: sprinkles({
     color: 'red',
   }),
-  darkGray: sprinkles({
-    color: 'darkGray',
+  lightGray: sprinkles({
+    color: 'lightGray',
   }),
 };
 

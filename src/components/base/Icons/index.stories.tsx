@@ -9,7 +9,7 @@ const IconList: FC = () => {
       {Object.entries(Icons).map(([iconName, IconComponent], index) => (
         <div key={index} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <IconComponent />
-          <div>{iconName}</div>
+          <div style={{ color: 'white' }}>{iconName}</div>
         </div>
       ))}
     </div>

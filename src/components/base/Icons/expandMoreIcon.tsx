@@ -5,7 +5,7 @@ import type { FC } from 'react';
 const SvgExpandMoreIcon: FC<IconProps> = ({ fill, stroke, ...props }) => (
   <svg
     aria-hidden={true}
-    fill={fill !== undefined ? colors[fill] : colors.black}
+    fill={fill !== undefined ? colors[fill] : colors.white}
     height={24}
     stroke={stroke}
     viewBox="0 0 24 24"
