@@ -13,7 +13,6 @@ const styles = {
       },
       lineHeight: 1,
       color: 'white',
-      backgroundColor: 'black',
       paddingX: 1,
       paddingY: 0.5,
     }),
