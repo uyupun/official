@@ -7,8 +7,8 @@ export const colors = {
   lightGray: '#E2E2E2',
   blue: '#1E1ADE',
   translucentBlue: 'rgba(11, 96, 223, 0.8)',
-  red: '#FF4747',
   gradientBlue: 'linear-gradient(#0078B7, #001E43)',
+  red: '#FF4747',
   transparent: 'transparent',
 } as const;
 
