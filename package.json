@@ -70,7 +70,6 @@
     "lint-staged": "^12.1.2",
     "micromatch": "^4.0.5",
     "minimist": "^1.2.8",
-    "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
     "prettier": "^2.8.3",
     "serve": "^14.2.1",
