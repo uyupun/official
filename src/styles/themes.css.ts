@@ -2,11 +2,11 @@ import { createGlobalTheme } from '@vanilla-extract/css';
 
 export const colors = {
   white: '#FEFEFE',
-  lightWhite: 'rgba(255, 255, 255, 0.25)',
+  translucentWhite: 'rgba(255, 255, 255, 0.25)',
   gray: '#94989B',
   lightGray: '#E2E2E2',
   blue: '#1E1ADE',
-  lightBlue: 'rgba(11, 96, 223, 0.8)',
+  translucentBlue: 'rgba(11, 96, 223, 0.8)',
   red: '#FF4747',
   gradientBlue: 'linear-gradient(#0078B7, #001E43)',
   transparent: 'transparent',

@@ -24,7 +24,7 @@ const styles = {
       },
       backgroundColor: {
         default: 'transparent',
-        hover: 'lightWhite',
+        hover: 'translucentWhite',
         disabledHover: 'transparent',
       },
       cursor: {
