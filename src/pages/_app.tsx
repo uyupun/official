@@ -1,4 +1,3 @@
-import 'modern-css-reset/dist/reset.min.css';
 import Head from 'next/head';
 
 import { cica } from '@/styles/font';
