@@ -3,6 +3,7 @@ import React from 'react';
 
 import { colors } from '../src/styles/themes.css';
 
+import '@acab/reset.css';
 import type { Parameters } from '@storybook/react';
 
 export const parameters: Parameters = {
