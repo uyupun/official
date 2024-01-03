@@ -42,7 +42,7 @@ const hoverContainer = style([
     },
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'hoverBlue',
+    backgroundColor: 'translucentBlue',
     padding: 1,
   }),
   {
