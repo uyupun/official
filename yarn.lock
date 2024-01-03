@@ -12,6 +12,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@acab/reset.css@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "@acab/reset.css@npm:0.8.0"
+  checksum: 9e98c3ec7490ec9b76be75051a41d06fc8cccbd2bfef8bed419b7aa380a5f8abd56b8a98c871163436a1034e581e7f62fb9ebdb87315248ccbbd7a6f474dc0af
+  languageName: node
+  linkType: hard
+
 "@ampproject/remapping@npm:^2.2.0":
   version: 2.2.1
   resolution: "@ampproject/remapping@npm:2.2.1"
@@ -13188,6 +13195,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "official@workspace:."
   dependencies:
+    "@acab/reset.css": "npm:^0.8.0"
     "@headlessui/react": "npm:^1.7.4"
     "@hookform/resolvers": "npm:^2.9.11"
     "@ls-lint/ls-lint": "npm:^2.0.0"

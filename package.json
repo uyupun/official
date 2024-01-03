@@ -25,6 +25,7 @@
     "clean:cspell": "ts-node src/scripts/cleanCspellWords.ts"
   },
   "dependencies": {
+    "@acab/reset.css": "^0.8.0",
     "@headlessui/react": "^1.7.4",
     "@hookform/resolvers": "^2.9.11",
     "clsx": "^1.2.1",
