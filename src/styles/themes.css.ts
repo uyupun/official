@@ -6,7 +6,7 @@ export const colors = {
   gray: '#94989B',
   lightGray: '#E2E2E2',
   blue: '#1E1ADE',
-  hoverBlue: 'rgba(11, 96, 223, 0.8)',
+  lightBlue: 'rgba(11, 96, 223, 0.8)',
   red: '#FF4747',
   gradientBlue: 'linear-gradient(#0078B7, #001E43)',
   transparent: 'transparent',
