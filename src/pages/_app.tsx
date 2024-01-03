@@ -1,3 +1,4 @@
+import '@/styles/reset.css';
 import Head from 'next/head';
 
 import { cica } from '@/styles/font';

@@ -4,6 +4,7 @@ import React from 'react';
 import { colors } from '../src/styles/themes.css';
 
 import type { Parameters } from '@storybook/react';
+import '../src/styles/reset.css';
 
 export const parameters: Parameters = {
   controls: {
