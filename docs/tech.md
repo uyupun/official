@@ -28,7 +28,7 @@
 
 ## スタイリング
 
-- [modern-css-reset](https://github.com/hankchizljaw/modern-css-reset)
+- [modern-css-reset](https://piccalil.li/blog/a-more-modern-css-reset)
 - [vanilla-extract](https://vanilla-extract.style)
   - [Sprinkles](https://vanilla-extract.style/documentation/packages/sprinkles)
   - [Recipes](https://vanilla-extract.style/documentation/packages/recipes)
