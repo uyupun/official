@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import 'the-new-css-reset/css/reset.css';
 
 import { cica } from '@/styles/font';
 
