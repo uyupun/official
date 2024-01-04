@@ -40,7 +40,9 @@ export const Textbox: Story = {
             <BaseTextbox errors={errors} id="title" register={register} />
           </dd>
         </dl>
-        <button type="submit">Submit</button>
+        <button style={{ color: 'white' }} type="submit">
+          Submit
+        </button>
       </form>
     );
   },
