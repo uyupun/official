@@ -1,5 +1,5 @@
-import 'modern-css-reset/dist/reset.min.css';
 import Head from 'next/head';
+import 'the-new-css-reset/css/reset.css';
 
 import { cica } from '@/styles/font';
 

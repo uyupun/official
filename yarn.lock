@@ -12764,13 +12764,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"modern-css-reset@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "modern-css-reset@npm:1.4.0"
-  checksum: b69603972fd4b5f03ced962c0c6c81447b2f343e33b396e86413501c14a873b20c532337b21fa0a7017a24c37fe134482e3dae36feb549f28bc02bd46adbc40b
-  languageName: node
-  linkType: hard
-
 "mri@npm:^1.2.0":
   version: 1.2.0
   resolution: "mri@npm:1.2.0"
@@ -13233,7 +13226,6 @@ __metadata:
     lint-staged: "npm:^12.1.2"
     micromatch: "npm:^4.0.5"
     minimist: "npm:^1.2.8"
-    modern-css-reset: "npm:^1.4.0"
     next: "npm:14.0.3"
     pathpida: "npm:^0.20.1"
     prettier: "npm:^2.8.3"
@@ -13243,6 +13235,7 @@ __metadata:
     serve: "npm:^14.2.1"
     sharp: "npm:^0.32.6"
     storybook: "npm:^7.5.3"
+    the-new-css-reset: "npm:^1.11.2"
     ts-node: "npm:^10.9.1"
     typescript: "npm:4.9.5"
     webpack-merge: "npm:^5.9.0"
@@ -15949,6 +15942,13 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: 02805740c12851ea5982686810702e2f14369a5f4c5c40a836821e3eefc65ffeec3131ba324692a37608294b0fd8c1e55a2dd571ffed4909822787668ddbee5c
+  languageName: node
+  linkType: hard
+
+"the-new-css-reset@npm:^1.11.2":
+  version: 1.11.2
+  resolution: "the-new-css-reset@npm:1.11.2"
+  checksum: 2b5e6e7a3d06c2be8e05191a4ac345805740d2df948b6559b5445716147d354ab76f363f98266064a8814192e21850db31250187cb174a43a086150ced4eb829
   languageName: node
   linkType: hard
 

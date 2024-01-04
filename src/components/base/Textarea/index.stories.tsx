@@ -40,7 +40,9 @@ export const Textarea: Story = {
             <BaseTextarea errors={errors} id="description" register={register} />
           </dd>
         </dl>
-        <button type="submit">Submit</button>
+        <button style={{ color: 'white' }} type="submit">
+          Submit
+        </button>
       </form>
     );
   },

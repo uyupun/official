@@ -32,6 +32,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.43.7",
+    "the-new-css-reset": "^1.11.2",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -70,7 +71,6 @@
     "lint-staged": "^12.1.2",
     "micromatch": "^4.0.5",
     "minimist": "^1.2.8",
-    "modern-css-reset": "^1.4.0",
     "pathpida": "^0.20.1",
     "prettier": "^2.8.3",
     "serve": "^14.2.1",
