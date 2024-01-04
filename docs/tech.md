@@ -28,6 +28,7 @@
 
 ## スタイリング
 
+- [the-new-css-reset](https://github.com/elad2412/the-new-css-reset)
 - [vanilla-extract](https://vanilla-extract.style)
   - [Sprinkles](https://vanilla-extract.style/documentation/packages/sprinkles)
   - [Recipes](https://vanilla-extract.style/documentation/packages/recipes)
