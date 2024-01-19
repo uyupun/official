@@ -1,24 +1,24 @@
-import { TechnologyBadge as CaseTechnologyBadge } from '.';
+import { TechnologyBadge as DomainTechnologyBadge } from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof CaseTechnologyBadge> = {
-  title: 'Case/TechnologyBadge',
-  component: CaseTechnologyBadge,
+const meta: Meta<typeof DomainTechnologyBadge> = {
+  title: 'Domain/TechnologyBadge',
+  component: DomainTechnologyBadge,
 };
 export default meta;
 
-type Story = StoryObj<typeof CaseTechnologyBadge>;
+type Story = StoryObj<typeof DomainTechnologyBadge>;
 export const TechnologyBadge: Story = {
   render: () => (
     <dl>
       <dt style={{ color: 'white', marginBottom: '8px' }}>label=&quot;expo&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <CaseTechnologyBadge label="expo" />
+        <DomainTechnologyBadge label="expo" />
       </dd>
       <dt style={{ color: 'white', marginBottom: '8px' }}>label=&quot;fastApi&quot;</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <CaseTechnologyBadge label="fastApi" />
+        <DomainTechnologyBadge label="fastApi" />
       </dd>
     </dl>
   ),
