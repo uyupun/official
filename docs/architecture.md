@@ -2,7 +2,7 @@
 
 ## コンポーネント
 
-[BCCD Design](https://qiita.com/misuken/items/19f9f603ab165e228fe1) を元に、以下に沿ってコンポーネントの設計を行う。
+BCCD Designを元に、以下に沿ってコンポーネントの設計を行う。
 
 ### 分類
 
@@ -27,3 +27,9 @@
 - CommonとDomainで分類に迷う場合は以下を基準にする
   - Common: 複数ページ/箇所で使えるレベルに特化されたコンポーネント
   - Domain: 特定ページ/箇所でしか使えないようなレベルに特化されたコンポーネント
+
+### 参照
+
+- [https://qiita.com/misuken/items/19f9f603ab165e228fe1](https://qiita.com/misuken/items/19f9f603ab165e228fe1)
+- [https://qiita.com/misuken/items/d51c181487cf611821f4](https://qiita.com/misuken/items/d51c181487cf611821f4)
+- [https://qiita.com/misuken/items/09498a496511034627af](https://qiita.com/misuken/items/09498a496511034627af)
