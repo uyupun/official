@@ -21,11 +21,6 @@
 
 - [Figma](https://www.figma.com/)
 
-## アーキテクチャ
-
-- [BEM](https://en.bem.info)
-- [BCCD Design](https://qiita.com/misuken/items/19f9f603ab165e228fe1)
-
 ## スタイリング
 
 - [the-new-css-reset](https://github.com/elad2412/the-new-css-reset)
