@@ -6,6 +6,8 @@ import { cica } from '@/styles/font';
 import type { AppProps } from 'next/app';
 import type { FC } from 'react';
 
+import '@/styles/layout.css';
+
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <>
