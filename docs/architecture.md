@@ -6,7 +6,7 @@ BCCD Designを元に、以下のルールに沿ってコンポーネントの設
 
 ### 背景
 
-[Atomic Design](https://atomicdesign.bradfrost.com/)、BCCD Design、および[featuresディレクトリ](https://github.com/alan2207/bulletproof-react)の中からBCCD Designを選定した。
+[Atomic Design](https://atomicdesign.bradfrost.com/)、[BCCD Design](https://qiita.com/misuken/items/19f9f603ab165e228fe1)、および[featuresディレクトリ](https://github.com/alan2207/bulletproof-react)の中からBCCD Designを選定した。
 AtomicDesignにおけるコンポーネントの分類の曖昧さを改善しており、かつ、プロジェクトの規模に適した設計手法である点が主な選定理由である。
 また、Storybookを用いた開発との相性が良い点や、プロジェクトが大規模化した場合にもある程度、対応が可能な点も副次的な選定理由として挙げられる。
 
