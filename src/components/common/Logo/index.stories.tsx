@@ -24,7 +24,7 @@ export const Logo: Story = {
   render: () => (
     <dl>
       <dt style={{ color: 'white' }}>{'type="discussion"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'オフィシャルサイトのGitHub discussion'}
           height={height}
@@ -35,7 +35,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="github"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'たかしのGitHubアカウント'}
           height={height}
@@ -46,7 +46,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="home"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'たかしのポートフォリオ'}
           height={height}
@@ -57,7 +57,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="qiita"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'たかしのQiitaアカウント'}
           height={height}
@@ -68,7 +68,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="uyupun"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'ぅゅ...ぷんぽぷんぽのGitHub Organization'}
           height={height}
@@ -79,7 +79,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="uyupun-archive"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'ぅゅ...ぷんぽぷんぽアーカイブのGitHub Organization'}
           height={height}
@@ -90,7 +90,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="x"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'ぅゅ...ぷんぽぷんぽのXアカウント'}
           height={height}
@@ -101,7 +101,7 @@ export const Logo: Story = {
         />
       </dd>
       <dt style={{ color: 'white' }}>{'type="youtube"'}</dt>
-      <dd style={{ marginBottom: '16px' }}>
+      <dd style={{ margin: '8px 0 16px 0' }}>
         <CommonLogo
           alt={'ぅゅ...ぷんぽぷんぽのYouTubeアカウント'}
           height={height}
