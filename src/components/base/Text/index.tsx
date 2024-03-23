@@ -46,27 +46,13 @@ const Text: FC<Props<Tag>> = ({
     display: tag === 'span' ? 'inlineBlock' : 'block',
     fontStyle,
   });
+  const Component = tag;
 
-  switch (tag) {
-    case 'span':
-      return (
-        <span className={clsx(style, className)} {...rest}>
-          {children}
-        </span>
-      );
-    case 'p':
-      return (
-        <p className={clsx(style, className)} {...rest}>
-          {children}
-        </p>
-      );
-    case 'div':
-      return (
-        <div className={clsx(style, className)} {...rest}>
-          {children}
-        </div>
-      );
-  }
+  return (
+    <Component className={clsx(style, className)} {...rest}>
+      {children}
+    </Component>
+  );
 };
 
 export { Text };
