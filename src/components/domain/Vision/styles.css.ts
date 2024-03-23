@@ -5,7 +5,10 @@ const styles = {
     textAlign: 'center',
   }),
   heading: sprinkles({
-    marginBottom: 10,
+    marginBottom: {
+      mobile: 6,
+      desktop: 10,
+    },
   }),
   vision: sprinkles({
     fontSize: {
@@ -14,7 +17,10 @@ const styles = {
     },
     color: 'white',
     lineHeight: 1.3,
-    marginBottom: 5,
+    marginBottom: {
+      mobile: 3,
+      desktop: 5,
+    },
   }),
   strong: sprinkles({
     fontWeight: 'bold',
