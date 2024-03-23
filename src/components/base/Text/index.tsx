@@ -10,7 +10,7 @@ type BaseProps<T extends TagName> = {
   /**
    * テキストのタグ
    */
-  tag?: T;
+  tagName?: T;
   /**
    * テキストの太さ
    */
@@ -33,7 +33,7 @@ type Props<T extends TagName> = BaseProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
 
 const Text: FC<Props<TagName>> = ({
-  tag: Tag = 'span',
+  tagName: TagName = 'span',
   fontWeight = 'normal',
   fontStyle = 'normal',
   color = 'white',
@@ -44,14 +44,14 @@ const Text: FC<Props<TagName>> = ({
   const style = styles({
     color,
     fontWeight,
-    display: Tag === 'span' ? 'inlineBlock' : 'block',
+    display: TagName === 'span' ? 'inlineBlock' : 'block',
     fontStyle,
   });
 
   return (
-    <Tag className={clsx(style, className)} {...rest}>
+    <TagName className={clsx(style, className)} {...rest}>
       {children}
-    </Tag>
+    </TagName>
   );
 };
 

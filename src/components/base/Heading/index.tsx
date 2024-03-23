@@ -10,7 +10,7 @@ type BaseProps<T extends TagName> = {
   /**
    * 見出しのタグ
    */
-  tag?: T;
+  tagName?: T;
   /**
    * 見出しのコンテンツ
    */
@@ -20,11 +20,11 @@ type BaseProps<T extends TagName> = {
 type Props<T extends TagName> = BaseProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
 
-const Heading: FC<Props<TagName>> = ({ tag: Tag = 'h1', children, className, ...rest }) => {
+const Heading: FC<Props<TagName>> = ({ tagName: TagName = 'h1', children, className, ...rest }) => {
   return (
-    <Tag className={clsx(styles.common, styles[Tag], className)} {...rest}>
+    <TagName className={clsx(styles.common, styles[TagName], className)} {...rest}>
       {children}
-    </Tag>
+    </TagName>
   );
 };
 
