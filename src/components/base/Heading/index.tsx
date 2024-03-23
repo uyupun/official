@@ -20,12 +20,11 @@ type BaseProps<T extends TagName> = {
 type Props<T extends TagName> = BaseProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
 
-const Heading: FC<Props<TagName>> = ({ tag = 'h1', children, className, ...rest }) => {
-  const Component = tag;
+const Heading: FC<Props<TagName>> = ({ tag: Tag = 'h1', children, className, ...rest }) => {
   return (
-    <Component className={clsx(styles.common, styles[tag], className)} {...rest}>
+    <Tag className={clsx(styles.common, styles[Tag], className)} {...rest}>
       {children}
-    </Component>
+    </Tag>
   );
 };
 

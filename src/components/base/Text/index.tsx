@@ -33,7 +33,7 @@ type Props<T extends TagName> = BaseProps<T> &
   Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
 
 const Text: FC<Props<TagName>> = ({
-  tag = 'span',
+  tag: Tag = 'span',
   fontWeight = 'normal',
   fontStyle = 'normal',
   color = 'white',
@@ -44,15 +44,14 @@ const Text: FC<Props<TagName>> = ({
   const style = styles({
     color,
     fontWeight,
-    display: tag === 'span' ? 'inlineBlock' : 'block',
+    display: Tag === 'span' ? 'inlineBlock' : 'block',
     fontStyle,
   });
-  const Component = tag;
 
   return (
-    <Component className={clsx(style, className)} {...rest}>
+    <Tag className={clsx(style, className)} {...rest}>
       {children}
-    </Component>
+    </Tag>
   );
 };
 
