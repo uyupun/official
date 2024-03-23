@@ -4,9 +4,9 @@ import { styles, type TextColor, type TextFontStyle, type TextFontWeight } from 
 
 import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
-type Tag = 'span' | 'p' | 'div';
+type TagName = 'span' | 'p' | 'div';
 
-type BaseProps<T extends Tag> = {
+type BaseProps<T extends TagName> = {
   /**
    * テキストのタグ
    */
@@ -29,9 +29,10 @@ type BaseProps<T extends Tag> = {
   children: ReactNode;
 };
 
-type Props<T extends Tag> = BaseProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
+type Props<T extends TagName> = BaseProps<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
 
-const Text: FC<Props<Tag>> = ({
+const Text: FC<Props<TagName>> = ({
   tag = 'span',
   fontWeight = 'normal',
   fontStyle = 'normal',
