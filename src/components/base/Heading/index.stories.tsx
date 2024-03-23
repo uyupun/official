@@ -13,7 +13,7 @@ export const Heading: Story = {
   render: () => (
     <div>
       <BaseHeading>Heading level 1</BaseHeading>
-      <BaseHeading tag="h2">Heading level 2</BaseHeading>
+      <BaseHeading tagName="h2">Heading level 2</BaseHeading>
     </div>
   ),
 };

@@ -1,12 +1,16 @@
+import clsx from 'clsx';
+
 import { styles, type TextColor, type TextFontStyle, type TextFontWeight } from './styles.css';
 
-import type { FC, ReactNode } from 'react';
+import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
-type Props = {
+type TagName = 'span' | 'p' | 'div';
+
+type BaseProps<T extends TagName> = {
   /**
    * テキストのタグ
    */
-  tag?: 'span' | 'p' | 'div';
+  tagName?: T;
   /**
    * テキストの太さ
    */
@@ -25,28 +29,30 @@ type Props = {
   children: ReactNode;
 };
 
-const Text: FC<Props> = ({
-  tag = 'span',
+type Props<T extends TagName> = BaseProps<T> &
+  Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
+
+const Text: FC<Props<TagName>> = ({
+  tagName: TagName = 'span',
   fontWeight = 'normal',
   fontStyle = 'normal',
   color = 'white',
   children,
+  className,
+  ...rest
 }) => {
-  const className = styles({
+  const style = styles({
     color,
     fontWeight,
-    display: tag === 'span' ? 'inlineBlock' : 'block',
+    display: TagName === 'span' ? 'inlineBlock' : 'block',
     fontStyle,
   });
 
-  switch (tag) {
-    case 'span':
-      return <span className={className}>{children}</span>;
-    case 'p':
-      return <p className={className}>{children}</p>;
-    case 'div':
-      return <div className={className}>{children}</div>;
-  }
+  return (
+    <TagName className={clsx(style, className)} {...rest}>
+      {children}
+    </TagName>
+  );
 };
 
 export { Text };
