@@ -4,7 +4,9 @@ import { styles } from './styles.css';
 
 import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
 
-type Props<T extends 'h1' | 'h2'> = {
+type Tag = 'h1' | 'h2';
+
+type BaseProps<T extends Tag> = {
   /**
    * 見出しのタグ
    */
@@ -13,9 +15,11 @@ type Props<T extends 'h1' | 'h2'> = {
    * 見出しのコンテンツ
    */
   children: ReactNode;
-} & Omit<ComponentPropsWithoutRef<T>, 'tag' | 'children'>;
+};
 
-const Heading: FC<Props<'h1' | 'h2'>> = ({ tag = 'h1', children, className, ...rest }) => {
+type Props<T extends Tag> = BaseProps<T> & Omit<ComponentPropsWithoutRef<T>, keyof BaseProps<T>>;
+
+const Heading: FC<Props<Tag>> = ({ tag = 'h1', children, className, ...rest }) => {
   const Component = tag;
   return (
     <Component className={clsx(styles.common, styles[tag], className)} {...rest}>
