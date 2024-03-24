@@ -20,12 +20,11 @@ const styles = {
       },
     },
   }),
-  value: sprinkles({
+  title: sprinkles({
     fontSize: {
       mobile: 18,
       desktop: 24,
     },
-    color: 'white',
     lineHeight: 1.3,
     marginBottom: {
       mobile: 2,

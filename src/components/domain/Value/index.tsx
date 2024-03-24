@@ -23,11 +23,11 @@ const Value: FC<Props> = ({ values }) => {
       <Heading className={styles.heading} tagName="h2">
         Value
       </Heading>
-      {values.map(({ title, description }, index) => (
+      {values.map(({ title, description }) => (
         <div className={styles.valueContainer} key={title}>
-          <p className={styles.value}>
+          <Text className={styles.title} tagName="p">
             <strong className={styles.strong}>{title}</strong>
-          </p>
+          </Text>
           <Text className={styles.description} tagName="p">
             {description}
           </Text>
