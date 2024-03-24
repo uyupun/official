@@ -19,13 +19,13 @@ type Props = {
 const Vision: FC<Props> = ({ vision, description }) => {
   return (
     <section className={styles.section}>
-      <Heading className={styles.heading} tag="h2">
+      <Heading className={styles.heading} tagName="h2">
         Vision
       </Heading>
       <p className={styles.vision}>
         <strong className={styles.strong}>{vision}</strong>
       </p>
-      <Text className={styles.description} tag="p">
+      <Text className={styles.description} tagName="p">
         {description}
       </Text>
     </section>
