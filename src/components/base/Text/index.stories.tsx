@@ -12,7 +12,7 @@ type Story = StoryObj<typeof BaseText>;
 export const Text: Story = {
   render: () => (
     <dl>
-      <dt style={{ color: 'white', marginBottom: '8px' }}>Tag</dt>
+      <dt style={{ color: 'white', marginBottom: '8px' }}>Tag Name</dt>
       <dd style={{ marginBottom: '24px' }}>
         <BaseText>tagName=&quot;span&quot;</BaseText>
         <BaseText tagName="p">tagName=&quot;p&quot;</BaseText>
