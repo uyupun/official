@@ -2,7 +2,7 @@ import { recipe } from '@vanilla-extract/recipes';
 
 import { sprinkles } from '@/styles/sprinkles.css';
 
-import type { Color } from '@/styles/themes.css';
+import type { Color, LineHeight } from '@/styles/themes.css';
 
 export type TextFontWeight = 'normal' | 'bold';
 export type TextColor = Extract<Color, 'white' | 'red' | 'lightGray'>;
@@ -48,9 +48,20 @@ const fontStyle: { [Key in TextFontStyle]: string } = {
   }),
 };
 
+const lineHeight: { [Key in LineHeight]: string } = {
+  1: sprinkles({
+    lineHeight: 1,
+  }),
+  1.3: sprinkles({
+    lineHeight: 1.3,
+  }),
+  1.8: sprinkles({
+    lineHeight: 1.8,
+  }),
+};
+
 const styles = recipe({
   base: sprinkles({
-    lineHeight: 1.8,
     fontSize: {
       mobile: 14,
       desktop: 16,
@@ -61,6 +72,7 @@ const styles = recipe({
     color,
     display,
     fontStyle,
+    lineHeight,
   },
 });
 

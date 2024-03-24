@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 
+import { type LineHeight } from '@/styles/themes.css';
+
 import { styles, type TextColor, type TextFontStyle, type TextFontWeight } from './styles.css';
 
 import type { ComponentPropsWithoutRef, FC, ReactNode } from 'react';
@@ -24,6 +26,10 @@ type BaseProps<T extends TagName> = {
    */
   color?: TextColor;
   /**
+   * テキストの行間
+   */
+  lineHeight?: LineHeight;
+  /**
    * テキストのコンテンツ
    */
   children: ReactNode;
@@ -37,6 +43,7 @@ const Text: FC<Props<TagName>> = ({
   fontWeight = 'normal',
   fontStyle = 'normal',
   color = 'white',
+  lineHeight = 1.8,
   children,
   className,
   ...rest
@@ -46,6 +53,7 @@ const Text: FC<Props<TagName>> = ({
     fontWeight,
     display: TagName === 'span' ? 'inlineBlock' : 'block',
     fontStyle,
+    lineHeight,
   });
 
   return (

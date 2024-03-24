@@ -58,6 +58,8 @@ export const lineHeight = {
   1.8: '1.8',
 } as const;
 
+export type LineHeight = keyof typeof lineHeight;
+
 /**
  *  width と height で使用する
  */
