@@ -7,23 +7,23 @@ import type { FC } from 'react';
 
 type Props = {
   /**
-   * ビジョン
+   * ビジョンのタイトル
    */
-  vision: string;
+  title: string;
   /**
    * ビジョンの説明
    */
   description: string;
 };
 
-const Vision: FC<Props> = ({ vision, description }) => {
+const Vision: FC<Props> = ({ title, description }) => {
   return (
     <section className={styles.section}>
       <Heading className={styles.heading} tagName="h2">
         Vision
       </Heading>
       <p className={styles.vision}>
-        <strong className={styles.strong}>{vision}</strong>
+        <strong className={styles.strong}>{title}</strong>
       </p>
       <Text className={styles.description} tagName="p">
         {description}
