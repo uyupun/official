@@ -52,6 +52,8 @@ export const fontSize = {
   64: '4rem',
 } as const;
 
+export type FontSize = keyof typeof fontSize;
+
 export const lineHeight = {
   1: '1',
   1.3: '1.3',
