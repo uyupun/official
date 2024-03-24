@@ -10,12 +10,11 @@ const styles = {
       desktop: 10,
     },
   }),
-  vision: sprinkles({
+  title: sprinkles({
     fontSize: {
       mobile: 24,
       desktop: 36,
     },
-    color: 'white',
     lineHeight: 1.3,
     marginBottom: {
       mobile: 3,

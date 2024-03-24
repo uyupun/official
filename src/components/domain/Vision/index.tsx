@@ -22,9 +22,9 @@ const Vision: FC<Props> = ({ title, description }) => {
       <Heading className={styles.heading} tagName="h2">
         Vision
       </Heading>
-      <p className={styles.vision}>
+      <Text className={styles.title} tagName="p">
         <strong className={styles.strong}>{title}</strong>
-      </p>
+      </Text>
       <Text className={styles.description} tagName="p">
         {description}
       </Text>
