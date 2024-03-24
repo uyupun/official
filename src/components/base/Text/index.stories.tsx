@@ -14,33 +14,33 @@ export const Text: Story = {
     <dl>
       <dt style={{ color: 'white', marginBottom: '8px' }}>Tag</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText>tag=&quot;span&quot;</BaseText>
-        <BaseText tag="p">tag=&quot;p&quot;</BaseText>
-        <BaseText tag="div">tag=&quot;div&quot;</BaseText>
+        <BaseText>tagName=&quot;span&quot;</BaseText>
+        <BaseText tagName="p">tagName=&quot;p&quot;</BaseText>
+        <BaseText tagName="div">tagName=&quot;div&quot;</BaseText>
       </dd>
       <dt style={{ color: 'white', marginBottom: '8px' }}>Font Weight</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText tag="p">fontWeight=&quot;normal&quot;</BaseText>
-        <BaseText fontWeight="bold" tag="p">
+        <BaseText tagName="p">fontWeight=&quot;normal&quot;</BaseText>
+        <BaseText fontWeight="bold" tagName="p">
           fontWeight=&quot;bold&quot;
         </BaseText>
       </dd>
       <dt style={{ color: 'white', marginBottom: '8px' }}>Font Style</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText tag="p">fontStyle=&quot;normal&quot;</BaseText>
-        <BaseText fontStyle="italic" tag="p">
+        <BaseText tagName="p">fontStyle=&quot;normal&quot;</BaseText>
+        <BaseText fontStyle="italic" tagName="p">
           fontStyle=&quot;italic&quot;
         </BaseText>
       </dd>
       <dt style={{ color: 'white', marginBottom: '8px' }}>Color</dt>
       <dd style={{ marginBottom: '24px' }}>
-        <BaseText color="white" tag="p">
+        <BaseText color="white" tagName="p">
           color=&quot;white&quot;
         </BaseText>
-        <BaseText color="red" tag="p">
+        <BaseText color="red" tagName="p">
           color=&quot;red&quot;
         </BaseText>
-        <BaseText color="lightGray" tag="p">
+        <BaseText color="lightGray" tagName="p">
           color=&quot;lightGray&quot;
         </BaseText>
       </dd>
