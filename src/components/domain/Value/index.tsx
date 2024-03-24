@@ -20,7 +20,7 @@ type Props = {
 const Value: FC<Props> = ({ values }) => {
   return (
     <section className={styles.section}>
-      <Heading className={styles.heading} tag="h2">
+      <Heading className={styles.heading} tagName="h2">
         Value
       </Heading>
       {values.map(({ title, description }, index) => (
@@ -28,7 +28,7 @@ const Value: FC<Props> = ({ values }) => {
           <p className={styles.value}>
             <strong className={styles.strong}>{title}</strong>
           </p>
-          <Text className={styles.description} tag="p">
+          <Text className={styles.description} tagName="p">
             {description}
           </Text>
         </div>
