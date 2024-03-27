@@ -12,7 +12,7 @@ type ValueItem = {
 
 type Props = {
   /**
-   * バリューと説明の配列
+   * タイトルと説明文を持つ配列
    */
   values: ValueItem[];
 };
