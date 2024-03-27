@@ -22,7 +22,12 @@ const Vision: FC<Props> = ({ title, description }) => {
       <Heading className={styles.heading} tagName="h2">
         Vision
       </Heading>
-      <Text className={styles.title} tagName="p">
+      <Text
+        className={styles.title}
+        fontSize={{ mobile: 20, desktop: 36 }}
+        lineHeight={1.3}
+        tagName="p"
+      >
         <strong className={styles.strong}>{title}</strong>
       </Text>
       <Text className={styles.description} tagName="p">
