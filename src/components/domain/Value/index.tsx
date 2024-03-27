@@ -25,7 +25,12 @@ const Value: FC<Props> = ({ values }) => {
       </Heading>
       {values.map(({ title, description }) => (
         <div className={styles.valueContainer} key={title}>
-          <Text className={styles.title} tagName="p">
+          <Text
+            className={styles.title}
+            fontSize={{ mobile: 18, desktop: 24 }}
+            lineHeight={1.3}
+            tagName="p"
+          >
             <strong className={styles.strong}>{title}</strong>
           </Text>
           <Text className={styles.description} tagName="p">

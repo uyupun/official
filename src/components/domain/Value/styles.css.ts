@@ -21,11 +21,6 @@ const styles = {
     },
   }),
   title: sprinkles({
-    fontSize: {
-      mobile: 18,
-      desktop: 24,
-    },
-    lineHeight: 1.3,
     marginBottom: {
       mobile: 2,
       desktop: 4,
