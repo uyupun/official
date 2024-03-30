@@ -1,17 +1,17 @@
-import { Value as DomainValue } from '.';
+import { PhilosophyValues as DomainPhilosophyValues } from '.';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof DomainValue> = {
-  title: 'Domain/Value',
-  component: DomainValue,
+const meta: Meta<typeof DomainPhilosophyValues> = {
+  title: 'Domain/PhilosophyValues',
+  component: DomainPhilosophyValues,
 };
 export default meta;
 
-type Story = StoryObj<typeof DomainValue>;
-export const Value: Story = {
+type Story = StoryObj<typeof DomainPhilosophyValues>;
+export const PhilosophyValues: Story = {
   render: () => (
-    <DomainValue
+    <DomainPhilosophyValues
       values={[
         {
           title: '安心、安全、Unstoppable',

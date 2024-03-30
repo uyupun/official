@@ -5,7 +5,7 @@ import { styles } from './styles.css';
 
 import type { FC } from 'react';
 
-type ValueItem = {
+type PhilosophyValuesItem = {
   title: string;
   description: string;
 };
@@ -14,10 +14,10 @@ type Props = {
   /**
    * タイトルと説明文を持つ配列
    */
-  values: ValueItem[];
+  values: PhilosophyValuesItem[];
 };
 
-const Value: FC<Props> = ({ values }) => {
+const PhilosophyValues: FC<Props> = ({ values }) => {
   return (
     <section className={styles.section}>
       <Heading className={styles.heading} tagName="h2">
@@ -42,4 +42,4 @@ const Value: FC<Props> = ({ values }) => {
   );
 };
 
-export { Value };
+export { PhilosophyValues };
