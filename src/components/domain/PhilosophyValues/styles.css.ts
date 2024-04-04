@@ -13,7 +13,7 @@ const styles = {
       desktop: 10,
     },
   }),
-  valueContainer: style({
+  itemContainer: style({
     selectors: {
       '&:not(:last-child)': {
         marginBottom: vars.spacing[6],
