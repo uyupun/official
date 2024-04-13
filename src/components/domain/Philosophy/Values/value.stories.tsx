@@ -9,7 +9,7 @@ const meta: Meta<typeof DomainPhilosophyValue> = {
 export default meta;
 
 type Story = StoryObj<typeof DomainPhilosophyValue>;
-export const PhilosophyValues: Story = {
+export const PhilosophyValue: Story = {
   render: () => (
     <DomainPhilosophyValue
       description={
