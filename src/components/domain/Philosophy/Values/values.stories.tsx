@@ -3,13 +3,13 @@ import { PhilosophyValues as DomainPhilosophyValues } from '.';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof DomainPhilosophyValues> = {
-  title: 'Domain/PhilosophyValues',
+  title: 'Domain/Philosophy/Values',
   component: DomainPhilosophyValues,
 };
 export default meta;
 
 type Story = StoryObj<typeof DomainPhilosophyValues>;
-export const PhilosophyValues: Story = {
+export const Values: Story = {
   render: () => (
     <DomainPhilosophyValues
       values={[
