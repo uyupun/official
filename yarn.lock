@@ -5571,6 +5571,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/braces@npm:*":
+  version: 3.0.4
+  resolution: "@types/braces@npm:3.0.4"
+  checksum: 05220f330814364318a1c2f403046d717690cabf3adc8417357b0b12713f92768cf9df76e0e25212b5a2727c8c56765ff19a284c7ece39e0985d0d6fadb6c4aa
+  languageName: node
+  linkType: hard
+
 "@types/connect@npm:*":
   version: 3.4.35
   resolution: "@types/connect@npm:3.4.35"
@@ -5742,6 +5749,15 @@ __metadata:
   version: 2.0.5
   resolution: "@types/mdx@npm:2.0.5"
   checksum: f46932365a24ad6927dd87678598b839fa64ef8c9d0714b45a0185ac52427b374899ba96022f97330b27aca3572a6815f844cf345a50b9c0c483f485c243eda1
+  languageName: node
+  linkType: hard
+
+"@types/micromatch@npm:^4.0.2":
+  version: 4.0.9
+  resolution: "@types/micromatch@npm:4.0.9"
+  dependencies:
+    "@types/braces": "npm:*"
+  checksum: b13d7594b4320f20729f20156c51e957d79deb15083f98a736689cd0d3e4ba83b5d125959f6edf65270a6b6db90db9cebef8168d88e1c4eedc9a18aecc0234a3
   languageName: node
   linkType: hard
 
@@ -12541,7 +12557,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
+"micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.5, micromatch@npm:^4.0.8":
   version: 4.0.8
   resolution: "micromatch@npm:4.0.8"
   dependencies:
@@ -13260,6 +13276,7 @@ __metadata:
     "@storybook/nextjs": "npm:^7.5.3"
     "@storybook/react": "npm:^7.5.3"
     "@svgr/cli": "npm:^6.5.1"
+    "@types/micromatch": "npm:^4.0.2"
     "@types/minimist": "npm:^1.2.2"
     "@types/node": "npm:18.17.0"
     "@types/react": "npm:18.2.37"
@@ -13285,6 +13302,7 @@ __metadata:
     husky: "npm:^7.0.0"
     lighthouse: "npm:^10.3.0"
     lint-staged: "npm:^12.1.2"
+    micromatch: "npm:^4.0.8"
     minimist: "npm:^1.2.8"
     next: "npm:14.1.1"
     pathpida: "npm:^0.20.1"
