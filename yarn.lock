@@ -5571,13 +5571,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/braces@npm:*":
-  version: 3.0.2
-  resolution: "@types/braces@npm:3.0.2"
-  checksum: f49abc49fd5af8e527de97ece19d51521b4ad98c7fe06390db3470645f0d5af7cc488a5abc6afe2570b276031842c8e705f6f0800f9614930d49f4c758a5468b
-  languageName: node
-  linkType: hard
-
 "@types/connect@npm:*":
   version: 3.4.35
   resolution: "@types/connect@npm:3.4.35"
@@ -5749,15 +5742,6 @@ __metadata:
   version: 2.0.5
   resolution: "@types/mdx@npm:2.0.5"
   checksum: f46932365a24ad6927dd87678598b839fa64ef8c9d0714b45a0185ac52427b374899ba96022f97330b27aca3572a6815f844cf345a50b9c0c483f485c243eda1
-  languageName: node
-  linkType: hard
-
-"@types/micromatch@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "@types/micromatch@npm:4.0.2"
-  dependencies:
-    "@types/braces": "npm:*"
-  checksum: e557324460e658283778c77d0f8995ee95e371c4fd54474b3186e947486427cc4af66b841393304b65c09a7bb36710158260db7a7cf761384e1a9a728e82e6f4
   languageName: node
   linkType: hard
 
@@ -7178,7 +7162,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"braces@npm:^3.0.2, braces@npm:^3.0.3, braces@npm:~3.0.2":
+"braces@npm:^3.0.3, braces@npm:~3.0.2":
   version: 3.0.3
   resolution: "braces@npm:3.0.3"
   dependencies:
@@ -12558,16 +12542,6 @@ __metadata:
   linkType: hard
 
 "micromatch@npm:^4.0.2, micromatch@npm:^4.0.4, micromatch@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "micromatch@npm:4.0.5"
-  dependencies:
-    braces: "npm:^3.0.2"
-    picomatch: "npm:^2.3.1"
-  checksum: 3d6505b20f9fa804af5d8c596cb1c5e475b9b0cd05f652c5b56141cf941bd72adaeb7a436fda344235cef93a7f29b7472efc779fcdb83b478eab0867b95cdeff
-  languageName: node
-  linkType: hard
-
-"micromatch@npm:^4.0.8":
   version: 4.0.8
   resolution: "micromatch@npm:4.0.8"
   dependencies:
@@ -13286,7 +13260,6 @@ __metadata:
     "@storybook/nextjs": "npm:^7.5.3"
     "@storybook/react": "npm:^7.5.3"
     "@svgr/cli": "npm:^6.5.1"
-    "@types/micromatch": "npm:^4.0.2"
     "@types/minimist": "npm:^1.2.2"
     "@types/node": "npm:18.17.0"
     "@types/react": "npm:18.2.37"
@@ -13312,7 +13285,6 @@ __metadata:
     husky: "npm:^7.0.0"
     lighthouse: "npm:^10.3.0"
     lint-staged: "npm:^12.1.2"
-    micromatch: "npm:^4.0.8"
     minimist: "npm:^1.2.8"
     next: "npm:14.1.1"
     pathpida: "npm:^0.20.1"
